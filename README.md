@@ -16,7 +16,7 @@
 ### 3、设计图
 
 - [安个家 Log 收集体系](https://www.processon.com/view/link/582d82a9e4b06bc83a12082d)
-- [安个家 应用服务分布](https://www.processon.com/diagraming/562756aee4b0da22d0957a05)
+- [安个家 应用服务分布](https://www.processon.com/view/link/562894b7e4b070f8ccca5863)
 - [安个家 Flume 日志高可用收集](https://www.processon.com/view/link/5821bbd2e4b0826f839a4309)
 - 安个家推荐系统
  - [CBCF](https://www.processon.com/view/link/56d3b2e7e4b0f9ea1683e1e5)
