@@ -31,7 +31,7 @@
  - [HDFS 工作原理图解](https://www.processon.com/view/link/56629a87e4b01db999f2f337)
  - [Hadoop 1.x Mapreduce 原理图解](https://www.processon.com/view/link/5664347fe4b026a7ca2a71a6)
  - [Mapreduce Shuffle 原理图解](https://www.processon.com/view/link/566d79e4e4b0187009265f4a)
- 
+ - [Mapreduce 优化思维导图](https://www.processon.com/view/link/5662d493e4b01db999f419b1)
 
 ## 一、[DW 服务相关文档](service)
 
