@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>simplePage - http://www.imsole.net</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<title>网友sole分享原创Jquery实现图片放大镜插件</title>
+<meta name="Keywords" content="网友sole分享原创Jquery实现图片放大镜插件,Jquery插件,Jquery原创,Jquery资源,Jquery特效,js特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+</head>
+<body><br />
+<center>
+  <h2>网友sole分享原创Jquery实现图片放大镜插件<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+	网友sole个人网站（<a href="http://www.imsole.net" target="_blank">http://www.imsole.net</a>）
+	</h2>
+</center>
+<div class="main">
+  <div id="show"> <img src="http://www.jq-school.com/attached/image/20121128/20121128112331_7343.jpg" id="show_pic" width="240" height="338" /> </div>
+  <div id="zoom"> <img src="http://www.jq-school.com/attached/image/20121128/20121128112331_7343.jpg"/> </div>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/simpleZoom.js"></script>
+<script type="text/javascript">
+$(function(){	
+	$("#show").simpleZoom({
+		zoomBox : "#zoom",
+		markSize : [120, 169],
+		zoomSize : [240, 338],
+		zoomImg : [480, 677]
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="jason" date="2015-08-26T03:31:24.176Z" timestamp="2015-08-26T03:31:24.176Z">
+    <change idref="t1" from="t-1" from-position="0" resolved="yes">
+      <change idref="t1" attribute="title" type="string" to="任务 1"/>
+    </change>
+    <change idref="t2" to="t-1" to-position="0" resolved="yes">
+      <change idref="t2" attribute="effort" type="real" from="28800" to="149"/>
+      <change idref="t2" attribute="isSplittableTask" type="real" from="1" to="0"/>
+      <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-24T02:45:15.000Z"/>
+      <change idref="t2" attribute="title" type="string" to="uba-run"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:31:33.464Z" timestamp="2015-08-26T03:31:33.464Z">
+    <change idref="t3" to="t-1" to-position="1" resolved="yes">
+      <change idref="t3" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:00.000Z"/>
+      <change idref="t3" attribute="title" type="string" to="&gt;任务 1"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:33:41.574Z" timestamp="2015-08-26T03:33:41.574Z">
+    <change idref="t3" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:00.000Z" to="2015-08-25T17:00:04.000Z" resolved="yes"/>
+    <change idref="t3" attribute="internalEffortDone" type="real" from="0" to="4" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:33:42.623Z" timestamp="2015-08-26T03:33:42.623Z">
+    <change idref="t3" attribute="internalEffortDone" type="real" from="4" to="0" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:33:43.351Z" timestamp="2015-08-26T03:33:43.351Z">
+    <change idref="t3" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:04.000Z" to="2015-08-25T17:00:00.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:34:01.899Z" timestamp="2015-08-26T03:34:01.899Z">
+    <change idref="t3" from="t-1" from-position="1" resolved="yes">
+      <change idref="t3" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:00.000Z"/>
+      <change idref="t3" attribute="title" type="string" to="&gt;任务 1"/>
+    </change>
+    <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-24T02:45:15.000Z" to="2015-08-24T02:45:14.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:37:49.840Z" timestamp="2015-08-26T03:37:49.840Z">
+    <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-24T02:45:14.000Z" to="2015-08-24T02:44:59.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:37:50.624Z" timestamp="2015-08-26T03:37:50.624Z">
+    <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-24T02:44:59.000Z" to="2015-08-24T02:45:14.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:39:43.131Z" timestamp="2015-08-26T03:39:43.131Z">
+    <change idref="t-1" attribute="criticalPathProperties" type="dict" from="{
+    color =     {
+        b = &quot;0.5&quot;;
+        g = &quot;0.5&quot;;
+        r = 1;
+    };
+    enabled = 0;
+    root = &quot;-1&quot;;
+}" to="{
+    color =     {
+        b = &quot;0.5&quot;;
+        g = &quot;0.5&quot;;
+        r = 1;
+    };
+    enabled = 1;
+    root = &quot;-1&quot;;
+}"/>
+    <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-24T02:45:14.000Z" to="2015-08-25T21:10:00.000Z"/>
+    <change idref="t2" attribute="noLaterThanConstraintDate" type="date" to="2015-08-25T23:30:00.000Z"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:42:51.369Z" timestamp="2015-08-26T03:42:51.369Z">
+    <change idref="t2" from="t-1" from-position="0" resolved="yes">
+      <change idref="t2" attribute="effort" type="real" from="28800" to="149"/>
+      <change idref="t2" attribute="isSplittableTask" type="real" from="1" to="0"/>
+      <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T21:10:00.000Z"/>
+      <change idref="t2" attribute="noLaterThanConstraintDate" type="date" to="2015-08-25T23:30:00.000Z"/>
+      <change idref="t2" attribute="title" type="string" to="uba-run"/>
+    </change>
+    <change idref="t4" to="t-1" to-position="0" resolved="yes">
+      <change idref="t4" attribute="effort" type="real" from="28800" to="360"/>
+      <change idref="t4" attribute="internalEffortDone" type="real" from="0" to="4"/>
+      <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:00.000Z"/>
+      <change idref="t4" attribute="title" type="string" to="uba-run "/>
+    </change>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T03:48:58.119Z" timestamp="2015-08-26T03:48:58.119Z">
+    <change idref="t7" to="t-1" to-position="1" resolved="yes">
+      <change idref="t7" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t7" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t12" to="t-1" to-position="2" resolved="yes">
+      <change idref="t12" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t12" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t12" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t13" to="t-1" to-position="3" resolved="yes">
+      <change idref="t13" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t13" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t13" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t14" to="t-1" to-position="4" resolved="yes">
+      <change idref="t14" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t14" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t14" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t15" to="t-1" to-position="5" resolved="yes">
+      <change idref="t15" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t15" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t15" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t16" to="t-1" to-position="6" resolved="yes">
+      <change idref="t16" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t16" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t16" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t17" to="t-1" to-position="7" resolved="yes">
+      <change idref="t17" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t17" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t17" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t18" to="t-1" to-position="8" resolved="yes">
+      <change idref="t18" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t18" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t18" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t19" to="t-1" to-position="9" resolved="yes">
+      <change idref="t19" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t19" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t19" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t20" to="t-1" to-position="10" resolved="yes">
+      <change idref="t20" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t20" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t20" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t21" to="t-1" to-position="11" resolved="yes">
+      <change idref="t21" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t21" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t21" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t22" to="t-1" to-position="12" resolved="yes">
+      <change idref="t22" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t22" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t22" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t23" to="t-1" to-position="13" resolved="yes">
+      <change idref="t23" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t23" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t23" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t24" to="t-1" to-position="14" resolved="yes">
+      <change idref="t24" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t24" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t24" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t25" to="t-1" to-position="15" resolved="yes">
+      <change idref="t25" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t25" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t25" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t26" to="t-1" to-position="16" resolved="yes">
+      <change idref="t26" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t26" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t26" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t4" attribute="title" type="string" from="uba-run " to="dw_scorecard_summary_daily" resolved="yes"/>
+    <change idref="t4" attribute="effort" type="real" from="360" to="556" resolved="yes"/>
+    <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:00.000Z" to="2015-08-25T17:00:01.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T04:01:18.904Z" timestamp="2015-08-26T04:01:18.904Z">
+    <change idref="t28" to="t-1" to-position="17" resolved="yes">
+      <change idref="t28" attribute="effort" type="real" from="28800" to="328"/>
+      <change idref="t28" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t28" attribute="title" type="string" to="dw_sem_baidu_summary_detail_info_daily"/>
+    </change>
+    <change idref="t29" to="t-1" to-position="18" resolved="yes">
+      <change idref="t29" attribute="effort" type="real" from="28800" to="2120"/>
+      <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t29" attribute="title" type="string" to="dw_broker_summary_basis_info_daily"/>
+    </change>
+    <change idref="t30" to="t-1" to-position="19" resolved="yes">
+      <change idref="t30" attribute="effort" type="real" from="28800" to="127"/>
+      <change idref="t30" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t30" attribute="title" type="string" to="dw_block_summary_basis_info_daily"/>
+    </change>
+    <change idref="t31" to="t-1" to-position="20" resolved="yes">
+      <change idref="t31" attribute="effort" type="real" from="28800" to="161"/>
+      <change idref="t31" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t31" attribute="title" type="string" to="dw_inventory_detail_info_daily"/>
+    </change>
+    <change idref="t32" to="t-1" to-position="21" resolved="yes">
+      <change idref="t32" attribute="effort" type="real" from="28800" to="965"/>
+      <change idref="t32" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t32" attribute="title" type="string" to="summary_hive_dw_connection_summary_detail_info_daily"/>
+    </change>
+    <change idref="t33" to="t-1" to-position="22" resolved="yes">
+      <change idref="t33" attribute="effort" type="real" from="28800" to="556"/>
+      <change idref="t33" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t33" attribute="title" type="string" to="dw_scorecard_summary_daily"/>
+    </change>
+    <change idref="t34" to="t-1" to-position="23" resolved="yes">
+      <change idref="t34" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t34" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t34" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t4" attribute="title" type="string" from="dw_scorecard_summary_daily" to="summary_hive_dw_mobile_user_browsing_metrics_daily" resolved="yes"/>
+    <change idref="t4" attribute="effort" type="real" from="556" to="1366" resolved="yes"/>
+    <change idref="t7" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="dw_member_summary_detail_info_daily" resolved="yes"/>
+    <change idref="t7" attribute="effort" type="real" from="35" to="1234" resolved="yes"/>
+    <change idref="t12" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="summary_hive_dw_property_inventory_detail_info_daily" resolved="yes"/>
+    <change idref="t12" attribute="effort" type="real" from="35" to="971" resolved="yes"/>
+    <change idref="t12" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsfQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTt9Cn0=" resolved="yes"/>
+    <change idref="t13" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="summary_hive_dw_property_community_detail_info_daily" resolved="yes"/>
+    <change idref="t13" attribute="effort" type="real" from="35" to="115" resolved="yes"/>
+    <change idref="t13" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsfQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTt9Cn0=" resolved="yes"/>
+    <change idref="t14" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="crawler_competitor_property_block_count" resolved="yes"/>
+    <change idref="t14" attribute="effort" type="real" from="35" to="1162" resolved="yes"/>
+    <change idref="t15" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="da_broker_summary_basis_info_daily" resolved="yes"/>
+    <change idref="t15" attribute="effort" type="real" from="35" to="21" resolved="yes"/>
+    <change idref="t16" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="sem_baidu_log" resolved="yes"/>
+    <change idref="t16" attribute="effort" type="real" from="35" to="16" resolved="yes"/>
+    <change idref="t16" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t17" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="sem_baidu_log_java_etl" resolved="yes"/>
+    <change idref="t17" attribute="effort" type="real" from="35" to="108" resolved="yes"/>
+    <change idref="t17" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t18" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="dw_user_access_summary_daily" resolved="yes"/>
+    <change idref="t18" attribute="effort" type="real" from="35" to="824" resolved="yes"/>
+    <change idref="t19" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="da_property_broker_followup_daily" resolved="yes"/>
+    <change idref="t19" attribute="effort" type="real" from="35" to="139" resolved="yes"/>
+    <change idref="t19" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t20" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="da_property_select_community_info" resolved="yes"/>
+    <change idref="t20" attribute="effort" type="real" from="35" to="165" resolved="yes"/>
+    <change idref="t20" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t21" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="uba-run" resolved="yes"/>
+    <change idref="t21" attribute="effort" type="real" from="35" to="347" resolved="yes"/>
+    <change idref="t21" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t22" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="m2h-sync-dump-run" resolved="yes"/>
+    <change idref="t22" attribute="effort" type="real" from="35" to="1629" resolved="yes"/>
+    <change idref="t22" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+    <change idref="t23" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="summary_hive_dw_sem_summary_basis_info_daily" resolved="yes"/>
+    <change idref="t23" attribute="effort" type="real" from="35" to="538" resolved="yes"/>
+    <change idref="t24" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="scorecard" resolved="yes"/>
+    <change idref="t24" attribute="effort" type="real" from="35" to="1318" resolved="yes"/>
+    <change idref="t25" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="da_property_summary_inventory_detail_daily" resolved="yes"/>
+    <change idref="t25" attribute="effort" type="real" from="35" to="79" resolved="yes"/>
+    <change idref="t26" attribute="title" type="string" from="dw_broker_art_basis_info_daily" to="da_mobile_chat_effect_info" resolved="yes"/>
+    <change idref="t26" attribute="effort" type="real" from="35" to="37" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T04:01:25.212Z" timestamp="2015-08-26T04:01:25.212Z">
+    <change idref="t13" attribute="notesAllowingNil" type="textdata" from="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T04:01:30.615Z" timestamp="2015-08-26T04:01:30.615Z">
+    <change idref="t12" attribute="notesAllowingNil" type="textdata" from="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T05:10:49.748Z" timestamp="2015-08-26T05:10:49.748Z">
+    <change idref="t22" from="t-1" from-position="12" resolved="yes">
+      <change idref="t22" attribute="effort" type="real" from="28800" to="1629"/>
+      <change idref="t22" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t22" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0="/>
+      <change idref="t22" attribute="title" type="string" to="m2h-sync-dump-run"/>
+    </change>
+    <change idref="t21" from="t-1" from-position="11" to="t-1" to-position="0" resolved="yes"/>
+    <change idref="t42" to="t-1" to-position="1" resolved="yes">
+      <change idref="t42" attribute="effort" type="real" from="28800" to="1629"/>
+      <change idref="t42" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t42" attribute="title" type="string" to="m2h-sync-dump-run"/>
+    </change>
+    <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:01.000Z" to="2015-08-25T18:30:01.000Z" resolved="yes"/>
+    <change idref="t4" attribute="internalPrerequisitesString" type="string" to="21FS" resolved="yes"/>
+    <change idref="t21" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T08:59:59.000Z" resolved="yes"/>
+    <change idref="t24" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T22:00:01.000Z" resolved="yes"/>
+    <change idref="t24" attribute="internalPrerequisitesString" type="string" to="4FS" resolved="yes"/>
+    <change idref="t32" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T18:20:00.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T05:10:50.654Z" timestamp="2015-08-26T05:10:50.654Z">
+    <change idref="t42" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0=" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T05:24:25.382Z" timestamp="2015-08-26T05:24:25.382Z">
+    <change idref="t26" from="t-1" from-position="16" to="t-1" to-position="19" resolved="yes"/>
+    <change idref="t44" to="t-1" to-position="24" resolved="yes">
+      <change idref="t44" attribute="effort" type="real" from="28800" to="300"/>
+      <change idref="t44" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T19:24:09.000Z"/>
+      <change idref="t44" attribute="title" type="string" to="art"/>
+    </change>
+    <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T19:00:02.000Z" resolved="yes"/>
+    <change idref="t7" attribute="internalPrerequisitesString" type="string" to="21FS, 42FS" resolved="yes"/>
+    <change idref="t15" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T20:00:00.000Z" resolved="yes"/>
+    <change idref="t15" attribute="internalPrerequisitesString" type="string" to="29FS" resolved="yes"/>
+    <change idref="t23" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T19:00:03.000Z" resolved="yes"/>
+    <change idref="t23" attribute="internalPrerequisitesString" type="string" to="21FS" resolved="yes"/>
+    <change idref="t24" attribute="internalPrerequisitesString" type="string" from="4FS" to="4FS, 29FS" resolved="yes"/>
+    <change idref="t26" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T20:00:03.000Z" resolved="yes"/>
+    <change idref="t26" attribute="internalPrerequisitesString" type="string" to="29FS" resolved="yes"/>
+    <change idref="t29" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T17:30:02.000Z" resolved="yes"/>
+    <change idref="t29" attribute="internalPrerequisitesString" type="string" to="21FF, 42FS" resolved="yes"/>
+    <change idref="t32" attribute="internalPrerequisitesString" type="string" to="42FS" resolved="yes"/>
+    <change idref="t32" attribute="internalEffortDone" type="real" from="0" to="965" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T06:13:53.139Z" timestamp="2015-08-26T06:13:53.139Z">
+    <change idref="t34" from="t-1" from-position="23" resolved="yes">
+      <change idref="t34" attribute="effort" type="real" from="28800" to="35"/>
+      <change idref="t34" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t34" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t28" from="t-1" from-position="16" resolved="yes">
+      <change idref="t28" attribute="effort" type="real" from="28800" to="328"/>
+      <change idref="t28" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t28" attribute="title" type="string" to="dw_sem_baidu_summary_detail_info_daily"/>
+    </change>
+    <change idref="t17" from="t-1" from-position="9" resolved="yes">
+      <change idref="t17" attribute="effort" type="real" from="28800" to="108"/>
+      <change idref="t17" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t17" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0="/>
+      <change idref="t17" attribute="title" type="string" to="sem_baidu_log_java_etl"/>
+    </change>
+    <change idref="t16" from="t-1" from-position="8" resolved="yes">
+      <change idref="t16" attribute="effort" type="real" from="28800" to="16"/>
+      <change idref="t16" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t16" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgIH0="/>
+      <change idref="t16" attribute="title" type="string" to="sem_baidu_log"/>
+    </change>
+    <change idref="t14" from="t-1" from-position="6" resolved="yes">
+      <change idref="t14" attribute="effort" type="real" from="28800" to="1162"/>
+      <change idref="t14" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:00:03.000Z"/>
+      <change idref="t14" attribute="title" type="string" to="crawler_competitor_property_block_count"/>
+    </change>
+    <change idref="t12" from="t-1" from-position="4" to="t-1" to-position="2" resolved="yes"/>
+    <change idref="t29" from="t-1" from-position="13" to="t-1" to-position="3" resolved="yes"/>
+    <change idref="t32" from="t-1" from-position="17" to="t-1" to-position="4" resolved="yes"/>
+    <change idref="t13" from="t-1" from-position="7" to="t-1" to-position="6" resolved="yes"/>
+    <change idref="t47" to="t-1" to-position="20" resolved="yes">
+      <change idref="t47" attribute="effort" type="real" from="28800" to="556"/>
+      <change idref="t47" attribute="internalPrerequisitesString" type="string" to="29FS"/>
+      <change idref="t47" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T22:00:01.000Z"/>
+      <change idref="t47" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t12" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T17:30:03.000Z" resolved="yes"/>
+    <change idref="t12" attribute="internalPrerequisitesString" type="string" to="31FS" resolved="yes"/>
+    <change idref="t13" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T18:50:04.000Z" resolved="yes"/>
+    <change idref="t13" attribute="internalPrerequisitesString" type="string" to="12FS" resolved="yes"/>
+    <change idref="t18" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t18" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T21:02:33.000Z" resolved="yes"/>
+    <change idref="t18" attribute="internalPrerequisitesString" type="string" to="21FS, 42FF" resolved="yes"/>
+    <change idref="t19" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t19" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T20:00:03.000Z" resolved="yes"/>
+    <change idref="t19" attribute="internalPrerequisitesString" type="string" to="42FS" resolved="yes"/>
+    <change idref="t20" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T20:00:06.000Z" resolved="yes"/>
+    <change idref="t21" attribute="effort" type="real" from="347" to="354" resolved="yes"/>
+    <change idref="t25" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t25" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T20:40:00.000Z" resolved="yes"/>
+    <change idref="t25" attribute="internalPrerequisitesString" type="string" to="12FS" resolved="yes"/>
+    <change idref="t30" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T19:00:08.000Z" resolved="yes"/>
+    <change idref="t30" attribute="internalPrerequisitesString" type="string" to="13FS" resolved="yes"/>
+    <change idref="t31" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T17:17:43.000Z" resolved="yes"/>
+    <change idref="t31" attribute="internalPrerequisitesString" type="string" to="21FS, 42FF" resolved="yes"/>
+    <change idref="t33" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t33" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T22:00:08.000Z" resolved="yes"/>
+    <change idref="t33" attribute="internalPrerequisitesString" type="string" to="4FF, 21FS, 29FS, 42FS, 42FS" resolved="yes"/>
+    <change idref="t44" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t44" attribute="internalPrerequisitesString" type="string" to="4FS, 23FS, 29FS" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T06:29:53.609Z" timestamp="2015-08-26T06:29:53.609Z">
+    <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T18:30:01.000Z" to="2015-08-25T17:30:03.000Z" resolved="yes"/>
+    <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T19:00:02.000Z" to="2015-08-25T18:00:02.000Z" resolved="yes"/>
+    <change idref="t12" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:30:03.000Z" to="2015-08-25T16:30:00.000Z" resolved="yes"/>
+    <change idref="t13" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T18:50:04.000Z" to="2015-08-25T17:50:05.000Z" resolved="yes"/>
+    <change idref="t15" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T20:00:00.000Z" to="2015-08-25T19:00:04.000Z" resolved="yes"/>
+    <change idref="t18" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T21:02:33.000Z" to="2015-08-25T20:00:07.000Z" resolved="yes"/>
+    <change idref="t19" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T20:00:03.000Z" to="2015-08-25T18:58:53.000Z" resolved="yes"/>
+    <change idref="t20" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T20:00:06.000Z" to="2015-08-25T19:00:50.000Z" resolved="yes"/>
+    <change idref="t20" attribute="internalPrerequisitesString" type="string" to="42FS" resolved="yes"/>
+    <change idref="t21" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T08:59:59.000Z" to="2015-08-25T16:00:04.000Z" resolved="yes"/>
+    <change idref="t23" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T19:00:03.000Z" to="2015-08-25T18:00:00.000Z" resolved="yes"/>
+    <change idref="t24" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T22:00:01.000Z" to="2015-08-25T21:00:06.000Z" resolved="yes"/>
+    <change idref="t25" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T20:40:00.000Z" to="2015-08-25T19:40:07.000Z" resolved="yes"/>
+    <change idref="t26" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T20:00:03.000Z" to="2015-08-25T19:02:01.000Z" resolved="yes"/>
+    <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:30:02.000Z" to="2015-08-25T16:30:46.000Z" resolved="yes"/>
+    <change idref="t30" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T19:00:08.000Z" to="2015-08-25T18:00:39.000Z" resolved="yes"/>
+    <change idref="t31" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t31" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:17:43.000Z" to="2015-08-25T16:15:00.000Z" resolved="yes"/>
+    <change idref="t32" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T18:20:00.000Z" to="2015-08-25T17:20:01.000Z" resolved="yes"/>
+    <change idref="t33" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T22:00:08.000Z" to="2015-08-25T21:01:00.000Z" resolved="yes"/>
+    <change idref="t42" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t42" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:00:03.000Z" to="2015-08-25T16:00:04.000Z" resolved="yes"/>
+    <change idref="t44" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T19:24:09.000Z" to="2015-08-25T18:30:11.000Z" resolved="yes"/>
+    <change idref="t47" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T22:00:01.000Z" to="2015-08-25T20:59:08.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T06:33:57.696Z" timestamp="2015-08-26T06:33:57.696Z">
+    <change idref="t47" from="t-1" from-position="20" resolved="yes">
+      <change idref="t47" attribute="effort" type="real" from="28800" to="556"/>
+      <change idref="t47" attribute="internalPrerequisitesString" type="string" to="29FS"/>
+      <change idref="t47" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T20:59:08.000Z"/>
+      <change idref="t47" attribute="title" type="string" to="dw_broker_art_basis_info_daily"/>
+    </change>
+    <change idref="t44" from="t-1" from-position="19" resolved="yes">
+      <change idref="t44" attribute="effort" type="real" from="28800" to="300"/>
+      <change idref="t44" attribute="internalPrerequisitesString" type="string" to="4FS, 23FS, 29FS"/>
+      <change idref="t44" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T18:30:11.000Z"/>
+      <change idref="t44" attribute="title" type="string" to="art"/>
+    </change>
+    <change idref="t33" from="t-1" from-position="18" resolved="yes">
+      <change idref="t33" attribute="effort" type="real" from="28800" to="556"/>
+      <change idref="t33" attribute="internalPrerequisitesString" type="string" to="4FF, 21FS, 29FS, 42FS, 42FS"/>
+      <change idref="t33" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T21:01:00.000Z"/>
+      <change idref="t33" attribute="title" type="string" to="dw_scorecard_summary_daily"/>
+    </change>
+    <change idref="t31" from="t-1" from-position="17" resolved="yes">
+      <change idref="t31" attribute="effort" type="real" from="28800" to="161"/>
+      <change idref="t31" attribute="internalPrerequisitesString" type="string" to="21FS, 42FF"/>
+      <change idref="t31" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T16:15:00.000Z"/>
+      <change idref="t31" attribute="title" type="string" to="dw_inventory_detail_info_daily"/>
+    </change>
+    <change idref="t26" from="t-1" from-position="16" resolved="yes">
+      <change idref="t26" attribute="effort" type="real" from="28800" to="37"/>
+      <change idref="t26" attribute="internalPrerequisitesString" type="string" to="29FS"/>
+      <change idref="t26" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T19:02:01.000Z"/>
+      <change idref="t26" attribute="title" type="string" to="da_mobile_chat_effect_info"/>
+    </change>
+    <change idref="t30" from="t-1" from-position="15" resolved="yes">
+      <change idref="t30" attribute="effort" type="real" from="28800" to="127"/>
+      <change idref="t30" attribute="internalPrerequisitesString" type="string" to="13FS"/>
+      <change idref="t30" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T18:00:39.000Z"/>
+      <change idref="t30" attribute="title" type="string" to="dw_block_summary_basis_info_daily"/>
+    </change>
+    <change idref="t25" from="t-1" from-position="14" resolved="yes">
+      <change idref="t25" attribute="effort" type="real" from="28800" to="79"/>
+      <change idref="t25" attribute="internalPrerequisitesString" type="string" to="12FS"/>
+      <change idref="t25" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T19:40:07.000Z"/>
+      <change idref="t25" attribute="title" type="string" to="da_property_summary_inventory_detail_daily"/>
+    </change>
+    <change idref="t24" from="t-1" from-position="13" resolved="yes">
+      <change idref="t24" attribute="effort" type="real" from="28800" to="1318"/>
+      <change idref="t24" attribute="internalPrerequisitesString" type="string" to="4FS, 29FS"/>
+      <change idref="t24" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T21:00:06.000Z"/>
+      <change idref="t24" attribute="title" type="string" to="scorecard"/>
+    </change>
+    <change idref="t23" from="t-1" from-position="12" resolved="yes">
+      <change idref="t23" attribute="effort" type="real" from="28800" to="538"/>
+      <change idref="t23" attribute="internalPrerequisitesString" type="string" to="21FS"/>
+      <change idref="t23" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T18:00:00.000Z"/>
+      <change idref="t23" attribute="title" type="string" to="summary_hive_dw_sem_summary_basis_info_daily"/>
+    </change>
+    <change idref="t20" from="t-1" from-position="11" resolved="yes">
+      <change idref="t20" attribute="effort" type="real" from="28800" to="165"/>
+      <change idref="t20" attribute="internalPrerequisitesString" type="string" to="42FS"/>
+      <change idref="t20" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T19:00:50.000Z"/>
+      <change idref="t20" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgXHVwMCBcbm9zdXBlcnN1YiBcdWxub25lIFxvYmxpcXVlbmVzczAgXGV4cGFuc2lvbjAgIH0="/>
+      <change idref="t20" attribute="title" type="string" to="da_property_select_community_info"/>
+    </change>
+    <change idref="t19" from="t-1" from-position="10" resolved="yes">
+      <change idref="t19" attribute="effort" type="real" from="28800" to="139"/>
+      <change idref="t19" attribute="internalPrerequisitesString" type="string" to="42FS"/>
+      <change idref="t19" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T18:58:53.000Z"/>
+      <change idref="t19" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgXHVwMCBcbm9zdXBlcnN1YiBcdWxub25lIFxvYmxpcXVlbmVzczAgXGV4cGFuc2lvbjAgIH0="/>
+      <change idref="t19" attribute="title" type="string" to="da_property_broker_followup_daily"/>
+    </change>
+    <change idref="t18" from="t-1" from-position="9" resolved="yes">
+      <change idref="t18" attribute="effort" type="real" from="28800" to="824"/>
+      <change idref="t18" attribute="internalPrerequisitesString" type="string" to="21FS, 42FF"/>
+      <change idref="t18" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T20:00:07.000Z"/>
+      <change idref="t18" attribute="title" type="string" to="dw_user_access_summary_daily"/>
+    </change>
+    <change idref="t15" from="t-1" from-position="8" resolved="yes">
+      <change idref="t15" attribute="effort" type="real" from="28800" to="21"/>
+      <change idref="t15" attribute="internalPrerequisitesString" type="string" to="29FS"/>
+      <change idref="t15" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T19:00:04.000Z"/>
+      <change idref="t15" attribute="title" type="string" to="da_broker_summary_basis_info_daily"/>
+    </change>
+    <change idref="t7" from="t-1" from-position="7" resolved="yes">
+      <change idref="t7" attribute="effort" type="real" from="28800" to="1234"/>
+      <change idref="t7" attribute="internalPrerequisitesString" type="string" to="21FS, 42FS"/>
+      <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T18:00:02.000Z"/>
+      <change idref="t7" attribute="title" type="string" to="dw_member_summary_detail_info_daily"/>
+    </change>
+    <change idref="t13" from="t-1" from-position="6" resolved="yes">
+      <change idref="t13" attribute="effort" type="real" from="28800" to="115"/>
+      <change idref="t13" attribute="internalPrerequisitesString" type="string" to="12FS"/>
+      <change idref="t13" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:50:05.000Z"/>
+      <change idref="t13" attribute="title" type="string" to="summary_hive_dw_property_community_detail_info_daily"/>
+    </change>
+    <change idref="t4" from="t-1" from-position="5" resolved="yes">
+      <change idref="t4" attribute="effort" type="real" from="28800" to="1366"/>
+      <change idref="t4" attribute="internalEffortDone" type="real" from="0" to="4"/>
+      <change idref="t4" attribute="internalPrerequisitesString" type="string" to="21FS"/>
+      <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:30:03.000Z"/>
+      <change idref="t4" attribute="title" type="string" to="summary_hive_dw_mobile_user_browsing_metrics_daily"/>
+    </change>
+    <change idref="t32" from="t-1" from-position="4" resolved="yes">
+      <change idref="t32" attribute="effort" type="real" from="28800" to="965"/>
+      <change idref="t32" attribute="internalEffortDone" type="real" from="0" to="965"/>
+      <change idref="t32" attribute="internalPrerequisitesString" type="string" to="42FS"/>
+      <change idref="t32" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T17:20:01.000Z"/>
+      <change idref="t32" attribute="title" type="string" to="summary_hive_dw_connection_summary_detail_info_daily"/>
+    </change>
+    <change idref="t29" from="t-1" from-position="3" resolved="yes">
+      <change idref="t29" attribute="effort" type="real" from="28800" to="2120"/>
+      <change idref="t29" attribute="internalPrerequisitesString" type="string" to="21FF, 42FS"/>
+      <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T16:30:46.000Z"/>
+      <change idref="t29" attribute="title" type="string" to="dw_broker_summary_basis_info_daily"/>
+    </change>
+    <change idref="t12" from="t-1" from-position="2" resolved="yes">
+      <change idref="t12" attribute="effort" type="real" from="28800" to="971"/>
+      <change idref="t12" attribute="internalPrerequisitesString" type="string" to="31FS"/>
+      <change idref="t12" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T16:30:00.000Z"/>
+      <change idref="t12" attribute="title" type="string" to="summary_hive_dw_property_inventory_detail_info_daily"/>
+    </change>
+    <change idref="t42" from="t-1" from-position="1" resolved="yes">
+      <change idref="t42" attribute="effort" type="real" from="28800" to="1629"/>
+      <change idref="t42" attribute="noEarlierThanConstraintDate" type="date" to="2015-08-25T16:00:04.000Z"/>
+      <change idref="t42" attribute="notesAllowingNil" type="textdata" to="e1xydGYxXGFuc2lcYW5zaWNwZzkzNlxjb2NvYXJ0ZjEzNDhcY29jb2FzdWJydGYxNzAKe1xmb250dGJsXGYwXGZuaWxcZmNoYXJzZXQwIEhlbHZldGljYU5ldWU7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTtccmVkODVcZ3JlZW44NVxibHVlODU7fQpccGFyZFx0eDU2MFx0eDExMjBcdHgxNjgwXHR4MjI0MFx0eDI4MDBcdHgzMzYwXHR4MzkyMFx0eDQ0ODBcdHg1MDQwXHR4NTYwMFx0eDYxNjBcdHg2NzIwXHBhcmRpcm5hdHVyYWwKClxmMFxmczI0IFxjZjIgXHVwMCBcbm9zdXBlcnN1YiBcdWxub25lIFxvYmxpcXVlbmVzczAgXGV4cGFuc2lvbjAgIH0="/>
+      <change idref="t42" attribute="title" type="string" to="m2h-sync-dump-run"/>
+    </change>
+    <change idref="t21" attribute="title" type="string" from="uba-run" to="test" resolved="yes"/>
+    <change idref="t21" attribute="effort" type="real" from="354" to="5786" resolved="yes"/>
+  </task-change-set>
+  <resource-change-set user="jason" date="2015-08-26T03:31:24.175Z" timestamp="2015-08-26T03:31:24.175Z">
+    <change idref="r-1" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;" resolved="yes"/>
+  </resource-change-set>
+  <resource-change-set user="jason" date="2015-08-26T06:29:53.607Z" timestamp="2015-08-26T06:29:53.607Z">
+    <change idref="r-1" attribute="standardHoursString" type="string" from=";3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;3600,43200,46800,61200;" to=";0,39600,46800,61200;0,39600,46800,61200;0,39600,46800,61200;0,39600,46800,61200;0,39600,46800,61200;" resolved="yes"/>
+  </resource-change-set>
+  <metadata-change-set user="jason" date="2015-08-26T03:31:24.175Z" timestamp="2015-08-26T03:31:24.175Z">
+    <change idref="m1" attribute="fixedDate" type="date" from="2007-01-01T20:00:00.000Z" to="2015-08-24T02:45:00.000Z" resolved="yes"/>
+    <change idref="m1" attribute="projectTitle" type="string" to="ads " resolved="yes"/>
+  </metadata-change-set>
+</changelog>

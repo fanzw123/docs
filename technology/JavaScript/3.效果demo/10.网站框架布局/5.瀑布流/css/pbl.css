@@ -1,0 +1,190 @@
+/* CSS Document */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+em{font-style:normal;}
+a{text-decoration:none;cursor:pointer;color:#666666;}
+a:hover{color:#666666;}
+body{background: none repeat scroll 0 0 #E6E6E6;font-family:Arial;font-size:12px;}
+.fl{float:left;}.fr{float:right;}
+.fl span{ font-weight:}
+.fl span a{ margin-left:5px; margin-right:5px;color:#666666;}
+.fl span a:hover{color:#999999;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-table;}
+*html .clearfix{height:1%;}
+.clearfix{display:block;}
+*+html .clearfix{min-height:1%;}
+.demo{width:950px;margin:0 auto;}
+
+/* item_list */
+.item_list{position:relative;padding:0 0 50px;}
+.item{
+	width:231px;background:#F0F0F0;overflow:hidden;margin:15px 0 0 0;border: 1px solid #D9D4D4;
+	border-radius:4px 4px 4px 4px;
+	box-shadow:0 1px 3px rgba(34, 25, 25, 0.2);	
+}
+.item_ie{
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: #909090 2px 2px 3px;
+-moz-box-shadow: #909090 2px 2px 3px;
+box-shadow: #909090 2px 2px 3px;
+background: #F0F0F0;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F0F0F0), to(#F0F0F0));
+background: -webkit-linear-gradient(#F0F0F0, #F0F0F0);
+background: -moz-linear-gradient(#F0F0F0, #F0F0F0);
+background: -ms-linear-gradient(#F0F0F0, #F0F0F0);
+background: -o-linear-gradient(#F0F0F0, #F0F0F0);
+background: linear-gradient(#F0F0F0, #F0F0F0);
+-pie-background: linear-gradient(#F0F0F0, #F0F0F0);
+behavior: url("./xwcms/PIE.htc");
+width:231px;
+background:#F0F0F0;
+overflow:hidden;
+margin:15px 0 0 0;
+border: 0px solid #D9D4D4;
+}
+
+.item_t{padding:10px 8px 0;}
+.item_t .img{background-color:#FFFFFF;margin:0 auto;position:relative;width:210px;}
+.item_t .img a{display:block;}
+.item_t .img a:hover{background:#f5f3f3;}
+.item_t .img a:hover img{filter:alpha(opacity=80);-khtml-opacity:0.8;opacity:0.8;-webkit-transition:all 0.3s ease-out;-khtml-transition:all 0.3s ease-out;}
+
+.item .btns{   display:none;
+   margin: 0 1px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 208px;
+    z-index: 3;}
+.img_album_btn{top:0px;position:absolute;background:#ff6fa6;color:#ffffff;height:20px;line-height:20px;width:280px;border-radius:3px;}
+.img_album_btn:hover{color:#fff;}
+.item_t .title{padding:8px 0;line-height:18px;}
+.item_t .title em{ font-size:15px; font-weight:bolder; color:#2A9CDA;font-family: '∫⁄ÃÂ',cursive; margin-right:5px;text-shadow: 0 1px 0 #999999;}
+.item_t .title span a{ color: #000000; font-weight:500;}
+.item_t .title span a:hover{text-decoration:underline;}
+.item_b{padding:10px 8px;}
+
+.item_b .items_likes .like_btn{background:url("images/fav_icon_word_new_1220.png") no-repeat;display:block;float:left;height:23px;width:59px;margin-right:5px;}
+.item_b .items_likes em{line-height:23px;display:block;float:left;padding:0px 6px;color:#FF6699;font-weight:800;border:1px solid #ff6fa6;border-radius:3px;}
+
+
+.user{border-top: 1px solid #c6c6c6; overflow: hidden;padding:10px 8px;}
+.ImgLink {
+    display: inline;
+    float: left;
+    margin-right: 6px;
+    width: 30px;
+	position: relative;
+    text-align: center;
+}
+.ImgLink img {
+    height: 30px;
+    width: 30px;
+	border: 1px solid #FFFFFF;
+    border-radius: 30px 30px 30px 30px;
+    height: 30px;
+    transition: all 0.3s ease-in 0s;
+    width: 30px;
+}
+.ImgLink:hover img {
+    border-radius: 0 0 0 0;
+    transition: all 0.3s ease 0s;
+}
+.user p {
+    line-height: 1.4;
+    margin: 0 0 0 36px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.user p a{ color:#2A9CDA}
+/* ’≤ÿ ‘‹ ∞¥≈•*/
+.item .btns a.repin_link {
+    float: left;
+}
+.f-r {
+    float: right;
+}
+
+.Button2.Button11 {
+    border-radius: 3px 3px 3px 3px;
+    font-size: 12px;
+}
+.Button2.WhiteButton {
+    background-color: #F0EDED;
+    background-image: -moz-linear-gradient(center top , #FDFAFB, #F9F7F7 50%, #F6F3F4 50%, #F0EDED);
+    border-color: #BBBBBB;
+    color: #524D4D;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+}
+
+/* more */
+#more{display:block;margin:10px auto 20px;}
+
+/* infscr-loading */
+#infscr-loading{ font-size:18px; font-weight:bolder;bottom:-10px;left:45%;position:absolute;text-align:center;height:20px;line-height:20px;z-index:100;width:160px; float:left; margin-bottom:30px;}
+#infscr-loading img{ float:left;}
+
+/* page */
+.page{display:none;font-size:18px;height:60px;text-align:center;margin:20px 0 0 0;}
+.page_num a,.page_num span{margin:0 2px;background:url("images/page.png") no-repeat;display:inline-block;width:30px;height:28px;line-height:26px;overflow:hidden;}
+.page_num a{background-position:-65px 0;color:#FF3333;overflow:hidden;}
+.page_num .prev{background-position:1px -33px;}
+.page_num .unprev{background-position:1px 0;cursor:default;}
+.page_num .next{background-position:-32px 0;}
+.page_num .unnext{background-position:-32px -33px;cursor:default;}
+.page_num .current{background-position:-99px 0;color:#FFFFFF;}
+.page_num .etc{background-position:-172px 8px;}
+/* page2 */
+.pagebox{padding:30px 20px 20px 20px;}
+.paging a,.paging span.Bg,.paging a:hover,.paging a.cur,.paging a:hover span.Bg,.paging a.cur span.Bg{background:url(../images/pagebg.png) no-repeat;}
+.paging{text-align:center;font-size:13px;}
+.paging a{padding-bottom:4px;display:inline-block;background-position:0 -134px;padding-bottom:11px;}
+.paging a:hover{text-decoration:none;}
+.paging b{font-weight:100;opacity:0;*visibility:hidden;}
+.paging span.Bg{
+	width:58px;height:17px;line-height:17px;padding-left:5px;text-align:left;margin-right:1px;display:inline-block;background-position:0px 11px;cursor:pointer;
+	-moz-transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+}
+.paging a:link,.paging a:visited{color:#266EB0;}
+.paging a:hover,.paging a.cur{color:#fff;background-position:0px -93px;}
+.paging a:hover span.Bg,.paging a.cur span.Bg{background-position:0px -63px;}
+.paging a:hover span.Bg b,.paging a.cur span.Bg b{opacity:1;*visibility:visible;}
+/* shagnxiafanye */
+.paging a.previous,.paging a.previous span.Bg,.paging a.previous b,.paging a.previous:hover,.paging a.previous:hover span.Bg,.paging a.previous:hover b,.paging a.nextpage,.paging a.nextpage span.Bg,.paging a.nextpage b,.paging a.nextpage:hover,.paging a.nextpage:hover span.Bg,.paging a.nextpage:hover b{background:url(../images/prev-next-bg.png) no-repeat}
+.paging a.previous{background-position:0px -72px;}
+.paging a.previous span.Bg{width:61px;padding-left:0px;background-position:0px -121px;}
+.paging a.previous b{background-position:0px 17px;}
+.paging a.previous:hover{background-position:0px -25px;}
+.paging a.previous:hover span.Bg{background-position:0px -108px;}
+.paging a.previous:hover b{background-position:0px 4px;opacity:1;*visibility:visible;}
+.paging a.nextpage{background-position:-61px -72px;}
+.paging a.nextpage span.Bg{width:61px;padding-left:0px;background-position:-61px -121px;}
+.paging a.nextpage b{background-position:-61px 17px;}
+.paging a.nextpage:hover{background-position:-61px -25px;}
+.paging a.nextpage:hover span.Bg{background-position:-61px -108px;}
+.paging a.nextpage:hover b{background-position:-61px 4px;opacity:1;*visibility:visible;}
+.paging a.previous b,.paging a.nextpage b{
+	width:61px;display:inline-block;height:17px;opacity:1;*visibility:visible;
+	-moz-transition:all 0.6s ease;
+	-webkit-transition:all 0.6s ease;
+	-o-transition:all 0.6s ease;
+}
+
+
+
+
+/* to_top */
+.to_top a,.to_top a:hover{background:url("images/gotop.png") no-repeat}
+.to_top a{
+	background-position:0 0;float:left;height:50px;overflow:hidden;width:50px;position:fixed;bottom:35px;cursor:pointer;right:20px;
+	_position:absolute;
+	_right:auto;
+	_left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft, 10)||0)-(parseInt(this.currentStyle.marginRight, 10)||20));
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||20)-(parseInt(this.currentStyle.marginBottom, 10)||20)));
+}
+.to_top a:hover{background-position:-51px 0px;}

@@ -1,0 +1,30 @@
+log£º
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/extract/lib/ -cp /home/dwadmin/app/recommend/extract/logGather/logGather.jar angejia.logGather.LogGather "/data/log/uba/lb" "GBK" "action" "uhadoop-ociicy-master1:2181" "bi4:9092" "/home/dwadmin/app/recommend/extract/logGather/config/lineInfo"
+
+
+mysql£º
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/extract/lib/ -cp /home/dwadmin/app/recommend/extract/mysqlExtract/mysqlExtract.jar angejia.mysqlExt.MysqlExtract /home/dwadmin/app/recommend/extract/mysqlExtract/config/mysql_ext.properties 
+
+
+score£º
+spark-submit --jars /home/hadoop/app/recommend/recommend/lib/spark-streaming-kafka_2.10-1.5.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka_2.10-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/zkclient-0.7.jar,/home/hadoop/app/recommend/recommend/lib/metrics-core-2.2.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-client-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka-clients-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-common-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/hbase-protocol-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/htrace-core-3.1.0-incubating.jar,/home/hadoop/app/recommend/recommend/lib/guava-12.0.1.jar  --class angejia.streaming.AssessScore --master local[2]  /home/hadoop/app/recommend/recommend/streaming/streaming.jar "uhadoop-ociicy-master1:2181" "bi4:9092" "action" "needRecommend" "group1" "5"
+
+recommend:
+spark-submit --jars /home/hadoop/app/recommend/recommend/lib/spark-streaming-kafka_2.10-1.5.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka_2.10-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/zkclient-0.7.jar,/home/hadoop/app/recommend/recommend/lib/metrics-core-2.2.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-client-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka-clients-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-common-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/hbase-protocol-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/htrace-core-3.1.0-incubating.jar,/home/hadoop/app/recommend/recommend/lib/guava-12.0.1.jar,/home/hadoop/app/recommend/recommend/lib/mysql-connector-java-5.1.26-bin.jar  --class angejia.streaming.Recommend --master local[2]  /home/hadoop/app/recommend/recommend/streaming/streaming.jar "uhadoop-ociicy-master1:2181" "bi4:9092" "needRecommend" "reco_group1" "5" "angejia-bi-db" "hadoop" "angejia888" "test"
+
+update:
+spark-submit --jars /home/hadoop/app/recommend/recommend/lib/spark-streaming-kafka_2.10-1.5.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka_2.10-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/zkclient-0.7.jar,/home/hadoop/app/recommend/recommend/lib/metrics-core-2.2.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-client-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/kafka-clients-0.9.0.0.jar,/home/hadoop/app/recommend/recommend/lib/hbase-common-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/hbase-protocol-1.0.2.jar,/home/hadoop/app/recommend/recommend/lib/htrace-core-3.1.0-incubating.jar,/home/hadoop/app/recommend/recommend/lib/guava-12.0.1.jar,/home/hadoop/app/recommend/recommend/lib/mysql-connector-java-5.1.26-bin.jar  --class angejia.streaming.UpdateInventory --master local[2]  /home/hadoop/app/recommend/recommend/updateInv/updateInv.jar "uhadoop-ociicy-master1:2181" "bi4:9092" "update_group1" "inventoryUpdate" "needRecommend" "5"
+
+tools£º
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/extract/lib/ -cp /home/dwadmin/app/recommend/extract/logGather/logGather.jar kafka.MyConsumer "uhadoop-ociicy-master1:2181" "group2" "action"
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/extract/lib/ -cp /home/dwadmin/app/recommend/extract/logGather/logGather.jar kafka.MyProducer "uhadoop-ociicy-master1:2181" "bi4:9092" "action"
+
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/recommend/lib -cp /home/dwadmin/app/recommend/recommend/tools/tools.jar angejia.tools.HbaseTool "uhadoop-ociicy-master1:2181" "inventory" "^\d*$"
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/recommend/lib -cp /home/dwadmin/app/recommend/recommend/tools/tools.jar angejia.tools.AddUserToInv
+java -Djava.ext.dirs=/home/dwadmin/app/recommend/recommend/lib -cp /home/dwadmin/app/recommend/recommend/tools/tools.jar angejia.tools.InventoryLoader
+
+
+kafka:
+bin/kafka-server-start.sh config/server-1.properties &
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic action
+bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic action

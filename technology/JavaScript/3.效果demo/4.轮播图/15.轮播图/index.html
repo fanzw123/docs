@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+/*
+ * Webdesign-Podcast.de SlideShow
+ * v.1.5.0
+ *
+ * Copyright (c) 2011 Pascal Bajorat (http://www.pascal-bajorat.com)
+ * Dual licensed under the MIT (below)
+ * and GPL (http://www.gnu.org/licenses/gpl.txt) licenses.
+ *
+ *
+ * http://www.pascal-bajorat.com
+ * http://www.webdesign-podcast.de
+
+MIT License
+
+Copyright (c) 2011 Pascal Bajorat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+-->
+<html>
+	<head>
+		<title>Webdesign-Podcast-Slider v.1.5</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Copy below this line -->
+		<!-- To modify the Styles please check and edit the webdesign-podcast-slider.css file, also if you change the standard Class names -->
+		<link rel="stylesheet" type="text/css" href="css/webdesign-podcast-slider.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/webdesign-podcast-slider.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery('#slideshow').WebdesignPodcastSlider({
+					width: 598,
+					autoPlay: 3000
+				});
+			});
+		</script>
+		<!-- and stop here -->
+	</head>
+	<body>
+	
+		<div style="width: 598px;margin:auto;padding-top: 200px;">
+		
+		<!-- Copy below this line -->
+		<div id="slideshow" class="WebdesignPodcastSlideShow">
+			<div class="slides">
+				<div class="slide"><a href="http://www.webdesign-podcast.de/2011/05/15/groses-gewinnspiel-1-jahr-webdesign-podcast-wir-feiern-geburtstag/"><img src="images/gewinnspiel-slider.jpg" alt="" width="598" height="250" /></a></div>
+				<div class="slide"><a href="http://www.webdesign-podcast.de/2010/10/05/facebook-gefallt-mir-like-button-in-webseite-einbinden/"><img src="images/img.jpg" alt="" width="598" height="250" /></a></div>
+				<div class="slide"><a href="http://www.webdesign-podcast.de/2011/02/16/jquery-simple-fadeslideshow-content-image-slider-einbauen-und-verwenden/"><img src="images/img3.jpg" alt="" width="598" height="250" /></a></div>
+				<div class="slide"><a href="http://www.webdesign-podcast.de/2011/03/22/html5-und-css3-handbuch-von-selfhtml-gruender-stefan-muenz-und-clemens-gull-kostenlos/"><img src="images/img4.jpg" alt="" width="598" height="250" /></a></div>
+				<div class="slide"><a href="http://www.webdesign-podcast.de/2010/07/09/12-professionelle-aufwendige-webdesigns/"><img src="images/img6.jpg" alt="" width="598" height="250" /></a></div>
+			</div>
+		</div>
+		<!-- and stop here -->
+		
+		</div>
+	
+	</body>
+</html>

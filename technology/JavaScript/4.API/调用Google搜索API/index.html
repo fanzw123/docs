@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友将沫分享Jquery调用Google搜索API实现微型搜索引擎</title>
+<meta name="Keywords" content="网友将沫分享Jquery调用Google搜索API实现微型搜索引擎,Jquery插件,Jquery原创,Jquery资源,Jquery特效,js特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both;">网友将沫分享Jquery调用Google搜索API实现微型搜索引擎<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+    官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=4bf27be4ad1c0d647109933b80345be05d9c0efbb2c52ae1feb7247a40950720"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂②群" title="Jquery学堂②群"></a> </div>
+</center>
+<div id="page">
+  <h1>Google Powered Site Search</h1>
+  <form id="searchForm" method="post">
+    <fieldset>
+    <input id="s" type="text" />
+    <input type="submit" value="Submit" id="submitButton" />
+    <div id="searchInContainer">
+      <input type="radio" name="check" value="site" id="searchSite" checked />
+      <label for="searchSite" id="siteNameLabel">Search</label>
+      <input type="radio" name="check" value="web" id="searchWeb" />
+      <label for="searchWeb">Search The Web</label>
+    </div>
+    <ul class="icons">
+      <li class="web" title="Web Search" data-searchType="web">Web</li>
+      <li class="images" title="Image Search" data-searchType="images">Images</li>
+      <li class="news" title="News Search" data-searchType="news">News</li>
+      <li class="videos" title="Video Search" data-searchType="video">Videos</li>
+    </ul>
+    </fieldset>
+  </form>
+  <div id="resultsDiv"></div>
+</div>
+<!-- It would be great if you leave the link back to the tutorial. Thanks! -->
+<p class="credit"><a href="http://tutorialzine.com/2010/09/google-powered-site-search-ajax-jquery/">Powered by Tzine &amp; Google</a></p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

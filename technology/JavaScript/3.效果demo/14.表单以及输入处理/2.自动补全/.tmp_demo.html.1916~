@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link rel="stylesheet" href="css/jquery.bigautocomplete.css" type="text/css" />
+<title>Jqueryʵ�ַ����������ı����Զ���ȫ��� - Jquery-school</title>
+
+<script type="text/javascript" src="http://www.jq-school.com/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bigautocomplete.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#tt").bigAutocomplete({width:604,data:[{title:"�й������",result:{ff:"qq"}},{title:"�й��ƶ�����Ӫҵ��"},{title:"�й�����"},{title:"�й��ƶ�"},{title:"�й������������"},{title:"�й������ ��һ��"},{title:"�й��������Ӫҵ��"},{title:"�й�������"},{title:"�й�������ڶ���"},{title:"�й��ͼ"}],callback:function(data){
+				alert(data.title);
+				
+			}});
+			
+		
+		})
+	</script>
+
+</head>
+<body>
+
+<br /><br /><br />
+<center>
+	�Զ����������ȣ��б�Ϊ���й���������й��ƶ�����Ӫҵ���й����С��й��ƶ����й�����������ڡ��й������ ��һ�ڡ��й��������Ӫҵ���й������С��й�������ڶ��ڡ��й��ͼ
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<input type="text" id="tt" style="width:600px;height:30px; line-height:30px;font-size:15px; border:2px #CCCCCC solid;" />		
+</center>	
+</body>
+</html>

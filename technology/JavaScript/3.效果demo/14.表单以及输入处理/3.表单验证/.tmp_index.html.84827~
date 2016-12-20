@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>check</title>
+<script type="text/javascript" src="scripts/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="scripts/Validform_v5.3.1.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	
+$(function () {
+	
+	/**
+	 * //自定义提示
+	 * $.Tipmsg.r=null;
+	 * tiptype:function (msg) {
+	 * }
+	 */
+	
+	$(".demoform").Validform({
+		btnSubmit:"#btn_sub", 		//表单提交按钮
+		btnReset:"#btn_reset",		//重置
+		tiptype:1, 						//提示窗口
+		showAllError:false,				//提示所有错误
+		postonce:false,					//true：数据成功提交后，表单将不能再继续提交。false：关闭
+		ajaxPost:true,						//是否使用ajax提交数据，true时，提交的地址就是action地址
+		tipSweep:true ,					//		默认为false，在各种tiptype下， 为true时提示信息将只会在表单提交时触发显示，各表单元素blur时不会触发信息提示；
+
+		
+		//函数
+		//表单验证之前，提交时执行的函数
+		beforeCheck:function(curform){	
+			//在表单提交执行验证之前执行的函数，curform参数是当前表单对象。
+			//这里明确return false的话将不会继续执行验证操作;	
+		},
+		
+		//表单验证成功，提交时执行的函数
+		beforeSubmit:function(curform){
+			//在验证成功后，表单提交前执行的函数，curform参数是当前表单对象。
+			//这里明确return false的话表单将不会提交;	
+		},
+		
+		//在使用ajax提交表单数据时，数据提交后的回调函数。返回数据data是Json对象：
+		callback:function(data){	////如果不是ajax方式提交表单，传入callback，这时data参数是当前表单对象，回调函数会在表单验证全部通过后执行，然后判断是否提交表单，如果callback里明确return false，则表单不会提交，如果return true或没有return，则会提交表单。		
+			if (data.status == "y") {
+				$.Hidemsg();
+				//setTimeout(function(){
+					//$.Hidemsg(); //公用方法关闭信息提示框;显示方法是$.Showmsg("message goes here.");
+				//}, 3000);
+			}
+			
+			//返回数据data是json格式，{"info":"demo info","status":"y"}
+			//info: 输出提示信息;
+			//status: 返回提交数据的状态,是否提交成功。如可以用"y"表示提交成功，"n"表示提交失败，在ajax_post.php文件返回数据里自定字符，主要用在callback函数里根据该值执行相应的回调操作;
+			//你也可以在ajax_post.php文件返回更多信息在这里获取，进行相应操作；
+			//ajax遇到服务端错误时也会执行回调，这时的data是{ status:**, statusText:**, readyState:**, responseText:** }；
+			
+			//这里执行回调操作;
+			//注意：如果不是ajax方式提交表单，传入callback，这时data参数是当前表单对象，回调函数会在表单验证全部通过后执行，然后判断是否提交表单，如果callback里明确return false，则表单不会提交，如果return true或没有return，则会提交表单。
+		}
+	});
+	
+});
+</script>
+</head>
+<body>
+<!-- 
+input属性:
+1、验证规则：datatype
+
+*：检测是否有输入，可以输入任何字符，不留空即可通过验证；
+*6-16：检测是否为6到16位任意字符；
+n：数字类型；
+n6-16：6到16位数字；
+s：字符串类型；
+s6-18：6到18位字符串；
+p：验证是否为邮政编码；
+m：手机号码格式；
+e：email格式；
+url：验证字符串是否为网址
+可以使正则datatype="/\w{3,6}/i"
+中文字符，/^([\u4E00-\u9FA5\uf900-\ufa2dA-Za-z]){1,20}$/
+逻辑运算
+如datatype="m | e, *4-18 | /\w{3,6}/i | /^validform\.rjboy\.cn$/"，
+
+
+
+2、提示信息：
+nullmsg="为空时提示信息"  
+当表单元素值为空时的提示信息，不绑定，默认提示"请填入信息！"。
+
+sucmsg="验证通过提示信息！"
+当表单元素通过验证时的提示信息，不绑定，默认提示"通过信息验证！"。
+			     
+errormsg="用户名必须是2到4位中文字符！"
+输入内容不能通过验证时的提示信息，默认提示"请输入正确信息！"。
+
+ignore="ignore"
+有内容时验证，没有内容时不验证
+
+recheck="name1"
+验证二个元素的内容是否一样
+用法：datatype="*" recheck="email" errormsg="您两次输入的账号密码不一致！" 
+
+value="提示文字" tip="提示文字" altercss="gray" 
+表单内提示字符
+
+//弹出窗口
+$.Showmsg(msg)		//提示窗口
+$.Hidemsg()				//关闭窗口
+
+-->
+
+<form class="demoform" action="" method="post"/>
+	<input type="text" value="提示文字" datatype="n4-4" nullmsg="请填写年份" errormsg="请正确输入" />
+	<input type="text" value="" name="name"  datatype="n4-4" nullmsg="请填写年份" errormsg="请正确输入"/>
+	<input type="button" value="提交" id="btn_sub"/>
+	<input type="button" value="重置" id="btn_reset" />
+ </form>
+
+
+</body>
+</html>

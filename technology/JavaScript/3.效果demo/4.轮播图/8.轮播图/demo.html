@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>网友蓝逸分享图片轮播Jquery特效</title>
+<meta name="Keywords" content="网友蓝逸分享图片轮播Jquery特效,Jquery,Jquery插件,Jquery资源,Jquery特效,div+css" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+	});
+</script>
+</head>
+<body>
+
+	<div style="margin:50px auto; width:660px;">
+		<h3>网友蓝逸分享图片轮播Jquery特效</h3>
+		
+		<div id="featured" >
+		  <ul class="ui-tabs-nav">
+	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><img src="images/image1-small.jpg" alt="" /><span>Jquery原创插件</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="images/image2-small.jpg" alt="" /><span>Jquery原创特效</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="images/image3-small.jpg" alt="" /><span>Jquery学堂</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="images/image4-small.jpg" alt="" /><span>在线汉字查字典</span></a></li>
+	      </ul>
+
+	    <!-- First Content -->
+	    <div id="fragment-1" class="ui-tabs-panel" style="">
+			<img src="images/image1.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="http://www.jq-school.com/Article.aspx" target="_blank" >Jquery原创插件</a></h2>
+				<p>JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站</p>
+			 </div>
+	    </div>
+
+	    <!-- Second Content -->
+	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/image2.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="http://www.jq-school.com/Article.aspx" target="_blank" >Jquery原创特效</a></h2>
+				<p>完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排</p>
+			 </div>
+	    </div>
+
+	    <!-- Third Content -->
+	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/image3.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="http://www.jq-school.com/Jquery.aspx" target="_blank" >Jquery学堂</a></h2>
+				<p>让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。</p>
+	         </div>
+	    </div>
+
+	    <!-- Fourth Content -->
+	    <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/image4.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="http://www.jq-school.com/Dictionary.aspx" target="_blank" >在线汉字查字典</a></h2>
+				<p>在线查字典是由JquerySchool推出的一款能够帮助网友们在线快速查找不认识的汉字的小工具</p>
+	         </div>
+	    </div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

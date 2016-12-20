@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友李奫冫原创文本输入限制输入个数JQuery插件</title>
+<meta name="Keywords" content="网友李奫冫原创文本输入限制输入个数JQuery插件,Jquery,Jquery插件,Jquery原创,Jquery资源,Jquery特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/wenzi.js"></script>
+<script type="text/javascript">
+ $(function(){
+   //插件
+   $(".per-wbox").myWords({   //输入框字数
+        obj_opts:"textarea",
+        obj_Maxnum:400,//要是只能输入140个字  那这里就是280
+        obj_Lnum:".sns-num"
+    });
+})
+</script>
+<style type="text/css">
+/*全局*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-family:"Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";}
+ul,ol,li{ list-style: none;}
+input,button,select,textarea{outline:none;}
+textarea{resize:none;}
+body{ background: #f0f0f0; font-size: 12px; color: #808080; }
+/*内容*/
+.per-wbox{ width: 547px; margin:10px auto;}
+.per-wbox .beizhu{ width:547px; height: 100px; text-align: left; border-radius: 3px; border:1px solid #d2d2d2; box-shadow: 1px 1px 3px rgba(34, 25, 25, 0.2); padding: 5px; overflow: hidden;}
+.per-wbox p{ text-align: right;}
+.per-wbox .sns-num{ font-size: 12px; color: #999;}
+.per-wbox .sns-num em{ font-weight: bold; font-size: 14px;}
+.btn{ background: url(images/space_icons.png) no-repeat scroll 0 0; border:none medium; height: 28px; width: 68px; margin-top: 10px; font-size: 14px; color: #fff;}
+/*.tiptest{ color:#C30; font-size: 12px;}*/
+</style>
+</head>
+<body>
+<form method="post" id="form1">
+<!-- 输入框start -->
+ <div class="per-wbox">
+   <textarea name="" rows="" class="beizhu"></textarea>
+   <p>
+   	 <span class="sns-num">还能输入<em>210</em>个字</span>
+   	 <input name="提交" type="submit" class="btn" value="发 布"  />
+   </p>
+ </div>
+ <!-- 输入框end -->
+</form>
+</body>
+</html>

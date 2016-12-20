@@ -1,0 +1,11 @@
+http://www.jq-school.com/Detail.aspx?id=204
+
+此Jquery插件一款带3D效果带略缩图的幻灯片效果，功能非常强大，默认带有3种皮肤，用法也很简单，可以灵活设置6个参数。
+1、skin：皮肤目录设置，包括3个（cool，crazy，simple）
+2、numberOfThumbsPerScreen：略缩图的滚动个数，默认为7个
+3、width：宽度
+4、height：高度
+5、thumbsReflection：默认显示的图片索引，默认为0
+6、defaultEffect：3D效果的类型选择，默认为random
+
+

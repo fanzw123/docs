@@ -1,0 +1,1 @@
+http://huacnlee.com/blog/jquery-qeditor-introduction/

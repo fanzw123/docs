@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 拖动元素</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<script type="text/javascript">
+	$(function () {	
+		(function () {
+			/** 
+			 * 1.来回拖动元素		
+			 * 	函数：	draggable()	把包装集的元素，开启拖动
+			 * 	实验室：	http://www.bibeault.org/jqia2/chapter10/draggables/lab.draggables.html
+			 *  书本：	281页。
+			 */
+			var options = {
+				//拖动属性设置，更多属性参照书本
+				containment:'document',
+				revert:false,
+				scroll:false,
+				cursor:'crosshair',
+				
+				//拖动执行函数设置
+				start: function () {		//拖动开始		执行
+					
+				},
+				drag: function () {		//拖动进行中		执行
+					
+				},
+				stop : function () {		//拖动结束		执行
+			
+				},
+			};
+			
+			$('div').draggable(options);
+			//拖动元素控制
+			//$('div').draggable('disable');	//禁用包装集中的拖动
+			//$('div').draggable('enable');		//开启包装集中的拖动
+			//$('div').draggable('destroy');	//删除包装集中的拖动	
+		})();
+
+	});	
+	</script>
+<style>
+	div {
+		display:block;
+		float:left;
+		width:200px;
+		height:200px;
+		margin:0 5px 0 0;
+	}
+	div.red {
+		background:red;
+	}
+	div.blue {
+		background:blue;
+	}
+	div.demo {
+		border:1px solid #ccc;
+	}
+	div.redBorder {
+		border: 2px solid red;
+	}
+</style>
+<body>
+	<H1>拖动元素</H1>
+	<div class="red" name="red">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div class="blue" name="blue">
+		<ul>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li class="yc">z</li>
+		</ul>
+	</div>
+	
+	
+</body>
+</html>

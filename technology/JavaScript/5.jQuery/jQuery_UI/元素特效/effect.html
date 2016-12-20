@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 运动</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	
+	<script type="text/javascript">
+	$(function () {
+		(function () {
+			$('input[type="button"]').click(function () {		
+				/** 设置元素特效. 
+				 *  函数：	 effect()       
+				 * 	实验室 ： http://www.bibeault.org/jqia2/chapter9/lab.ui-effects.html
+				 * 	书本	：	 266页
+				 */
+				//1.blind:百叶窗
+				//$('div').effect('blind',{direction:'horizontal',mode:'show'},'slow');
+				
+				//2.bounce : 水平、垂直、弹跳
+				//$('div').effect('bounce',{direction:'right',times:3,distance:20,mode:'show'},'slow');
+				//shake : 水平、垂直、晃动
+				//$('div').effect('shake',{direction:'left',times:3,distance:20,mode:'show'},'fast');
+				
+				//3.clip : 左右同时展开、消失
+				$('div').effect('clip',{direction:'vertical',mode:'show'},'slow');	
+				
+				//4.drop : 淡入淡出
+				//$('div').effect('drop',{direction:'left',distance:200,mode:'hide'},'slow');
+				
+				//5.explode : 分解消散
+				//$('div').effect('explode',{pieces:9,mode:'hide'},'slow');	
+				
+				//6.fade : 改变元素的不透明度
+				//$('div').effect('fade',{mode:'hide'},'slow');
+				
+				//7.fold 边界运动		horizFirst ：true、false  运动方向
+				//$('div').effect('fold',{horizFirst:false,mode:'hide'},'slow');
+				
+				//8.highlight : 显示影藏改变背景颜色	
+				//$('div').effect('highlight',{mode:'hide',color:'red'},'slow');
+				
+				//9.puff : 原点缩放大小	
+				//$('div').effect('puff',{mode:'show',percent:10},'slow');
+				
+				//10.pulsate : 闪烁	
+				//$('div').effect('pulsate',{mode:'hide',times:2},'slow');
+				
+				//11.scale : 收缩元素运动
+				//$('div').effect('scale',{direction:'vertical',scale:'both',percent:20,},'slow');
+				
+				//12.	移动到指定元素上。测试中...
+				
+				//$('#sp').effect('transfer',{	to: "#button", className: "ui-effects-transfer" ,});	
+				
+			});
+			
+		})();
+
+	});
+		
+	</script>
+<style>
+
+	div {
+		display:none;
+		float:left;
+		width:400px;
+		height:400px;
+		margin:0 5px 0 0;
+	}
+	div.red {
+		background:red;
+	}
+	div.blue {
+		background:blue;
+	}
+
+	#sp {
+		border:1px solid #ccc;
+	}
+
+</style>
+<body>
+	<div class="red">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	
+	<div class="blue">
+
+	</div>
+	
+	<input type="button" value="点击" id="button"/>
+	
+	<span id="sp" >123</span>
+	
+</body>
+</html>

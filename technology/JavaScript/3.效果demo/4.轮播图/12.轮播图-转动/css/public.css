@@ -1,0 +1,23 @@
+* { font-size:13px; font-family:Georgia, "Times New Roman","宋体"; color:#333; margin:0; padding:0; list-style:none; text-shadow:0 1px 1px #fff; }
+html { background:url(bg.png) repeat; }
+a img { border:0;}
+.demoTitle { text-align:center; font-size:30px; font-weight:bold; color:#c00; text-shadow:1px 1px 0 #fff; margin:60px 0 40px; border-bottom:1px dashed #999;border-top:1px dashed #999; padding:20px 0; background:#EEE; }
+#demo1,#demo2,#demo3,#demo4,#demo5,#demo6,#demo7,#demo8 { margin:0 auto; }
+#psWraper { background:#eee; padding:10px 0; margin-top:80px; border-top:1px dashed #999; }
+#psText { padding-bottom:10px; margin-bottom:20px; border-bottom:1px dashed #bebebe; }
+#psText samp { font-weight:bold; font-size:14px; letter-spacing:0.1em; }
+#psText samp a { color:#06F;letter-spacing:0.1em; }
+#psText h2 { font-size:20px; margin:10px auto; }
+#psText p { padding:10px 0; line-height:25px; letter-spacing:0.1em; }
+#psText ul { margin:10px auto; }
+#psText ul li { line-height:25px; line-height:25px; letter-spacing:0.1em; }
+#ps { width:600px; margin:0 auto; padding:30px 0; }
+#ps h1 { padding-bottom:20px; text-shadow:1px 1px 0 #fff; color:#c00; font-size:23px; font-weight:bold; }
+#ps h2 { line-height:20px; text-shadow:1px 1px 0 #fff; padding:10px 0; }
+#ps h1 p { display:inline; font-size:16px; font-weight:bold; color:#666; margin-left:20px; }
+#ps dl { padding-left:0; padding-bottom:40px; }
+#ps dl dt,#ps dl dd { height:30px; line-height:30px; font-size:13px; text-shadow:1px 1px 0 #fff;  }
+#ps dl dt { padding-left:10px; }
+#ps dl dd { color:#ff6600; text-shadow:1px 1px 0 #fff; }
+#ps dl dd span {color:#900; margin-right:50px; letter-spacing:0.01em; padding-left:10px;}
+.TmpStyle { margin:50px auto; }

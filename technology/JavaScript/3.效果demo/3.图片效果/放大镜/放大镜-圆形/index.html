@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <title>mlens magnifying glass jQuery plugin by musings.it</title>
+		<meta name="author" content="Federica Sibella - musings.it">
+		<meta name="description" content="mlens is the magnifying glass jQuery plugin by musings.it">
+		<meta name="keywords" content="magnifying glass, glass, lens, magnifying lens, plugin, jQuery plugin, musings.it, Federica Sibella">
+		<link rel="stylesheet" href="css/CSSreset.min.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/jquery.share.css" type="text/css" media="screen">
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mlens-1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.share.min.js"></script>
+		<script type="text/javascript" src="js/settings_en.js"></script>
+	</head> 
+	<body>
+		<section id="main">
+			<div id="green_wrapper">
+				<img id="green_monster" src="images/GreenMonster_640px.jpg" alt="green monster graffiti by Kotzian" data-big="images/GreenMonster_1280px.jpg" />
+			</div>	
+			<div id="real_time_testing">
+				<h2>Test the demo parameters</h2>
+				<form id="real_time_form">
+					<legend></legend>
+					<fieldset>
+						<label for="lensShape_param">lensShape [<i>circle</i> o <i>square</i>]:</label>
+						<select name="lensShape_param">
+							<option value="circle">circle</option>
+							<option value="square">square</option>
+						</select>
+						<br class="esc" />
+						<label for="lensSize_param">lensSize [<i>px number</i>]:</label>
+						<input type="text" id="lensSize_param" name="lensSize_param" value="180" />
+						<br class="esc" />
+						<label for="borderSize_param">borderSize [<i>px number</i>]:</label>
+						<input type="text" id="borderSize_param" name="borderSize_param" value="4" />
+						<br class="esc" />
+						<label for="borderColor_param">borderColor [<i>hex value</i>]:</label>
+						<input type="text" id="borderColor_param" name="borderColor_param" value="#fff" />
+						<br class="esc" />
+						<span class="note">Only if <i>lensShape is square</i></span>
+						<label for="boderRadius_param">borderRadius [<i>px number</i>]:</label>
+						<input type="text" id="borderRadius_param" name="borderRadius_param" value="0" />
+						<br class="esc" />
+						<br class="esc" />
+						<input id="form_button_reset" type="reset" value="Values reset" /> <input id="form_button" type="button" value="Apply changes" />
+					</fieldset>
+					<div id="risposta"></div>
+				</form>
+			</div>
+			<br class="esc" />
+		</section>
+	</body>	
+</html>

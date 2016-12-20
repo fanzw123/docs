@@ -1,0 +1,324 @@
+body {
+	background: url('../images/bedge_grunge.png') repeat center center #fafafa;
+	color: #505050;
+	font-family: 'CuprumFFURegular', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+@font-face {
+    font-family: 'CuprumFFURegular';
+    src: url('../fonts/Cuprum-webfont.eot');
+    src: url('../fonts/Cuprum-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cuprum-webfont.woff') format('woff'),
+         url('../fonts/Cuprum-webfont.ttf') format('truetype'),
+         url('../fonts/Cuprum-webfont.svg#CuprumFFURegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header, section, footer {
+	position: relative;
+	margin: 0px auto;
+	width: 990px;
+	text-align: center;
+}
+
+a {
+	color: #d45500;
+}
+
+a:link, a:focus, a:visited {
+	outline: none;
+} 
+
+#logo_wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 870px;
+}
+
+#lens {
+	position: relative;
+	float: left;
+	margin: 35px auto 0px auto;
+}
+
+#logo {
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 100px;
+	margin: 30px auto 0px -76px;
+	float: left;
+}
+
+#mlens_logo {
+	position: relative;
+	margin: 0 auto;
+}
+
+header h1 {
+	position: relative;
+	font-size: 52px;
+	line-height: 150%;
+	margin: 66px auto 0px 0px;
+	float: left;
+	width: 310px;
+}
+
+header h2 {
+	position: absolute;
+	font-size: 34px;
+	line-height: 120%;
+	top: 140px;
+	right: 96px;
+	width: auto;
+	text-align: left;
+}
+
+header h2 a {
+	color: #505050;
+	text-decoration: none;
+}
+
+header h2 a:hover {
+	color: #d45500;
+}
+
+section {
+	margin: 40px auto 50px;
+}
+
+section p {
+	line-height: 150%;
+}
+
+#green_wrapper {
+	position: relative;
+	width: 640px;
+	height: auto;
+	margin: 0 auto;
+	border: 12px solid #fff;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
+	float: left;
+}
+
+#real_time_testing {
+	position: relative;
+	float: right;
+	width: 310px;
+	height: 504px;
+	text-align: left;
+	border: 0px solid #000;
+	padding: 0px;
+}
+
+#real_time_testing h2 {
+	position: relative;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.esc {
+	position: relative;
+	width: 100%;
+	clear: both;
+}
+
+#real_time_form, #downloads {
+	position: relative;
+	width: 300px;
+	margin: auto 0px 30px 10px;
+	font-family: 'CuprumFFURegular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#real_time_form label {
+	position: relative;
+	display: inline;
+	float: left;
+	margin-top: 4px;
+	font-family: 'CuprumFFURegular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#real_time_form input, #real_time_form select {
+	width: 70px;
+	padding: 3px;
+	position: relative;
+	display: inline-block;
+	margin: 0px auto 12px;
+	float: right;
+	background: #f0f0f0;
+	border: 1px solid #d45500;
+	border-radius: 5px;
+	font-family: 'CuprumFFURegular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#real_time_form select {
+	width: 78px;
+}
+
+#real_time_form input[type=button], #real_time_form input[type=reset] {
+	width: auto;
+	float: none;
+	cursor: pointer;
+}
+
+#real_time_form input:focus, #real_time_form input[type=button]:hover,
+#real_time_form input[type=reset]:hover {
+	background: #fafafa;
+}
+
+#real_time_form input[type=button]:focus, #real_time_form input[type=reset]:focus {
+	background: #f0f0f0;
+}
+
+#real_time_form .note {
+	position: relative;
+	display: block;
+	font-style: italic;
+	color: #d45500;
+	margin-bottom: 5px;
+}
+
+#risposta {
+	position: absolute;
+	margin: 0px auto;
+	bottom: -20px;
+	width: 100%;
+	height: 20px;
+	display: none;
+}
+
+#parametri, #faq {
+	position: relative;
+	margin: 40px auto 20px;
+	text-align: justify;
+}
+
+#parametri h2, #faq h2 {
+	font-size: 32px;
+	line-height: 150%;
+	margin-bottom: 15px;
+}
+
+#parametri h3, #faq h3 {
+	font-size: 24px;
+	font-style: italic;
+	margin-bottom: 8px;
+}
+
+#parametri p, #faq p {
+	line-height: 120%;
+}
+
+#faq p {
+	margin-bottom: 20px;
+}
+
+#faq p a {
+	color: #505050;
+	text-decoration: none;
+}
+
+#faq p a:hover {
+	color: #d45500;
+}
+
+#faq #paypal, #faq #paypal_en {
+	position: absolute;
+	display: inline-block;
+	bottom: -3px;
+	right: 163px;
+}
+
+#faq #paypal_en {
+	right: 218px;
+}
+
+#faq #paypal_post {
+	margin-left: 112px;
+}
+
+#faq #paypal_post_en {
+	margin-left: 102px;
+}
+
+pre {
+	border: 5px solid #fff;
+	border-radius: 5px;
+	position: relative;
+	margin: 20px auto 40px;
+	padding: 10px;
+	background: #f0f0f0;
+	white-space: pre-wrap;
+	line-height: 150%;
+	font-size: 14px;
+}
+
+#downloads h2 {
+	text-align: center;
+	margin-top: 21px;
+	margin-bottom: 5px;
+}
+
+#downloads .trenta p, #downloads .trenta_last p {
+	text-align: center;
+	margin-top: 0px;
+}
+
+.trenta, .trenta_last {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #d45500;
+	border-radius: 10px;
+	background: #f0f0f0;
+	float: left;
+	margin: 20px 24px 0px 0px;
+}
+
+.trenta_last {
+	margin-right: 0px;
+}
+
+.trenta:hover, .trenta_last:hover  {
+	background: #fafafa;
+	cursor: pointer;
+}
+
+a .trenta, a .trenta_last {
+	color: #505050;
+}
+
+#grazie_wrapper {
+	position: relative;
+	margin: 0 auto 30px;
+	width: 400px;
+}
+
+#grazie_wrapper_en {
+	position: relative;
+	margin: 0 auto 30px;
+	width: 450px;
+}
+
+#grazie {
+	position: relative;
+	display: block;
+	width: auto;
+	margin: 20px auto;
+}
+
+footer p {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+footer p a {
+	color: #d45500;
+	text-decoration: none;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友Adam‘分享原创图片播放jQuery-jcImgScroll插件</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+<!-- 
+/* jQuery jcImgScroll css */
+.jcImgScroll { position:relative; height:342px; }
+.jcImgScroll li { border:1px solid #ccc; }
+.jcImgScroll li a { background:#fff; display:block; height:340px;  }
+.jcImgScroll li.loading a { background:#fff url(img/loading.gif) no-repeat center center;} 
+.jcImgScroll li img,.jcImgScroll li,.jcImgScroll em,.jcImgScroll dl { display:none;}
+.jcImgScroll em.sPrev { background:url(img/arrow-left.png) no-repeat right center; }
+.jcImgScroll em.sNext { background:url(img/arrow-right.png) no-repeat left center;}
+.jcImgScroll dl dd { background:url(img/NumBtn.png) no-repeat 0 bottom; text-indent:-9em; }
+.jcImgScroll dl dd:hover,.jcImgScroll dl dd.curr { background-position:0 0; }
+body,ul,ol,h2,h3,h4,h5,p,dl,dt,dd,form{padding:0;margin:0;}img{border:none;}li{list-style:none;}a{text-decoration:none;outline:none;color:#666666;}a:hover{text-decoration:none}img{border:0}ul{list-style:none;margin:0;}label{color:#6CBD45;font-size:14px;font-weight:bold;padding-bottom:0.5em;margin:0;}.h3{font-size:13px;font-weight:bold;}#show{background:url(images/photo.jpg)}#meun{color:#fff;padding-left:10px;}#meun img{float:left;}#submeun{margin-left:70px;float:left;}#submeun span{text-align:center;margin-right:10px;float:left;display:inline;}#submeun span a{color:#fff;height:50px;line-height:50px;font-size:14px;font-weight:bold;text-align:center;padding-left:15px;padding-right:15px;display:block;}#submeun span.cur{text-align:center;background:#82ce18;margin-right:10px;float:left;display:inline;}#top{background-color:#000;margin:0em 0 10px 0em;border-style:solid;border-width:1px;border-color:#E5E5E5;height:50px;line-height:50px;}label.subtitle{font-size:13px;float:right;color:#6CBD45;margin:0 10px;text-align:right;}h1.title{height:50px;font-size:12px;background:url(logo.png) no-repeat;}h1.title a:link,h1.title a:visited,h1.title a:hover{color:#000;text-decoration:none;}
+-->
+</style>
+<script src="../js/jQuery-1.7.1.js" language="javascript" type="text/javascript"></script>
+<script src="../js/jQuery-easing.js" language="javascript" type="text/javascript"></script>
+<script src="js/jQuery-jcImgScroll.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!-- 
+$(function(){
+	$("#demo1").jcImgScroll({
+		
+	});
+	$("#demo2").jcImgScroll({
+		count : 7
+	});
+	$("#demo3").jcImgScroll({
+		arrow : {
+			width:110,	
+			height:342,
+			x:220,
+			y:0
+		},
+		count : 3,
+		offsetX : 140,
+		NumBtn : true,
+		title:false
+	});
+});
+-->
+</script>
+</head>
+
+<body>
+<div id="top">
+  <label class="subtitle"> Jquery学堂QQ群开放(244127054)</label>
+  <div id="meun"><a href="http://www.jq-school.com/" title="Jquery-School"><img src="http://www.jq-school.com/logo.png" /></a>
+    <div id="submeun">
+      <span><a href="http://www.jq-school.com/">首 页</a></span>    
+	   <span class="cur"><a href="javascript:void(0)">网友Adam‘分享原创图片播放jQuery-jcImgScroll插件</a></span>
+    </div>
+  </div>
+  </div>
+<br />
+<!-- HTML 开始 -->
+
+<!-- demo 1 -->
+<div class="demoTitle">Adam ’ jQuery - jcImgScroll图片展示（ 默认效果 ）</div>
+
+<div id="demo1" class="jcImgScroll">
+	<ul>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b3.images22.51img1.com/6000/riddick_ls/33858e84935f6f9919cdf11d8b704749.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://bd.images22.51img1.com/6000/riddick_ls/d1374e5456c6e6c07b1271ae433dac4a.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/eee0913803e41b5fd2a874a4c5d88ae4.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    	<li><a href="http://adamdesign.diandian.com/" path="http://b2.images22.51img1.com/6000/riddick_ls/26aa942152f3d14414a1dbaa4f671d6b.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b0.images22.51img1.com/6000/riddick_ls/0facc08381d574a39b0f5877f962b237.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b7.images22.51img1.com/6000/riddick_ls/74c2f73f6284445a9ee8781a5bb21057.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b4.images22.51img1.com/6000/riddick_ls/4c767bbeb2459d9b97eef7ec3d05eb0d.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/e5d18ee7efa2fb1e4246695ecd52bf8f.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    </ul>
+</div>
+
+<div class="demoTitle">Adam ’ jQuery - jcImgScroll图片展示（ 7图,无按钮,带信息 ）</div>
+
+<div id="demo2" class="jcImgScroll">
+	<ul>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b3.images22.51img1.com/6000/riddick_ls/33858e84935f6f9919cdf11d8b704749.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://bd.images22.51img1.com/6000/riddick_ls/d1374e5456c6e6c07b1271ae433dac4a.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/eee0913803e41b5fd2a874a4c5d88ae4.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    	<li><a href="http://adamdesign.diandian.com/" path="http://b2.images22.51img1.com/6000/riddick_ls/26aa942152f3d14414a1dbaa4f671d6b.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b0.images22.51img1.com/6000/riddick_ls/0facc08381d574a39b0f5877f962b237.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b7.images22.51img1.com/6000/riddick_ls/74c2f73f6284445a9ee8781a5bb21057.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b4.images22.51img1.com/6000/riddick_ls/4c767bbeb2459d9b97eef7ec3d05eb0d.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/e5d18ee7efa2fb1e4246695ecd52bf8f.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    </ul>
+</div>
+
+<div class="demoTitle">Adam ’ jQuery - jcImgScroll图片展示（ 3图,按钮,无信息,设置间距，设置箭头偏移 ）</div>
+
+<div id="demo3" class="jcImgScroll">
+	<ul>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b3.images22.51img1.com/6000/riddick_ls/33858e84935f6f9919cdf11d8b704749.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://bd.images22.51img1.com/6000/riddick_ls/d1374e5456c6e6c07b1271ae433dac4a.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/eee0913803e41b5fd2a874a4c5d88ae4.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    	<li><a href="http://adamdesign.diandian.com/" path="http://b2.images22.51img1.com/6000/riddick_ls/26aa942152f3d14414a1dbaa4f671d6b.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b0.images22.51img1.com/6000/riddick_ls/0facc08381d574a39b0f5877f962b237.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b7.images22.51img1.com/6000/riddick_ls/74c2f73f6284445a9ee8781a5bb21057.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://b4.images22.51img1.com/6000/riddick_ls/4c767bbeb2459d9b97eef7ec3d05eb0d.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+        <li><a href="http://adamdesign.diandian.com/" path="http://be.images22.51img1.com/6000/riddick_ls/e5d18ee7efa2fb1e4246695ecd52bf8f.png" title="Adam ’ jQuery - jcImgScroll图片展示"></a></li>
+    </ul>
+</div>
+
+<!-- HTML 结束  -->
+<div id="psWraper">
+    <div id="ps" style=" width:950px;">
+        <div id="psText">
+        	<samp>首先感谢 jQuery-School ( <a>http://www.jq-school.com</a> ) 对 Adam' 的支持！鼓励原创，支持前端！</samp>
+            <h2>jQuery-jcImgScroll （ 体验版 ）</h2>
+            <ul>
+            	<li>功能介绍：<li>
+                <li>1. 可以自定义箭头位置，显示图片数量必须是单数</li>
+                <li>2. 自定义数字按钮功能</li>
+                <li>3. 自定义信息显示功能</li>
+            </ul>
+            <p>jQuery-jcImgScroll 调用简单，插件实用！只需修改插件参数 及 CSS便能实现想要的效果！如有宝贵意见请联系Adam ’
+            </p>
+        </div>
+        <h1>jQuery-jcImgScroll插件<p>by Adam ’</p></h1>
+        <dl style="clear:both"> 
+            <h2>* 插件说明 及 相关参数</h2>
+            <dt>jQuery - jcImgScroll v 1.4</dt>
+            <dt>Copyright(c) 2012 by Adam ’ </dt>
+            <dt>QQ : 1741498</dt>
+            <dt>E-mail : 1741498@qq.com</dt>
+            <dt>Date: 2012-09-20</dt>
+            
+            <dd><span>speed:400,</span> //图片切换速度设置，提供easing.js值 或 时间值(mm)</dd>
+            <dd><span>width : 618,</span> //设置图片宽度</dd>
+            <dd><span>height:342,</span> //设置图片高度</dd>
+            <dd><span>offsetX:100,</span> //设置图片间距</dd>
+            <dd><span>setZoom:.5,</span> //微调图片缩小比例</dd>
+            <dd><span>loadClass:"loading",</span> //定义loading CSS CLASS样式</dd>
+            <dd><span>position:"center",</span> //定义小图位置，top，center，bottom</dd>
+            <dd><span>count:5,</span> //设置显示图片的数量</dd>
+            <dd><span>arrow : { width : 110, height : 342, x : 20, y : 0 },</span> //设置箭头高宽和微调xy偏移</dd>
+            <dd><span>NumBtn : false,</span> //是否开起数字按钮</dd>
+            <dd><span>setNumBtn : { width : 19, height : 18, x : 20, y : 0 },</span> //设置数字按钮高宽和微调xy偏移</dd>
+            <dd><span>title:true,</span> //是否开起信息功能</dd>
+            <dd><span>setTitle : { border : 0, height : 35, bgColor:"#6ba600", color:"#fff", padding:20, opacity:.8 },</span> //设置信息功能相关配置</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

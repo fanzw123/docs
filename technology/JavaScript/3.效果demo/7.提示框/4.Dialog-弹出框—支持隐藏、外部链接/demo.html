@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网友小宇分享Dialog弹出层Jquery插件</title>
+<meta name="author" content="Jquery-School" />
+<meta name="Copyright" content="Jquery-School,www.jq-school.com" />
+
+<meta name="Keywords" content="网友小宇分享Dialog弹出层Jquery插件,Jquery插件,Jquery原创,Jquery资源,Jquery特效,js特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<link rel="stylesheet" type="text/css" href="css/Dialog.1.0.css">
+<link href="http://www.jq-school.com/css/style.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+.a{
+	display:block;
+	width:400px;
+	height:40px;
+	line-height:40px;
+	font-weight:bold;
+	cursor:pointer;
+	background-color:#000000;
+	color:#fff;
+}
+.a:hover{
+	display:block;
+	width:400px;
+	height:40px;
+	line-height:40px;
+	font-weight:bold;
+	cursor:pointer;
+	background-color:#CC00FF;
+	color:#fff;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/Dialog.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#tmp1").click(function(){
+		$.Dialog();	
+	});	
+	$("#tmp2").click(function(){
+		$.Dialog("你好，欢迎您光临本站!");	
+	});	
+	$("#tmp3").click(function(){
+		$.Dialog("你好，欢迎您光临本站!",{time:2000});
+	});	
+	$("#tmp4").click(function(){
+		$.Dialog("http://www.jq-school.com",{type:"iframe"});	
+	});	
+	$("#tmp5").click(function(){
+		var def = {
+			title:"这里是修改的默认标题",	
+		}
+		$.Dialog(def);
+		$.Dialog("本次函数未给定title参数，但是默认title已修改,再点击下上面的link，看看title");	
+	});	
+});
+</script>
+</head>
+<body>
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px;">网友小宇分享Dialog弹出层Jquery插件<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />	
+	小宇官方网站（<a href="http://www.windyland.com" target="_blank">http://www.windyland.com</a>）<br />
+	</div>
+</center>
+<br />
+<br />
+<br />
+<center>
+  <a class="a" id="tmp1">直接按默认打开</a><br/>
+  <a class="a" id="tmp2">仅给定内容，其他参数默认</a><br/>
+  <a class="a" id="tmp3">设置2s，自动关闭</a><br/>
+  <a class="a" id="tmp4">iframe加载JquerySchool网站</a><br/>
+  <a class="a" id="tmp5">更改默认参数type，为iframe后，默认参数打开</a><br/>
+</center>
+</body>
+</html>

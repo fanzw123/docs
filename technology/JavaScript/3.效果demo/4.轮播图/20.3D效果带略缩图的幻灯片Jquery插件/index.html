@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8' />
+<title>一款带3D效果带略缩图的幻灯片Jquery插件</title>
+<meta name="Keywords" content="一款带3D效果带略缩图的幻灯片Jquery插件,Jquery插件,Jquery原创,Jquery资源,Jquery特效,js特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<link rel='stylesheet' href='css/style.css' />
+<!-- must have -->
+<link href="allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="js/allinone_thumbnailsBanner.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="page-wrap" class="group">
+<!--Banner-->
+<script>
+	$(function() {
+		$('#allinone_thumbnailsBanner_simple').allinone_thumbnailsBanner({
+			skin: 'simple',
+			numberOfThumbsPerScreen:7,
+			width: 960,
+			height: 384,
+			thumbsReflection:0,
+			defaultEffect: 'random'
+		});		
+		
+		
+	});
+</script>
+<div style="background:url(preview_images/simpleBg.jpg) top center no-repeat;" id="banner-div-thumbs">
+  <div id="zzz" style="width:960px;margin: 0 auto; padding:10px 0 0 0;">
+    <!------------------------------------------------------------------------------------>
+    <div style="width:960px; height:400px; margin:50px auto 0 auto;">
+      <div id="allinone_thumbnailsBanner_simple" style="display:none;">
+        <ul class="allinone_thumbnailsBanner_list">
+          <!-- IMAGES -->
+          <li data-bottom-thumb="images/simple/thumbs/01_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText1"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qldu0yfj20qo0ao418.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/02_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText2"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qls1yctj20qo0aoacr.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/03_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText3"><img src="http://ww1.sinaimg.cn/large/adde8400gw1e45qm2rnzgj20qo0aoac7.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/04_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText4"><img src="http://ww1.sinaimg.cn/large/adde8400jw1e45qmb4deij20qo0aoq5s.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/05_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText5"><img src="http://ww3.sinaimg.cn/large/adde8400jw1e45qmj98stj20qo0aotbh.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/01_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText1"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qldu0yfj20qo0ao418.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/02_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText2"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qls1yctj20qo0aoacr.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/03_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText3"><img src="http://ww1.sinaimg.cn/large/adde8400gw1e45qm2rnzgj20qo0aoac7.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/04_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText4"><img src="http://ww1.sinaimg.cn/large/adde8400jw1e45qmb4deij20qo0aoq5s.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/05_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText5"><img src="http://ww3.sinaimg.cn/large/adde8400jw1e45qmj98stj20qo0aotbh.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/01_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText1"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qldu0yfj20qo0ao418.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/02_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText2"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qls1yctj20qo0aoacr.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/03_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText3"><img src="http://ww1.sinaimg.cn/large/adde8400gw1e45qm2rnzgj20qo0aoac7.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/04_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText4"><img src="http://ww1.sinaimg.cn/large/adde8400jw1e45qmb4deij20qo0aoq5s.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/05_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText5"><img src="http://ww3.sinaimg.cn/large/adde8400jw1e45qmj98stj20qo0aotbh.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/01_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText1"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qldu0yfj20qo0ao418.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/02_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText2"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qls1yctj20qo0aoacr.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/03_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText3"><img src="http://ww1.sinaimg.cn/large/adde8400gw1e45qm2rnzgj20qo0aoac7.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/04_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText4"><img src="http://ww1.sinaimg.cn/large/adde8400jw1e45qmb4deij20qo0aoq5s.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/05_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText5"><img src="http://ww3.sinaimg.cn/large/adde8400jw1e45qmj98stj20qo0aotbh.jpg" alt="" /></li>
+          <li data-bottom-thumb="images/simple/thumbs/02_simple.jpg" data-text-id="#allinone_thumbnailsBanner_photoText2"><img src="http://ww2.sinaimg.cn/large/adde8400gw1e45qls1yctj20qo0aoacr.jpg" alt="" /></li>
+        </ul>
+        <!-- TEXTS -->
+        <div id="allinone_thumbnailsBanner_photoText1" class="allinone_thumbnailsBanner_texts">
+          <div class="allinone_thumbnailsBanner_text_line textElement11_simple" data-initial-left="0" data-initial-top="60" data-final-left="0" data-final-top="307" data-duration="0.5" data-fade-start="0" data-delay="0">&nbsp;&nbsp;&nbsp;UP TO <a href="http://www.jq-school.com" target="_blank">4 TYPES</a> OF SLIDERS<br />
+            &nbsp;&nbsp;&nbsp;Each with multiple SKINS</div>
+        </div>
+        <div id="allinone_thumbnailsBanner_photoText2" class="allinone_thumbnailsBanner_texts">
+          <div class="allinone_thumbnailsBanner_text_line textElement21_simple" data-initial-left="200" data-initial-top="60" data-final-left="45" data-final-top="60" data-duration="0.5" data-fade-start="0" data-delay="0"><span style="font-weight:bold;">16 TRANSITION EFFECTS<br />
+            FOR IMAGES</span><br />
+            optional can set the transition<br />
+            for each image</div>
+        </div>
+        <div id="allinone_thumbnailsBanner_photoText3" class="allinone_thumbnailsBanner_texts">
+          <div class="allinone_thumbnailsBanner_text_line textElement31_simple" data-initial-left="70" data-initial-top="160" data-final-left="70" data-final-top="60" data-duration="0.5" data-fade-start="0" data-delay="0"><span>Animated text from any direction</span><br />
+            <span style="text-transform:uppercase; font-weight:bold;">top, bottom, left<br />
+            and right</span><br />
+            Any color, CSS and HTML formated</div>
+        </div>
+        <div id="allinone_thumbnailsBanner_photoText4" class="allinone_thumbnailsBanner_texts">
+          <div class="allinone_thumbnailsBanner_text_line textElement41_simple" data-initial-left="100" data-initial-top="60" data-final-left="480" data-final-top="60" data-duration="0.5" data-fade-start="0" data-delay="0"><span style="text-transform:uppercase; font-weight:bold;">16 transition effects<br />
+            for images</span><br />
+            optional can set the transition<br />
+            for each image</div>
+        </div>
+        <div id="allinone_thumbnailsBanner_photoText5" class="allinone_thumbnailsBanner_texts">
+          <div class="allinone_thumbnailsBanner_text_line textElement51_simple" data-initial-left="0" data-initial-top="200" data-final-left="0" data-final-top="0" data-duration="0.5" data-fade-start="0" data-delay="0"><span style="font-weight:bold; text-transform:uppercase;">Up to 4 types of <a href="http://www.jq-school.com" target="_blank">sliders</a></span><br />
+            Each with multiple skins</div>
+        </div>
+        <!--       -->
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------->
+  </div>
+</div>
+<!--end Banner-->
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+		opacity: 0.9
+	});
+  });
+</script>
+<script type="text/javascript">  
+    jQuery(document).ready(function($)
+    {  
+        jQuery('#floatdiv').addFloating(  
+            {  
+                targetLeft: 0,  
+                targetBottom: 20,  
+                snap: true  
+            }); 
+			 
+    });
+</script>
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both;">一款带3D效果带略缩图的幻灯片Jquery插件<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+    官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=4bf27be4ad1c0d647109933b80345be05d9c0efbb2c52ae1feb7247a40950720"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂②群" title="Jquery学堂②群"></a> </div>
+</center>
+</body>
+</html>

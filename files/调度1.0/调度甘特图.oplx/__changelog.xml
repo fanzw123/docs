@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="jason" date="2015-08-26T03:39:43.131Z" timestamp="2015-08-26T03:39:43.131Z">
+    <change idref="t-1" attribute="criticalPathProperties" type="dict" from="{
+    color =     {
+        b = &quot;0.5&quot;;
+        g = &quot;0.5&quot;;
+        r = 1;
+    };
+    enabled = 0;
+    root = &quot;-1&quot;;
+}" to="{
+    color =     {
+        b = &quot;0.5&quot;;
+        g = &quot;0.5&quot;;
+        r = 1;
+    };
+    enabled = 1;
+    root = &quot;-1&quot;;
+}"/>
+    <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-24T02:45:14.000Z" to="2015-08-25T21:10:00.000Z"/>
+    <change idref="t2" attribute="noLaterThanConstraintDate" type="date" to="2015-08-25T23:30:00.000Z"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-08-26T07:31:14.543Z" timestamp="2015-08-26T07:31:14.543Z">
+    <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:30:03.000Z" to="2015-08-25T17:29:59.000Z"/>
+    <change idref="t32" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T17:20:01.000Z" to="2015-08-25T17:21:02.000Z"/>
+  </task-change-set>
+  <task-change-set user="jason" date="2015-09-03T01:34:26.375Z" timestamp="2015-09-03T01:34:26.375Z">
+    <change idref="t48" to="t-1" to-position="21">
+      <change idref="t48" attribute="noEarlierThanConstraintDate" type="date" to="2015-09-02T16:00:00.000Z"/>
+      <change idref="t48" attribute="title" type="string" to="dw_user_summary_user_browsing_metrics_daily"/>
+    </change>
+    <change idref="t4" attribute="title" type="string" from="summary_hive_dw_mobile_user_browsing_metrics_daily" to="summary_hive_dw_mobile_user_browsing_metrics_daily (stop)"/>
+    <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" from="2015-08-25T16:06:59.000Z" to="2015-08-25T16:08:10.000Z"/>
+    <change idref="t33" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0"/>
+  </task-change-set>
+</changelog>

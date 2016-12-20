@@ -1,0 +1,49 @@
+# 报表平台
+
+## 一、已经使用的表
+
+``` sql
+
+```
+
+
+## 二、已使用的表
+
+``` sql
+dim_city
+dim_property_address_agent
+dw_basis_common_data_dictionary
+dw_basis_dimension_city_district_block
+dw_basis_dimension_delivery_channels_package
+dw_basis_dimension_filter_agent
+dw_basis_dimension_filter_ip
+dw_basis_dimension_url_host
+dw_business_lane_communities
+dw_business_lanes
+dw_business_records
+dw_cal_20160908
+dw_data_quality
+dw_log_total
+dw_product_app_web_sd
+dw_property_address_broker
+dw_property_dim_address
+dw_property_dim_block
+dw_property_lianjia_inventory
+tbd_dw_dim_city
+tbd_dw_property_inventory_sd_20160822
+dm_broker_kpi_report
+dm_broker_user_mate_inventory_rs
+dm_call_monthly
+dm_community_geo
+dm_community_iwjw_geo
+dm_community_team_monthly
+dm_property_zy_develop
+dm_property_zy_processing
+dm_transaction_analysis_detail
+dm_transaction_map_hot
+dm_visit_month
+dm_zhuying_daily
+lianjia_inventory
+zhiwen_angejia_lianjia_compare_inv
+zhiwen_promotion4_report_daily
+```

@@ -1,0 +1,169 @@
+*{padding:0; margin:0;}
+BODY{
+	MIN-WIDTH:989px;
+	FONT-FAMILY:"ËÎÌו";
+	COLOR:#292929;
+	FONT-SIZE:12px
+}
+LI{
+	LIST-STYLE-TYPE:none;
+	LIST-STYLE-IMAGE:none
+}
+A{
+	COLOR:#292929;
+	TEXT-DECORATION:none
+}
+.slideNum{
+	BACKGROUND-IMAGE:url(../images/images.png) !important;
+	BACKGROUND-REPEAT:no-repeat
+}
+.active{
+	BACKGROUND-IMAGE:url(../images/images.png) !important;
+	BACKGROUND-REPEAT:no-repeat
+}
+.wrp{
+	POSITION:relative;
+	MARGIN:0px auto;
+	ZOOM:1
+}
+.sd{
+	Z-INDEX:999;
+	POSITION:absolute;
+	BACKGROUND-POSITION:0px -798px;
+	HEIGHT:18px;
+	TOP:71px;
+	RIGHT:0px;
+	LEFT:0px
+}
+.banner .sd{
+	BACKGROUND-POSITION:0px -414px;
+	HEIGHT:24px;
+	TOP:415px
+}
+.banner{
+	BORDER-BOTTOM:#fff 1px solid;
+	POSITION:relative;
+	HEIGHT:415px;
+	OVERFLOW:hidden;
+	RIGHT:0px;
+	LEFT:0px
+}
+#picList{
+	POSITION:relative;
+	HEIGHT:415px
+}
+.slide_li{
+	Z-INDEX:1;
+	POSITION:absolute;
+	BOTTOM:0px;
+	TOP:0px;
+	LEFT:0px
+}
+.first{
+	Z-INDEX:2;
+	LEFT:0px
+}
+.sActive{
+	
+}
+.sNext{
+	Z-INDEX:3
+}
+.imgBg_home{
+	Z-INDEX:1;
+	POSITION:absolute;
+	BACKGROUND:url(../images/imgbg_01.png) repeat-x;
+	HEIGHT:415px;
+	RIGHT:0px;
+	LEFT:0px
+}
+.imgBg_air{
+	Z-INDEX:1;
+	POSITION:absolute;
+	BACKGROUND:url(../images/imgbg_01.png) repeat-x;
+	HEIGHT:415px;
+	RIGHT:0px;
+	LEFT:0px
+}
+.imgBg_work{
+	Z-INDEX:1;
+	POSITION:absolute;
+	BACKGROUND:url(../images/imgbg_01.png) repeat-x;
+	HEIGHT:415px;
+	RIGHT:0px;
+	LEFT:0px
+}
+.imgBg_home{
+	BACKGROUND:url(../images/imgbg_02.png) repeat-x
+}
+.imgBg_work{
+	BACKGROUND:url(../images/imgbg_02.png) repeat-x
+}
+.sd{
+	WIDTH:auto !important
+}
+.imgBg_home{
+	WIDTH:auto !important
+}
+.imgBg_air{
+	WIDTH:auto !important
+}
+.imgBg_work{
+	WIDTH:auto !important
+}
+.imgBg_air{
+	BACKGROUND-POSITION:0px 0px
+}
+.imgBg_home{
+	BACKGROUND-POSITION:0px -420px
+}
+.imgBg_work{
+	BACKGROUND-POSITION:0px -840px
+}
+.slide_img{
+	Z-INDEX:9;
+	POSITION:relative;
+	MARGIN:0px auto;
+	WIDTH:989px;
+	DISPLAY:block;
+	HEIGHT:415px
+}
+.slide_imgLoading{
+	POSITION:absolute;
+	WIDTH:20px;
+	HEIGHT:20px;
+	MARGIN-LEFT:-10px;
+	TOP:197px;
+	LEFT:50%
+}
+.airTop{
+	HEIGHT:351px
+}
+.airBottom{
+	HEIGHT:64px
+}
+#slideThumb{
+	Z-INDEX:11;
+	POSITION:absolute;
+	BOTTOM:76px;
+	RIGHT:100px
+}
+.slideNum{
+	WIDTH:9px;
+	DISPLAY:block;
+	BACKGROUND-POSITION:-538px 0px;
+	FLOAT:left;
+	HEIGHT:9px;
+	CURSOR:pointer;
+	MARGIN-RIGHT:11px
+}
+.active{
+	BACKGROUND-POSITION:-558px 0px
+}
+.bannerLinks{
+	Z-INDEX:11;
+	POSITION:absolute;
+	MIN-WIDTH:989px;
+	RIGHT:0px;
+	LEFT:0px
+}

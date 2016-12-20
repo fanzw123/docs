@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友Null分享js+flash+xml实现3D照片墙特效</title>
+<script type="text/javascript" src="swfobject.js"></script>
+<style type="text/css">	
+	html {
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	#flashcontent {
+		height: 100%;
+	}
+
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+		color:#ffffff;
+		font-family:sans-serif;
+		font-size:40;
+	}
+
+	a {	
+		color:#cccccc;
+	}
+</style>
+</head>
+<body>
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both;">网友Null分享js+flash+xml实现3D照片墙特效<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+    官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=4bf27be4ad1c0d647109933b80345be05d9c0efbb2c52ae1feb7247a40950720"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂②群" title="Jquery学堂②群"></a> </div>
+</center>
+	<div id="flashcontent">
+	    <a href="http://get.adobe.com/cn/flashplayer/"></a>
+ 	</div>
+	<script type="text/javascript">
+		var fo = new SWFObject("TiltViewer.swf", "viewer", "100%", "100%", "9.0.28", "#000000");	
+		fo.addVariable("useFlickr", "false");
+		fo.addVariable("xmlURL", "gallery.xml");
+		fo.addVariable("maxJPGSize","640");	
+		fo.addVariable("useReloadButton", "false");
+		fo.addVariable("columns", "5");
+		fo.addVariable("rows", "5");		
+		fo.addParam("allowFullScreen","true");
+		fo.write("flashcontent");			
+	</script>
+</body>
+</html>

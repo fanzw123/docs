@@ -1,0 +1,35 @@
+* {margin:0;padding:0;font: 12px/1.25 tahoma,arial,宋体,sans-serif;}
+li {list-style:none;}
+a {text-decoration:none;}
+body {width:100%;height:100%;background:#000;_position:relative;overflow:hidden;}
+.page{position:fixed;_position:absolute;right:0;bottom:0;}
+#miaov_bottom{width:203px;height: 50px;background:url(minibar.png) no-repeat 0 0;position:absolute;right:-165px;bottom:0;z-index: 20001;}
+#nav{height: 22px;margin: 5px 0 0 43px;width: 125px;}
+#nav li{float: left;width: 25px;}
+#nav li a{display: block;height: 22px;width: 25px;}
+#nav li .show,#nav li a:hover{background: url(minibar.png) no-repeat 0 -51px;}
+#nav .li_1 .show,#nav .li_1 a:hover{background-position:-25px -51px}
+#nav .li_2 .show,#nav .li_2 a:hover{background-position:-50px -51px}
+#nav .li_3 .show,#nav .li_3 a:hover{background-position:-75px -51px}
+#nav .li_4 .show,#nav .li_4 a:hover{background-position:-100px -51px}
+.miaov{color: #FFFFFF;height: 16px;margin: 4px 0 0 8px;overflow: hidden;width: 160px;}
+#but{ bottom: 0;display: block;height: 50px;position: absolute;right: 0;width: 33px;z-index:20002;}
+.but_hide{background: url(minibar.png) no-repeat -170px 0;}
+.but_hide:hover{background-position:-203px 0;}
+.but_show{background: url(minibar.png) no-repeat -236px 0;}
+.but_show:hover{background-position:-269px 0;}
+#miaov_box{bottom:-315px;display:none;height: 315px;padding: 0 0 48px;position: absolute;right: 1px;width: 200px; z-index: 20000;}
+.bg{background: url(mini_jpgs.jpg) no-repeat 0 0;height: 315px;opacity: 0.9;position: absolute;right: 0;top: 0;width: 200px;}
+.nav2_bg{bottom: 48px;height: 176px;left: 0;position: absolute;width: 34px;background: url(mini_jpgs.jpg) no-repeat 0 -139px;}
+#list_nav{background: url(minibar.png) no-repeat scroll 0 -255px transparent;height: 139px;left: 0;position: absolute;top: 2px;width: 34px;}
+#list_nav a{ color: #FFFFFF;display: block;height: 27px;line-height: 25px;text-align: center;text-decoration: none;}
+#list_nav .show{color: #FF9900;}
+#list_nav a:hover{color:#FFFF00;}
+.clos{ background: url(minibar.png) no-repeat 0 -76px ;cursor: pointer;height: 9px;position: absolute;right: 10px;top: 14px;width: 9px;}
+.box_right{color: #FFFFFF;
+    height: 285px;
+    overflow: hidden;
+    position: absolute;
+    right: 6px;
+    top: 28px;
+    width: 150px;}

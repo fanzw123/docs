@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<meta http-equiv="Content-Language" content="fr" />
+<title>照片放大图</title>
+
+
+
+
+<!--[if IE 6]>
+	<style type="text/css" media="screen">
+	ul.thumb li img.hover {
+	margin-top:15px;
+	background:url(thumb_bg.gif) no-repeat center center;
+	border: none;
+}
+ul.thumb li .title{color:#fff;width:185px;height:50px;margin:0;font-weight:900;background:url(title.gif) no-repeat center center;padding:17px 0 0 0;text-align:center;}
+	</style>
+<![endif]-->
+<style type="text/css">
+body {
+	font: Arial, Helvetica, sans-serif normal 10px;
+	margin: 0; padding: 0;
+}
+* {margin: 0; padding: 0;}
+#page{
+		margin:0 auto;
+		position:relative;
+		width:850px;
+		font-family:verdana;
+		font-size:12px;
+	}
+	#content{
+		width:100%;
+	}
+pre{
+	border:3px solid #ccc;
+	padding:5px;
+	font-size:12px;
+	font-family:arial;
+	}
+	.bold{font-weight:bold;}
+	.blue{color:blue;}
+	.red{color:red;}
+#footer{
+	margin-top:5px;
+	text-align:center;
+	width:100%;
+	height:auto;
+	padding:5px;
+	background-color:#ccc;
+	}
+ #logo,#foot { margin-left: 10px; }
+</style> 
+
+<link rel="stylesheet" type="text/css" href="css/zoomer.css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="js/zoomer.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+ 	$('ul.thumb li').Zoomer({
+		speedView:200,
+		speedRemove:400,
+		altAnim:true,
+		speedTitle:400,
+		debug:false
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div id="page">
+	<br><br><br>
+		<div id="content">
+		
+		<div class="container">
+		<!-- 这里开始 -->
+			<ul class="thumb">
+				<li><a href="#"><img src="images/robots.jpg" alt="Robots like cameras" /></a></li>
+				<li><a href="#"><img src="images/monster.jpg" alt="Monsters!" /></a></li>
+				<li><a href="#"><img src="images/santa.jpg" alt="Santa down under" /></a></li>
+				<li><a href="#"><img src="images/thumb6.jpg" alt="Sponguebob!" /></a></li>
+				<li><a href="#"><img src="images/thumb7.jpg" alt="Star Wars" /></a></li>
+				<li><a href="#"><img src="images/hulk.jpg" alt="Hulk Smash!" /></a></li>
+				<li><a href="#"><img src="images/dino.png" alt="Dinosaur time" /></a></li>
+				<li><a href="#"><img src="images/orange.jpg" alt="Orange car" /></a></li>
+				<li><a href="#"><img src="images/alien.jpg" alt="Aliens!" /></a></li>
+				<li><a href="#"><img src="images/supe.jpg" alt="It's Superman!" /></a></li>
+                <li><a href="#"><img src="images/garfield.jpg" alt="Where's my lasagne?" /></a></li>
+				<li><a href="#"><img src="images/bridge.jpg" alt="The bridge at Sunset" /></a></li>
+				<li><a href="#"><img src="images/peanuts.jpg" alt="Peanuts!" /></a></li>
+				<li><a href="#"><img src="images/thumb5.jpg" alt="1956 Yellow Car" /></a></li>
+				<li><a href="#"><img src="images/thumb4.jpg" alt="Ooooh. Pretty" /></a></li>
+				<li><a href="#"><img src="images/thumb3.jpg" alt="Lets build something" /></a></li>
+				<li><a href="#"><img src="images/thumb2.jpg" alt="Puppy love" /></a></li>
+				<li><a href="#"><img src="images/thumb1.jpg" alt="It's a Toy Story" /></a></li>
+			</ul>
+			
+		</div>
+		
+		
+		
+		
+	</div>
+
+</div>
+
+</body>
+</html>

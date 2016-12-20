@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="aY-ZKSI-fX0">
+  <start-date>2015-08-24T02:45:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>&gt;任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>&gt;里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <schedule>
+      <schedule-day day-of-week="sunday"/>
+      <schedule-day day-of-week="monday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="tuesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="wednesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="thursday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="friday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="saturday"/>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes"/>
+    </schedule>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>资源 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t21"/>
+    <child-task idref="t42"/>
+    <child-task idref="t64"/>
+    <child-task idref="t65"/>
+    <child-task idref="t66"/>
+    <child-task idref="t69"/>
+    <child-task idref="t70"/>
+    <child-task idref="t71"/>
+    <child-task idref="t72"/>
+    <child-task idref="t74"/>
+    <child-task idref="t75"/>
+    <child-task idref="t76"/>
+    <child-task idref="t77"/>
+    <child-task idref="t78"/>
+    <child-task idref="t79"/>
+    <child-task idref="t80"/>
+    <child-task idref="t81"/>
+    <child-task idref="t82"/>
+    <child-task idref="t83"/>
+    <child-task idref="t84"/>
+    <child-task idref="t85"/>
+    <child-task idref="t86"/>
+    <child-task idref="t87"/>
+    <child-task idref="t88"/>
+    <child-task idref="t89"/>
+    <child-task idref="t90"/>
+    <child-task idref="t91"/>
+    <child-task idref="t92"/>
+    <child-task idref="t93"/>
+    <child-task idref="t94"/>
+    <child-task idref="t95"/>
+    <child-task idref="t96"/>
+    <child-task idref="t102"/>
+    <child-task idref="t103"/>
+    <child-task idref="t104"/>
+    <child-task idref="t105"/>
+    <child-task idref="t106"/>
+    <child-task idref="t108"/>
+    <child-task idref="t109"/>
+    <child-task idref="t111"/>
+    <child-task idref="t112"/>
+  </task>
+  <task id="t21">
+    <title>uba-run</title>
+    <effort>297</effort>
+    <start-constraint-date>2015-08-25T16:00:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:00:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t42">
+    <title>m2h-sync-dump-run</title>
+    <effort>2352</effort>
+    <start-constraint-date>2015-08-25T16:00:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:00:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t64">
+    <title>dw_user_mapping_relations_info</title>
+    <effort>222</effort>
+    <start-constraint-date>2015-08-25T16:31:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:31:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t65">
+    <title>summary_hive_dw_property_inventory_detail_info_daily</title>
+    <effort>1702</effort>
+    <start-constraint-date>2015-08-25T16:30:52.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:30:52.000Z</start-no-earlier-than>
+  </task>
+  <task id="t66">
+    <title>summary_hive_dw_property_community_detail_info_daily</title>
+    <effort>479</effort>
+    <start-constraint-date>2015-08-25T17:00:13.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:00:13.000Z</start-no-earlier-than>
+  </task>
+  <task id="t69">
+    <title>sem_baidu_log_java_etl</title>
+    <effort>146</effort>
+    <start-constraint-date>2015-08-25T16:30:19.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:30:19.000Z</start-no-earlier-than>
+  </task>
+  <task id="t70">
+    <title>da_broker_summary_basis_info_daily</title>
+    <effort>55</effort>
+    <start-constraint-date>2015-08-25T17:10:03.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:10:03.000Z</start-no-earlier-than>
+  </task>
+  <task id="t71">
+    <title>sem_baidu_log</title>
+    <effort>34</effort>
+    <start-constraint-date>2015-08-25T17:31:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:31:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t72">
+    <title>dw_user_access_summary_daily</title>
+    <effort>2289</effort>
+    <start-constraint-date>2015-08-25T17:05:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:05:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t74">
+    <title>da_property_broker_followup_daily
+</title>
+    <effort>730</effort>
+    <start-constraint-date>2015-08-25T17:10:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:10:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t75">
+    <title>da_property_select_community_info
+</title>
+    <effort>964</effort>
+    <start-constraint-date>2015-08-25T17:13:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:13:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t76">
+    <title>summary_hive_dw_sem_summary_basis_info_daily</title>
+    <effort>696</effort>
+    <start-constraint-date>2015-08-25T16:09:06.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:09:06.000Z</start-no-earlier-than>
+  </task>
+  <task id="t77">
+    <title>da_property_summary_inventory_detail_daily
+</title>
+    <effort>311</effort>
+    <start-constraint-date>2015-08-25T17:18:54.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:18:54.000Z</start-no-earlier-than>
+  </task>
+  <task id="t78">
+    <title>da_mobile_chat_effect_info
+</title>
+    <effort>57</effort>
+    <start-constraint-date>2015-08-25T17:21:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:21:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t79">
+    <title>dw_sem_baidu_summary_detail_info_daily
+</title>
+    <effort>251</effort>
+    <start-constraint-date>2015-08-25T18:30:03.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T18:30:03.000Z</start-no-earlier-than>
+  </task>
+  <task id="t80">
+    <title>dw_broker_summary_basis_info_daily
+
+</title>
+    <effort>4207</effort>
+    <start-constraint-date>2015-08-25T16:30:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:30:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t81">
+    <title>dw_block_summary_basis_info_daily</title>
+    <effort>261</effort>
+    <start-constraint-date>2015-08-25T17:02:16.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T17:02:16.000Z</start-no-earlier-than>
+  </task>
+  <task id="t82">
+    <title>dw_inventory_detail_info_daily
+
+</title>
+    <effort>1200</effort>
+    <start-constraint-date>2015-08-25T16:15:44.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:15:44.000Z</start-no-earlier-than>
+  </task>
+  <task id="t83">
+    <title>summary_hive_dw_connection_summary_detail_info_daily
+</title>
+    <effort>2170</effort>
+    <start-constraint-date>2015-08-25T16:30:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:30:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t84">
+    <title>dw_scorecard_summary_daily
+</title>
+    <effort>716</effort>
+    <start-constraint-date>2015-08-25T19:00:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:00:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t85">
+    <title>dw_broker_art_basis_info_daily
+
+</title>
+    <effort>53</effort>
+    <start-constraint-date>2015-08-25T19:24:02.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:24:02.000Z</start-no-earlier-than>
+  </task>
+  <task id="t86">
+    <title>dw_property_inventory_log_summary_daliy
+</title>
+    <effort>300</effort>
+    <start-constraint-date>2015-08-25T16:15:02.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:15:02.000Z</start-no-earlier-than>
+  </task>
+  <task id="t87">
+    <title>dw_user_log_summary_daliy
+</title>
+    <effort>48</effort>
+    <start-constraint-date>2015-08-25T16:30:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:30:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t88">
+    <title>dw_user_summary_user_browsing_metrics_daily
+</title>
+    <effort>3007</effort>
+    <start-constraint-date>2015-08-25T16:40:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:40:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t89">
+    <title>dw_user_conduct_summary_info_daily</title>
+    <effort>601</effort>
+    <start-constraint-date>2015-08-25T16:35:03.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:35:03.000Z</start-no-earlier-than>
+  </task>
+  <task id="t90">
+    <title>dw_sem_art_basis_info_daily
+</title>
+    <effort>291</effort>
+    <start-constraint-date>2015-08-25T19:24:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:24:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t91">
+    <title>dw_wechat_detail_info_daily</title>
+    <effort>34</effort>
+    <start-constraint-date>2015-08-25T21:30:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T21:30:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t92">
+    <title>dw_transaction_art_cut_info</title>
+    <effort>2402</effort>
+    <start-constraint-date>2015-08-25T19:30:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:30:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t93">
+    <title>dw_transaction_art_outdate_info</title>
+    <effort>1982</effort>
+    <start-constraint-date>2015-08-25T19:40:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:40:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t94">
+    <title>dw_contact_art_basis_info_daily</title>
+    <effort>360</effort>
+    <start-constraint-date>2015-08-25T21:30:03.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T21:30:03.000Z</start-no-earlier-than>
+  </task>
+  <task id="t95">
+    <title>biportal</title>
+    <effort>32</effort>
+    <start-constraint-date>2015-08-25T20:10:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T20:10:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t96">
+    <title>dw_property_article_log_daliy</title>
+    <effort>114</effort>
+    <start-constraint-date>2015-08-25T16:15:01.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:15:01.000Z</start-no-earlier-than>
+  </task>
+  <task id="t102">
+    <title>index_final_week</title>
+    <effort>7982</effort>
+    <start-constraint-date>2015-08-25T19:20:03.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:20:03.000Z</start-no-earlier-than>
+  </task>
+  <task id="t103">
+    <title>swan_call_daily
+</title>
+    <effort>43</effort>
+    <start-constraint-date>2015-08-25T19:00:18.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:00:18.000Z</start-no-earlier-than>
+  </task>
+  <task id="t104">
+    <title>dm_sem_baidu_summary_detail_info_week
+</title>
+    <effort>2084</effort>
+    <start-constraint-date>2015-08-25T19:00:18.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T19:00:18.000Z</start-no-earlier-than>
+  </task>
+  <task id="t105">
+    <title>da_broker_familiar_community
+</title>
+    <effort>716</effort>
+    <start-constraint-date>2015-08-25T16:03:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:03:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t106">
+    <title>jixiao_week
+
+</title>
+    <effort>6425</effort>
+    <start-constraint-date>2015-08-26T07:00:10.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T07:00:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t108">
+    <title>broker_la_customer
+</title>
+    <effort>6425</effort>
+    <start-constraint-date>2015-08-26T07:00:10.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T07:00:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t109">
+    <title>swan_staff_list_week
+</title>
+    <effort>6425</effort>
+    <start-constraint-date>2015-08-26T07:00:10.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T07:00:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t111">
+    <title>yuan_team_jixiao_week
+</title>
+    <effort>3652</effort>
+    <start-constraint-date>2015-08-26T07:00:10.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T07:00:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t112">
+    <title>dw_user_recommendation_daliy
+</title>
+    <effort>406</effort>
+    <start-constraint-date>2015-08-25T18:00:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T18:00:15.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="true" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>

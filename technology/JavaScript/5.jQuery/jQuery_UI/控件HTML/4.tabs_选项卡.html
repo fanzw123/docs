@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 选项卡</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	<script type="text/javascript">
+
+	$(function () {
+		/** 
+		 * 1.tabs  选项卡	
+		 * 	函数：	tabs()	选项卡  
+		 * 	实验室：	http://www.bibeault.org/jqia2/chapter11/tabs/lab.tabs.html
+		 *  书本：	347页。
+		 */
+		(function () {		
+			 options = {
+				//attr  属性
+				event:'click',				//处理事件
+				selected:'0',				//默认选中的选项
+			};
+			$('#tabs').tabs(options);		//指定元素上添加	
+			
+		})('');
+		
+	});	
+	</script>
+<style>
+* {
+	padding:0;
+	margin:0;
+}
+#tabs {
+	width:400px;
+	height:300px;
+	margin:0 auto;
+}
+</style>
+<body>	
+	<h1>选项卡</h1>
+
+	<div id="tabs">
+		<ul>
+              <li><a href="#index" >主页</a></li>
+              <li><a href="#other" >其他</a></li>
+              <li><a href="#content" >内容</a></li>
+              <li><a href="/jqia2/lengthyTab" title=""><span>添加</span></a></li>
+            </ul>		
+            <div id="index">
+              123
+            </div>
+            <div id="other">
+              456
+            </div>
+			<div id="content">
+              789
+            </div>
+			
+          </div>
+	</div>
+
+	
+</body>
+</html>

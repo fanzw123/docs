@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友蘑菇分享原创多功能轮播图Jquery插件(测试版)</title>
+<style type="text/css">
+/* 页面样式 */
+body,ul,li,h1,h2,h3,blockquote,p{font-size:14px;margin:0; padding:0;list-style:none;color:#333; font-family:'微软雅黑',Arial, Helvetica, sans-serif;}
+a img{border:none;}
+a{text-decoration:none;color:#333;}
+body{background:url(images/bg.jpg);padding-top:30px;}
+.logo{font-size:38px;margin:0 0 50px 50px;padding-right:300px;}.logo span{font-size:14px;margin-left:10px;}
+.intro{width:940px;margin:0 auto;border:1px dotted #ccc;padding:20px;background:#fff;margin-bottom:20px;}
+.intro p{line-height:30px;color:#000; background:url(images/listIco.gif) no-repeat left 11px;padding-left:20px;}.intro p a{color:#145983;font-weight:bold;}.intro p a:hover{text-decoration:underline;}
+h2{margin-left:150px;font-size:24px;margin-bottom:30px;}
+.code{width:940px;margin:0 auto;border:1px dotted #333;background:#f1f1f1;padding:0 0 10px 50px;font-weight:bold;margin:50px auto;}
+.code p,#parameters p{text-indent:48px;line-height:30px;}.code p.textIn,#parameters p.textIn{text-indent:24px;}.code p.notextIn,#parameters p.notextIn{text-indent:0;}
+.code h3{font-size:16px;margin:10px 0;}
+#parameters{width:100%;border-top:1px solid #999;background:#fff;}
+#parameters p{width:1100px;margin:0 auto;font-weight:bold;}#parameters p span{margin-left:30px;color:#9d6f15;}
+#parameters h2{font-size:30px;margin-top:20px;font-family:'宋体';font-weight:bold;}#btn{float:right;font-size:20px;margin-top:26px;font-weight:normal;outline:none;}
+</style>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="http://www.jq-school.com/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://www.jq-school.com/js/easing.js"></script>
+<script type="text/javascript" src="js/MogFocus.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#focus").mogFocus();	
+	$("#focus2").mogFocus({
+		loadAnimation : false,
+		time : 4000,
+		animationWay : 'tbSliding',
+		prevNextToggle : 'toggle',
+		btnStyle : 'noNumber',
+		focusTime : {duration: 1300, easing: "easeOutBounce"},
+		focusTwoTime : {duration: 1300, easing: "easeOutBounce"}
+	});
+	$("#focus3").mogFocus({
+		loadAnimation : false,
+		time : 2500,
+		animationWay : 'fade',
+		prevNextToggle : 'hide',
+		thumlen : 4	
+	});	
+	$("#focus4").mogFocus({
+		loadAnimation : false,
+		time : 3000,
+		scrollWidth : 1000,
+		animationWay : 'randomImg',
+		btnStyle : 'hidden',
+		randeasing : 'easeOutQuad'
+	});	
+	$("#btn").click(function(){  //和插件本身无关
+		$("html,body").animate({scrollTop:$("#parameters").offset().top},{duration: 2000, easing: "easeInOutQuart"});
+		return false;
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="logo"><a href="#" id="btn">查看参数说明</a>MogFocus V1.1<span>作者：蘑菇</span></h1>
+<blockquote class="intro">
+ <p>这是一个基于jQuery开发的focus插件</p>
+ <p>版权所有归开发者蘑菇</p>
+ <p>版本号： mogFocus v1.1</p>
+ <p>感谢jquery学堂对作者的支持。<a href="http://www.jq-school.com">http://www.jq-school.com</a></p>
+ <p>如果您有建议或者在使用过程中发现BUG！请联系作者，提出您宝贵的意见！谢谢</p>
+ <p>QQ:448214643&nbsp;&nbsp;&nbsp;前端开发QQ群：228759650</p>
+ <p>注：(X)HTML结构请参考本示例，以保证插件正确运行</p>
+</blockquote>
+<h2>默认为左右滑动</h2>
+<div id="warpper">
+    <div id="focus">
+        <div class="focusWarp">
+            <ul class="imgList">
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/one.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/two.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/thr.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/four.jpg" width="800" height="320" /></a></li>
+            </ul>
+            <ul class="imgList_two">
+                <li><img src="http://www.jq-school.com/tool/mogu/images/one_size.png" width="375" height="150" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/two_size.png" width="367" height="105" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/thr_size.png" width="412" height="94" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/four_size.png" width="372" height="96" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code">
+	<h3>代码</h3>
+    <p class="notextIn">$(function(){</p>
+    <p class="textIn">$("#focus").mogFocus()</p>
+    <p class="notextIn">})</p>
+</div>
+<h2>设置上下滑动</h2>
+<div id="warpper2">
+    <div id="focus2">
+        <div class="focusWarp">
+            <ul class="imgList">
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/one.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/two.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/thr.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/four.jpg" width="800" height="320" /></a></li>
+            </ul>
+            <ul class="imgList_two">
+                <li><img src="http://www.jq-school.com/tool/mogu/images/one_size.png" width="375" height="150" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/two_size.png" width="367" height="105" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/thr_size.png" width="412" height="94" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/four_size.png" width="372" height="96" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code">
+	<h3>代码</h3>
+    <p class="notextIn">$(function(){</p>
+    <p class="textIn">$("#focus2").mogFocus({</p>
+    <p>loadAnimation : false,</p>
+    <p>time : 4000,</p>
+    <p>animationWay : 'tbSliding',</p>
+    <p>prevNextToggle : 'toggle',</p>
+    <p>focusTime : {duration: 1300, easing: "easeOutBounce"},</p>
+    <p>focusTwoTime : {duration: 1300, easing: "easeOutBounce"}</p>
+    <p class="notextIn">})</p>
+</div>
+<h2>设置淡入淡出</h2>
+<div id="warpper3">
+    <div id="focus3">
+        <div class="focusWarp">
+            <ul class="imgList">
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/one.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/two.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/thr.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/four.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/one.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/two.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/thr.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/four.jpg" width="800" height="320" /></a></li>
+            </ul>
+            <ul class="imgList_two">
+                <li><img src="http://www.jq-school.com/tool/mogu/images/one_size.png" width="375" height="150" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/two_size.png" width="367" height="105" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/thr_size.png" width="412" height="94" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/four_size.png" width="372" height="96" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/one_size.png" width="375" height="150" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/two_size.png" width="367" height="105" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/thr_size.png" width="412" height="94" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/four_size.png" width="372" height="96" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code">
+	<h3>代码</h3>
+    <p class="notextIn">$(function(){</p>
+    <p class="textIn">$("#focus2").mogFocus({</p>
+    <p>loadAnimation : false,</p>
+    <p>time : 2500,</p>
+    <p>animationWay : 'fade',</p>
+    <p>prevNextToggle : 'hide',</p>
+    <p>thumlen : 4	</p>
+    <p class="notextIn">})</p>
+</div>
+<h2>设置随机滑出图片</h2>
+<div id="warpper4">
+    <div id="focus4">
+        <div class="focusWarp">
+            <ul class="imgList">
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/one.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/two.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/thr.jpg" width="800" height="320" /></a></li>
+                <li><a href="#"><img src="http://www.jq-school.com/tool/mogu/images/four.jpg" width="800" height="320" /></a></li>
+            </ul>
+            <ul class="imgList_two">
+                 <li><img src="http://www.jq-school.com/tool/mogu/images/one_size.png" width="375" height="150" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/two_size.png" width="367" height="105" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/thr_size.png" width="412" height="94" /></li>
+                <li><img src="http://www.jq-school.com/tool/mogu/images/four_size.png" width="372" height="96" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code">
+	<h3>代码</h3>
+    <p class="notextIn">$(function(){</p>
+    <p class="textIn">$("#focus2").mogFocus({</p>
+    <p>loadAnimation : false,</p>
+    <p>time : 3000,</p>
+    <p>scrollWidth : 1000,</p>
+    <p>animationWay : 'randomImg',</p>
+    <p>btnStyle : 'hidden',</p>
+    <p>randeasing : 'easeOutQuad'</p>
+    <p class="notextIn">})</p>
+</div>
+<blockquote id="parameters">
+<h2>参数说明文档</h2>
+<p class="notextIn">$(function(){</p>
+<p class="textIn">$("#focus").mogFocus({</p>
+<p>loadAnimation : true,  <span>//效果初次加载是否有动画效果</span></p>
+<p>loadswitch : false,<span>//是否开启loading</span></p>		
+<p>loading : "images/loading.gif",<span>//loading图片路径</span></p>		
+<p>time : 4000,<span>//间隔时间</span></p>		
+<p>scrollWidth : "100%",<span>//焦点图宽度，任意数值，设置为100%或者auto时，占满全屏</span></p>		
+<p>autoScroll : true,<span>//是否自动滚动</span></p>		
+<p>conversionImg : true,<span>//此参数是用来兼容第二层滑动层IE的PNG图片，开启为true，反之为false</span></p>		
+<p>animationWay: 'tbSliding',<span>//此参数提供fade(淡入淡出),lrSliding(左右滑动)，tbSliding(上下滑动)，随机展示(randomImg)</span></p>		
+<p>prevNextPos : 70,<span>//上一页下一页初始位置调整</span></p>		
+<p>prevNextAnima : {duration: 600, easing: "easeInOutBack"},<span>//按钮滑动出来的方式，支持缓动公式，如果直接设置数值，那么就没有缓动效果</span></p>				
+<p>prevNextToggle : "show",<span>//设置为toggle时鼠标放到滑动图上显示，离开影藏。设置show时一直显示，设置hide时影藏</span></p>				
+<p>btnStyle : "thumbnail",<span>//参数有四个分别是number(数字),noNumber(非数字，任意图形),thumbnail(缩略图),hidden(影藏)</span></p>				
+<p>thumWidth : 90,<span>//缩略图宽度</span></p>				
+<p>thumHeight : 36,<span>//缩略图高度</span></p>				
+<p>thumlen : 5,<span>//缩略图显示个数</span></p>				
+<p>thumCSS : {"right":"50%","margin-right":-390},<span>//提供当全屏滑动时缩略图位置</span></p>				
+<p>thumSubsty : {"border":"1px solid #ccc","padding":1,"background":"#fff"},<span>//缩略图样式</span></p>				
+<p>thumSelected : {"border":"1px solid #6d6d6d","background":"#fff"},<span>//缩略图选中样式</span></p>				
+<p>single: true,<span>//设置true则显示第二层，false则第二层影藏</span></p>				
+<p>focusDelay: 0,<span>//焦点图延迟时间</span></p>				
+<p>focusDelayTwo : 300,<span>//第二层焦点图延迟时间</span></p>				
+<p>focusTime : {duration: 1000, easing: "easeOutBounce"},<span>//左右焦点图时间，支持缓动公式，如果直接设置数值，那么就没有缓动效果</span></p>				
+<p>focusTwoTime : {duration: 1300, easing: "easeOutBounce"} ,<span>//左右第二层焦点图时间，支持缓动公式，如果直接设置数值，那么就没有缓动效果</span></p>				
+<p>fadeTime : 400,<span>//该参数使用淡入淡出动画生效，控制淡入速度</span></p>				
+<p>fadeTwoTime : 600,<span>//该参数使用淡入淡出动画生效  控制第二层淡入速度</span></p>				
+<p>randomsImgTime : 600,<span>//该参数在使用随机动画生效，控制滑动速度</span></p>					
+<p>randeasing : 'easeInOutBack'<span>//该参数在使用随机动画生效，控制easing滑动样式</span></p>	
+<p class="textIn">});</p>	
+<p class="notextIn">});</p>
+</blockquote>
+</body>
+</html>

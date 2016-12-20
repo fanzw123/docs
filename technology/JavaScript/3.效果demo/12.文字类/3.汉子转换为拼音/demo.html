@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>汉字转拼音的jQuery插件 - Jquery-school</title>
+<meta name="author" content="Jquery-School" />
+<meta name="Copyright" content="Jquery-School,www.jq-school.com" />
+<meta name="keywords" content="Jquery,Jquery资源,前端设计,div+css" />
+<meta name="description" content="" />
+<style type="text/css">
+<!--
+	#content{border:1px #dbdbdb solid; width:700px; height:50px; padding:10px; font-size:13px; line-height:23px; letter-spacing:15px;}
+	#show{border:1px #dbdbdb solid; width:700px; height:50px; padding:10px; font-size:12px; color:#FF0000; line-height:23px; margin-top:2px; letter-spacing:1px; overflow-x:hide; overflow-y:auto;}
+	#show a{color:#FF0000; font-size:13px; font-weight:bold}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/manhuaDialog.1.0.css">
+<link href="http://www.jq-school.com/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.jq-school.com/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jQuery.Hz2Py-min.js"></script>
+<script type="text/javascript">
+$(function (){
+	$("#content").live("keyup keydown change blur",function (){
+		$("#show").val($(this).toPinyin());
+	});
+});
+</script>
+
+</head>
+<body>
+<div id="top">
+  <h2 class="subtitle"> JQuery让你的前端设计更精彩！</h2>
+  <div id="meun"><a href="/" title="Jquery-School"><img src="http://www.jq-school.com/logo.png" /></a>
+    <ul id="submeun">
+      <li><a href="/">首 页</a></li>    
+	   <li class="cur"><a href="javascript:void(0)">汉字转拼音的jQuery插件</a></li>
+    </ul>
+  </div>
+  </div>
+<br /><br /><br /><br /><br />
+<center>
+
+
+<textarea id="content">
+</textarea><br />
+<textarea id="show"></textarea></center>
+</body>
+</html>

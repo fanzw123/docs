@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友Adam'分享原创图片播放Jquery插件</title>
+<link href="http://www.jq-school.com/tool/jc/css/public.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+<!-- 
+/* jQuery jcLightBox List css */
+.demoList { width:1229px; overflow:hidden;}
+.demoList li { float:left; height:150px; width:275px; border:1px solid #ccc; padding:5px; background:#fff; margin:10px; _display:inline; position:relative; z-index:0; overflow:hidden;}
+/*.demoList li:hover { border:1px solid #000; background:#222; }*/
+.demoList li a { display:block; height:150px; width:275px; overflow:hidden; cursor:pointer; }
+.demoList li samp,.demoList li div { height:150px; width:275px; position:absolute; left:5px; top:5px; z-index:1; }
+.demoList li samp { background:url(img/zoom.png) no-repeat center center; }
+.demoList li div { background:#000; }
+.demoList li span,.demoList li b {  display:block; position:absolute; left:5px; bottom:5px; width:275px; z-index:1; height:35px; text-align:center; line-height:35px; font-size:15px; color:#fff; text-shadow:1px 1px 0 #000; font-weight:normal; }
+.demoList li span { background:#000; }
+/* jQuery jcLightBox css */
+#jc-Mod { position:absolute; z-index:99; display:none; left:0; right:0; bottom:0; top:0; cursor:pointer; }
+#jc-Box { position:absolute; left:0; top:0; z-index:100; display:none; }
+#box-top { height:24px; position:relative; background:url(img/box-top.png) repeat-x 0 0; }
+#box-top-left { background:url(img/box-ra.png) no-repeat 0 0; height:24px; width:24px; position:absolute; left:-24px; top:0; }
+#box-top-right { background:url(img/box-ra.png) no-repeat -25px 0; height:24px; width:24px; position:absolute; right:-24px; top:0; }
+#box-btm { height:24px; position:relative;  background:url(img/box-bottom.png) repeat-x 0 0; }
+#box-btm-left { background:url(img/box-ra.png) no-repeat 0 -25px; height:22px; width:24px; position:absolute; left:-24px; top:0; }
+#box-btm-right { background:url(img/box-ra.png) no-repeat -25px -25px; height:22px; width:24px; position:absolute; right:-24px; top:0; }
+#box-cen { background:url(img/box-left.png) repeat-y 0 0; position:relative; left:-24px;}
+#box-cen-right { background:url(img/box-right.png) repeat-y right 0; position:relative; right:-48px;}
+#box-cen-img { position:relative; left:-24px; background:#000; }
+#box-pn { position:absolute; left:10px; top:32px; height:30px; width:70px; z-index:101; }
+#box-prev { background:#000; float:left; width:32px; height:30px; cursor:pointer; }
+#box-next { background:#000; float:right; width:32px; height:30px; cursor:pointer;}
+#box-pn a { display:block; height:20px; position:relative; top:5px; left:5px; background:url(img/sprite.png) no-repeat;}
+#box-next a { background-position:0 -20px; }
+#box-prev a { background-position:0 -40px; }
+#box-close { background:url(img/box-close.png) no-repeat; height:60px; width:42px; position:absolute; top:14px; right:-50px; cursor:pointer; z-index:101; }
+#box-close a { display:block; height:20px; position:relative; top:20px; left:8px; background:url(img/sprite.png) no-repeat 0 0;}
+#box-text { height:50px; position:absolute; left:0; }
+#box-text samp { display:block; position:absolute; background:url(img/arrow.png) no-repeat; height:12px; width:12px; left:48%; top:-8px; z-index:1;}
+#box-text-left { background:url(img/box-text.png) no-repeat; height:50px; width:10px; position:absolute; left:0; top:0;}
+#box-text-cen { color:#fff; text-shadow:1px 1px 0 #000; text-align:center; background:url(img/box-text-cen.png) repeat-x; height:50px; line-height:50px; margin:0 10px; padding:0 30px; font-size:15px;overflow:hidden;}
+#box-text-right { background:url(img/box-text.png) no-repeat right 0; height:50px; width:10px; position:absolute; right:0; top:0;}
+
+
+	body,ul,ol,h2,h3,h4,h5,p,dl,dt,dd,form{padding:0;margin:0;}img{border:none;}li{list-style:none;}a{text-decoration:none;outline:none;color:#666666;}a:hover{text-decoration:none}img{border:0}ul{list-style:none;margin:0;}label{color:#6CBD45;font-size:14px;font-weight:bold;padding-bottom:0.5em;margin:0;}.h3{font-size:13px;font-weight:bold;}#show{background:url(images/photo.jpg)}#meun{color:#fff;padding-left:10px;}#meun img{float:left;}#submeun{margin-left:70px;float:left;}#submeun span{text-align:center;margin-right:10px;float:left;display:inline;}#submeun span a{color:#fff;height:50px;line-height:50px;font-size:14px;font-weight:bold;text-align:center;padding-left:15px;padding-right:15px;display:block;}#submeun span.cur{text-align:center;background:#82ce18;margin-right:10px;float:left;display:inline;}#top{background-color:#000;margin:0em 0 10px 0em;border-style:solid;border-width:1px;border-color:#E5E5E5;height:50px;line-height:50px;}label.subtitle{font-size:13px;float:right;color:#6CBD45;margin:0 10px;text-align:right;}h1.title{height:50px;font-size:12px;background:url(logo.png) no-repeat;}h1.title a:link,h1.title a:visited,h1.title a:hover{color:#000;text-decoration:none;}
+-->
+</style>
+<script src="http://www.jq-school.com/js/jquery-1.7.2.min.js" language="javascript" type="text/javascript"></script>
+<script src="http://www.jq-school.com/js/jQuery-easing.js" language="javascript" type="text/javascript"></script>
+<script src="js/jQuery-jcLightBox.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!-- 
+$(function(){
+	
+    $("#demo1").jcLightBox();
+	
+	$("#demo2").jcLightBox({
+		speed : 200,
+		listSpeed : 200,
+		setLood : {
+			path : "img/loading.gif",
+			width : 32,
+			height : 32
+		},
+		setModal : {
+			bgColor : "#000",
+			opacity : .6
+		},
+		state : "fade"
+	});
+	
+});
+-->
+</script>
+</head>
+
+<body>
+<div id="top">
+  <label class="subtitle"> Jquery学堂QQ群开放(244127054)</label>
+  <div id="meun"><a href="http://www.jq-school.com/" title="Jquery-School"><img src="http://www.jq-school.com/logo.png" /></a>
+    <div id="submeun">
+      <span><a href="http://www.jq-school.com/">首 页</a></span>    
+	   <span class="cur"><a href="javascript:void(0)">网友Adam'分享原创图片播放Jquery插件</a></span>
+    </div>
+  </div>
+  </div>
+<br />
+<!-- HTML 开始 -->
+
+<!-- demo 1 -->
+
+<div class="demoTitle">Adam ’ jQuery - jcLightBox图片展示（ 默认效果 ）</div>
+
+<ul id="demo1" class="demoList">
+	<li>
+    	<a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_blue_big.jpg" width="428" height="350">
+    		<img src="img/s1.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_purple_big.jpg" width="328" height="250">
+      	  <img src="img/s4.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_pink_big.jpg" width="528" height="450">
+       	 <img src="img/s3.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_green_big.jpg" width="328" height="250">
+        	<img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_pink_big.jpg" width="428" height="350">
+            <img src="img/s3.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_green_big.jpg" width="528" height="450">
+           <img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_blue_big.jpg" width="428" height="350">
+            <img src="img/s1.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://demo.wpthemers.net/thumbfx/demo/thumbs/thumb_purple_big.jpg" width="628" height="550">
+            <img src="img/s4.jpg" height="150" width="275" />
+        </a>
+    </li>
+</ul>
+
+
+<!-- demo 2 -->
+<div class="demoTitle">Adam ’ jQuery - jcLightBox图片展示（ Title信息，Group分组 ）</div>
+
+<ul id="demo2" class="demoList">
+    <li>
+        <a rel="http://pic4.nipic.com/20090806/970774_084945032_2.jpg" width="824" height="483" group="group1" title="demo1">
+           <img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://pic10.nipic.com/20101105/5063545_012629466000_2.jpg" width="724" height="468" group="group1" title="demo1">
+            <img src="img/s1.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://pic4.nipic.com/20090911/970774_083832883992_2.jpg" width="624" height="327" group="group2" title="demo2">
+            <img src="img/s4.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="http://pic4.nipic.com/20090806/970774_084945032_2.jpg" width="824" height="483" group="group1" title="demo1">
+           <img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+	<li>
+    	<a rel="img/b1.jpg" width="528" height="450" title="The effects adaptive size" group="group1">
+    		<img src="img/s1.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="img/b4.jpg" width="428" height="350" title="The effects can be grouped" group="group1">
+      	  <img src="img/s4.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="img/b3.jpg" width="428" height="350" title="Do you support Adam ' ?" group="group1">
+       	 <img src="img/s3.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="img/b2.jpg" width="428" height="350" title="You want to help!" group="group1">
+        	<img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+    	<a rel="img/b3.jpg" width="428" height="350" title="Adam ' Photo Gallery effect" group="group2">
+            <img src="img/s3.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="img/b2.jpg" width="528" height="450" title="The effect of support?" group="group2">
+           <img src="img/s2.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="img/b1.jpg" width="428" height="350" title="Adam ' Email: 1741498@qq.com" group="group2">
+            <img src="img/s1.jpg" height="150" width="275" />
+        </a>
+    </li>
+    <li>
+        <a rel="img/b4.jpg" width="428" height="350" title="Adam ' QQ:1741498" group="group2">
+            <img src="img/s4.jpg" height="150" width="275" />
+        </a>
+    </li>
+</ul>
+
+
+<!-- HTML 结束  -->
+<div id="psWraper">
+    <div id="ps" style=" width:950px;">
+        <div id="psText">
+        	<samp>首先感谢 jQuery-School ( <a>http://www.jq-school.com</a> ) 对 Adam' 的支持！支持原创，支持前端！</samp>
+            <h2>jQuery-jcLightBox 图片展示（ 体验版 ）</h2>
+
+            <p>jQuery-jcLightBox 调用简单，插件实用！只需修改插件参数 及 CSS便能实现想要的效果！如有宝贵意见请联系Adam ’</p>
+        </div>
+        <h1>jQuery-jcLightBox插件<p>by Adam ’</p></h1>
+        <dl style="clear:both"> 
+            <h2>* 插件说明 及 相关参数</h2>
+            <dt>jQuery - jcLightBox v1.12</dt>
+            <dt>Copyright(c) 2012 by Adam ’ </dt>
+            <dt>QQ : 1741498</dt>
+            <dt>E-mail : 1741498@qq.com</dt>
+            <dt>Date: 2012-08-30</dt>
+			<dd><span>speed : 200,</span> // 设置动画时间</dd>
+			<dd><span>listSpeed : 200,</span> // 设置图片列表动画时间</dd>
+			<dd><span>setLood : { path : "img/loading.gif", width : 32, height : 32 }, // loadding相关设置</span></dd>
+			<dd><span>setModal : { bgColor : "#000", opacity : .6 },</span> // 模态层相关设置</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

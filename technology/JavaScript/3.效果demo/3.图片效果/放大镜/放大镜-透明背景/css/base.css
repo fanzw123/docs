@@ -1,0 +1,6 @@
+* { font-size:13px; font-family:Georgia, "Times New Roman","宋体"; color:#333; margin:0; padding:0; list-style:none; text-shadow:0 1px 1px #fff; }
+html { background:url(bg.png) repeat; }
+a img { border:0;}
+#demo,#demo1,#demo2,#demo3,#demo4,#demo5,#demo6,#demo7,#demo8 { margin:0 auto; }
+
+h1 { text-align:center; font-size:30px; font-weight:bold; color:#c00; text-shadow:1px 1px 0 #fff; margin:60px 0 40px; border-bottom:1px dashed #999;border-top:1px dashed #999; padding:20px 0; background:#EEE; }

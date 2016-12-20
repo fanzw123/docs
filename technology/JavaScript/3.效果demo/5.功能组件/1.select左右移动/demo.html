@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>select左右移动</title>
+<style type="text/css">
+#one{width:200px; height:180px; float:left}
+#two{width:50px; height:180px; float:left}
+#three{width:200px; height:180px; float:left}
+.btn{width:50px; height:30px; margin-top:10px; cursor:pointer;}
+#table {
+		width:500px; 
+		align:center;
+		border:0;
+		cellpadding:0;
+		cellspacing:0;
+		class:newContTab;
+	}
+</style>
+
+<script src="jquery-1.9.0.js" type="text/javascript"></script>
+<script src="demo.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(function(){
+   xxx(); 
+});
+
+</script>
+
+</head>
+<body>
+<br />
+<br />
+
+<table id="table">
+  <tr>
+    <th>&nbsp;</th>
+    <td><div>
+        <div>
+          <select multiple="multiple" id="select1" style="width:150px;height:200px; float:left; border:1px #A0A0A4 outset; padding:4px; ">
+            <option value="1">demo1</option>
+            <option value="2">demo2</option>
+            <option value="2">demo3</option>
+            <option value="3">demo4</option>
+            <option value="4">demo5</option>
+            <option value="5">demo6</option>
+            <option value="6">demo7</option>
+          </select>
+        </div>
+        <div style="float:left"> <span id="add">
+          <input type="button" class="btn" value=">"/>
+          </span><br />
+          <span id="add_all">
+          <input type="button" class="btn" value=">>"/>
+          </span> <br />
+          <span id="remove">
+          <input type="button" class="btn" value="<"/>
+          </span><br />
+          <span id="remove_all">
+          <input type="button" class="btn" value="<<"/>
+          </span> </div>
+        <div>
+          <select multiple="multiple" id="select2" style="width: 150px;height:200px; float:lfet;border:1px #A0A0A4 outset; padding:4px;">
+          </select>
+        </div>
+      </div></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB18030">
+<title>Insert title here</title>
+
+<!-- 任意一个CSS都可 -->
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" id="skin" href="css/jquery-ui-1.9.2.custom.min17.css" />
+<style>
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+	font-size: 62.5%;
+}
+.describe,a,span{
+	font-size:12px;
+	text-align:right;
+}
+.redfont{
+	color:#F00;}
+</style>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jquery-ym-datePlugin-0.1.js"></script>
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+//显示时间的选择
+$(".timeSubject").ymdateplugin({
+	//attr 属性 ，更多格式参加书本
+	altField:'#otherField',			//同步元素日期到其他元素上
+	dateFormat:'yy-mm-dd',		//日期格式设置
+	minDate: new Date(),		//最小选择日期为今天
+	changeYear:true,				//显示年份
+	changeMonth:true,				//显示月份
+	showMonthAfterYear:true,	//互换位置
+	showTimePanel: true
+});
+</script>
+
+</body>
+</html>

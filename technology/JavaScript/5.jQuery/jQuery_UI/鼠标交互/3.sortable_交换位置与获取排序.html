@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 交换位置与获取排序</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		(function () {
+			/** 
+			 * 3.交换位置与获取排序
+			 * 函数：		sortable()
+			 * 实验室：	http://www.bibeault.org/jqia2/chapter10/sortables/lab.sortables.html
+			 * 书本：		292页
+			 */	
+			var option = {						//设置需要移动列表，的父元素
+				//属性。 更多属性参照书本
+				containment:"document",		//范围移动范围
+				connectWith:"#ul2",				//与另外一个可排序的元素，移动列表
+				
+				//fn 函数设置
+				start : function () {				//开始拖动运行
+					//alert('')
+				},
+				update : function () {			//移动完成时，并且改变了位置  执行函数			
+					var toArray = $(this).sortable('toArray');	//返回新的排序(toArray)。 格式：order_1order_4order_5order_3order_2
+					$('#toArray').html(toArray);
+					
+					var serialize = $(this).sortable('serialize');//返回新的排序(serialize)。 格式：subject[]=3&subject[]=5&subject[]=1&subject[]=4&subject[]=2
+					$('#serialize').html(serialize);				
+				}	
+			};
+			$('#ul').sortable(option);		
+			//控制交换位置与排序的元素
+			//$('#ul').sortable('disable');		//禁用包装集中的	交换位置与排序的元素
+			//$('#ul').sortable('enable');		//开启包装集中的	交换位置与排序的元素
+			//$('#ul').sortable('destroy');		//删除包装集中的	交换位置与排序的元素
+			
+			
+			//第二个
+			var options2 = {						//设置需要移动列表，的父元素
+				//属性。 更多属性参照书本
+				containment:"document",		//范围移动范围
+				connectWith:"#ul",				//与另外一个可排序的元素，移动列表
+				
+				//fn 函数设置
+				start : function () {				//开始拖动运行
+					//alert('')
+				},
+				update : function () {			//移动完成时，并且改变了位置  执行函数
+					//alert('');			
+				}	
+			};
+			
+			$('#ul2').sortable(options2);	
+			
+		})();	
+
+	});	
+	</script>
+<style>
+	li {
+		list-style: none;
+	}
+	#sidebar {
+		width:200px;
+		height:200px;
+		border:1px solid black;
+		float:left;
+		margin:0 30px 0 0;
+	}
+	#sidebar ul {
+		padding:0;
+		margin:5px;	
+		width:auto;
+		height:180px;
+	}
+	#sidebar ul li {
+		display:block;
+		width:auto;
+		height:30px;
+		background:#ccc;
+		margin:0 0 5px 0;
+	}
+	div.content  {
+		min-width:300px;
+		max-width:auto;
+		height:200px;
+		margin:0 30px 0 0;
+		border:1px solid black;
+		float:left;
+	}
+	span {
+		color:red;
+	}
+</style>
+<body>
+	<h1>交换位置与获取排序</h1>
+	<div id="sidebar">
+		<ul id="ul"> 
+			<li id="name_1">1</li>
+			<li id="user_2">2</li>
+			<li id="order_3">3</li>
+			<li id="order_4">4</li>
+			<li id="order_5">5</li>
+		</ul>	
+	</div>
+	
+	<div id="sidebar">
+		<ul id="ul2"> 
+			<li id="name_1">6</li>
+			<li id="user_2">7</li>
+			<li id="order_3">8</li>
+			<li id="order_4">9</li>
+			<li id="order_5">10</li>
+		</ul>	
+	</div>
+	<div class="content">
+		<p>toArray：<span id="toArray"></span></p>
+		
+		<p>serialize：<span id="serialize"></span></p>
+	</div>
+</body>
+</html>

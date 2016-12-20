@@ -1,0 +1,41 @@
+{
+    "author": {
+        "name": "Nurul Ferdous", 
+        "email": "nurul@ferdo.us", 
+        "url": "http://dynamicguy.com"
+    }, 
+    "bugs": {
+        "url": "https://github.com/dynamicguy/tagcloud/issues"
+    }, 
+    "demo": "http://dynamicguy.github.com/tagcloud/", 
+    "dependencies": {
+        "jquery": ">=1.4.3"
+    }, 
+    "description": "jQuery Tag Cloud looking like a 3d sphere. 3d animated tag cloud generated from an array. you can easily customize it by tweaking the params.", 
+    "docs": "https://github.com/dynamicguy/tagcloud/wiki", 
+    "homepage": "http://dynamicguy.github.com/tagcloud/", 
+    "keywords": [
+        "tag", 
+        "cloud", 
+        "tagcloud", 
+        "animation", 
+        "visualization"
+    ], 
+    "licenses": [
+        {
+            "type": "MIT", 
+            "url": "http://opensource.org/licenses/MIT"
+        }, 
+        {
+            "type": "GPLv2", 
+            "url": "http://opensource.org/licenses/gpl-2.0"
+        }
+    ], 
+    "name": "tagcloud", 
+    "repository": {
+        "type": "git", 
+        "url": "git@github.com:dynamicguy/tagcloud.git"
+    }, 
+    "title": "jQuery Tag Cloud", 
+    "version": "1.2.1"
+}

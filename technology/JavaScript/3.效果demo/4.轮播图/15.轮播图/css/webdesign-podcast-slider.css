@@ -1,0 +1,40 @@
+/*
+ * Webdesign-Podcast.de SlideShow
+ * v.1.5.0
+ *
+ * Copyright (c) 2011 Pascal Bajorat (http://www.pascal-bajorat.com)
+ * Dual licensed under the MIT (below)
+ * and GPL (http://www.gnu.org/licenses/gpl.txt) licenses.
+ *
+ *
+ * http://www.pascal-bajorat.com
+ * http://www.webdesign-podcast.de
+
+MIT License
+
+Copyright (c) 2011 Pascal Bajorat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ *
+ *
+ *
+ * If you change the default Class names in the Slider Settings it is important to change the Class names in this CSS, too.
+ * =========================================================================================================================
+ *
+ */
+.WebdesignPodcastSlideShow{border:1px solid #ccc;-moz-border-radius:3px;border-radius:3px;position:relative;overflow:hidden;margin-bottom:20px;}
+.WebdesignPodcastSlideShow .slides{position:absolute;top:0px;left:0px;z-index:1;-moz-border-radius:3px;border-radius:3px;}
+		
+.WebdesignPodcastSlideShow .nextBtn,
+.WebdesignPodcastSlideShow .prevBtn{width:30px;display:block;position:absolute;top:0px;z-index:2;opacity:0.5;filter:alpha(opacity=65);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";}
+		
+.WebdesignPodcastSlideShow .nextBtn{right:0px;background:url(../images/button.png) no-repeat center #fff;background:url(../images/button.png) no-repeat center rgba(255, 255, 255, 0.65);-webkit-box-shadow:-1px 0px 1px #fff;-moz-box-shadow:-1px 0px 1px #fff;box-shadow:-1px 0px 1px #fff;-moz-border-radius-topright:3px;border-radius-bottomright:3px;}
+.WebdesignPodcastSlideShow .prevBtn{left:0px;background:url(../images/button2.png) no-repeat center #fff;background:url(../images/button2.png) no-repeat center rgba(255, 255, 255, 0.65);-webkit-box-shadow:1px 0px 1px #fff;-moz-box-shadow:1px 0px 1px #fff;box-shadow:1px 0px 1px #fff;-moz-border-radius-topleft:3px;border-radius-bottomleft:3px;}
+		
+.WebdesignPodcastSlideShow .slide{float:left;}
+.WebdesignPodcastSlideShow .slides *{-moz-border-radius:3px;border-radius:3px;}

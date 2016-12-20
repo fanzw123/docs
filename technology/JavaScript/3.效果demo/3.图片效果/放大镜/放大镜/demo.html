@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>图片放大镜Jquery插件</title>
+<meta name="Keywords" content="Jquery,Jquery插件,Jquery资源,Jquery特效,div+css," />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.jqzoom.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".jqzoom").jqueryzoom({
+		xzoom: 300, //缩放div默认宽度(默认宽度为200)
+		yzoom: 300, //缩放div默认高度(默认高度为200)
+		offset: 10, //缩放div默认停靠偏移位置(默认停靠偏移位置10)
+		position: "right", //显示默认位置(显示默认位置为 "right")
+		preload:1,
+		lens:1
+	});
+});
+</script>
+<link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="style/jqzoom.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper" >
+
+
+
+		<div id="maincontent">
+
+		
+                       				
+
+				<h3>jQZoom allows you to realize a small magnifier window close to the image or images on your web page easily.</h3>
+				I decided to build this jQuery plugin to embed detailed big images in my B2B.So now in few steps you can have your <strong>jQZoom</strong>
+				in your website,eCommerce or whatever you want.<span style="float:left;color:#666666;width:100%;border-bottom:1px solid #333333;text-align:right;">Author: <strong><a href="mailto:info@mind-projects.it">Ing. Renzi Marco</a></strong>&nbsp;,December 2007</span><br><br>
+
+				<p>1)Simply include the <i>jqzoom.css</i> in your page.</p>
+
+				<span class="code">
+				<xmp><link rel="stylesheet" href="your_path/jqzoom.css" type="text/css" media="screen"></xmp></span>
+
+				<p>2)Include jQzoom and jQuery code</p><br>
+
+				<span class="code"><xmp><script type="text/javascript" src="your_path/jquery.js"></script>
+				<script type="text/javascript" src="your_path/jquery.jqzoom.js"></script></xmp></span>
+
+				<p>3)Now create a container(div is better!!) for the image or images you would like to zoom and assign to it the "<strong>jqzoom</strong>" class.Specify for each image,the <strong>jqimg</strong> attribute,to wich you are going to assign the big image path.</p>
+
+				<span class="code">
+				<xmp><div class="jqzoom"><img src="images/shoe4_small.jpg"  alt="shoe"  jqimg="images/shoe4_big.jpg"></div>
+				</xmp></span>
+
+				<p>4)Load the plugin at window load</p>
+
+				<span class="code">
+				<xmp>$(document).ready(function(){
+				$(".jqzoom").jqueryzoom();
+				});</xmp>
+				</span>
+
+				<p>You can also specify some <strong>options</strong>:</p>
+
+
+				<span class="code">
+				<xmp>$(document).ready(function(){
+	$(".jqzoom").jqueryzoom({
+		xzoom: 300, //缩放div默认宽度(默认宽度为200)
+		yzoom: 300, //缩放div默认高度(默认高度为200)
+		offset: 10, //缩放div默认停靠偏移位置(默认停靠偏移位置10)
+		position: "right", //显示默认位置(显示默认位置为 "right")
+		preload:1,
+		lens:1
+	});
+});</xmp>
+				</span>
+
+				<p>5)Sit and wait for people to tell you that what you have done is really cool!!!!:-)</p>
+								
+				<h3 style="float:left;clear:both;">Demo</h3>
+				<p>Now move the mouse over the images.</p>
+			      <div style="float:left;width:100%;clear:both;" >              
+		            <div style='float:left;width:100%;'><div class="jqzoom"  style='margin-right:5px;float:left;'><img src="images/shoe2_small.jpg"  alt="scarpa"  jqimg="images/shoe2_big.jpg"></div>
+			      </div>
+
+
+	                   <p>Inside a container with position:relative</p>
+                        <div style="border:1px solid #CCCCCC;padding:50px;float:left;clear:both;width:80%;margin-bottom:10px;"><div class="jqzoom"><img src="images/triumph_small.jpg"  alt="macchina"  jqimg="images/triumph.jpg"></div></div>
+
+
+                         <div style="float:left;width:100%;clear:both;"><div class="jqzoom"><img src="images/me_small.jpg"  alt="scarpa"  jqimg="images/me_big.jpg"></div></div>
+
+
+                </div>
+		 <span style="float:left;width:100%;height:200px;">&nbsp;</span>
+</div>
+
+
+</body>
+</html>

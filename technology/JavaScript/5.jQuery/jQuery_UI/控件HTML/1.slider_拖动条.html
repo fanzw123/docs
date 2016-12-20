@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 拖动条</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	<script type="text/javascript">
+	$(function () {
+	
+		/** 
+		 * 1.slider 拖动条	
+		 * 	函数：	slider()	拖动条
+		 * 	实验室：	http://www.bibeault.org/jqia2/chapter11/sliders/lab.sliders.html
+		 *  书本：	323页。
+		 */
+		(function () {
+			var options = {
+				value:30,					//初始值
+				min:0, 						//最小值
+				max:100, 					//最大值
+				animate:true,			//运动动画
+				range:"min", 	
+				
+				//fn 函数
+				start : function (event,info) {		//开始时触发
+					$('#value').html(info.value + '开始了...');
+				},
+				slide : function (event,info) {		//移动中触发
+					$('#value').html(info.value + '移动中...');
+				},
+				stop : function (event,info) {		//结束后触发
+				
+					$(this).slider('option','value',20);
+					$('#value').html(info.value + '结束...');			
+				},
+			};
+			
+			$('div.slider').slider(options);
+			
+			//拖动条	控制
+			//$('div.slider').slider('disable');	//禁用包装集中的拖动条	
+			//$('div.slider').slider('enable');	//开启包装集中的拖动条	
+			//$('div.slider').slider('destroy');	//删除包装集中的拖动条	
+		})();
+		
+
+	});	
+	</script>
+<style>
+	
+</style>
+<body>	
+	<h2 class="demoHeaders">拖动条</h2>
+	
+	<div class="slider" ></div>
+	<p id="value"></p>
+	
+</body>
+</html>

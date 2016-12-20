@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 放置拖动元素</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		(function () {
+				/** 
+			 * 2.放置可拖动元素到指定位置
+			 * 函数：		droppable()
+			 * 实验室：	http://www.bibeault.org/jqia2/chapter10/droppables/lab.droppables.html
+			 * 书本：		288页
+			 */		 
+			$('div.red,div.blue').draggable({		//选中可以被放置的元素
+				helper: 'clone',	
+				opacity: 0.5,
+				revert: true,
+				start : function () {
+					var _this = this;						//1.保存正在被拖动的元素对象。
+					
+					//设置放置元素 。
+					var options = {			//2.选取目标区域的元素
+						//attr 属性设置
+						accept:'.red,.blue',				//(选择器)设置可以被放置的元素。不设置此属性，所有可拖动元素都能放置。
+						tolerance:'intersect',				//设置可放置元素进入目标区域的范围值			
+						activeClass:'redBorder',		//(css类名 多个空格分开)	移动可放置的元素时，改变目标区域的样式。
+						hoverClass:'bronze', 			//(css类名 多个空格分开)	移动可放置的元素时，放置在目标区域时改变目标区域颜色
+										
+						//fn 函数设置。这里this指针，指向目标区域的对象
+						activate : function () {			//拖动开始		触发函数	
+							
+						},		
+						over : function () {				//进入目标区域   触发函数
+						
+						},
+						out : function () {					//移除目标区域	触发函数
+							
+						},
+						drop : function (event,info) {	//停在目标区域
+							var type = $(_this).html();
+							$(this).html(type);
+						},		
+					};
+					
+					$('div.demo').droppable(options);			
+					//控制可放置元素
+					//$('div').droppable('disable');	//禁用包装集中的可放置元素
+					//$('div').droppable('enable');		//开启包装集中的可放置元素
+					//$('div').droppable('destroy');	//删除包装集中的可放置元素					
+				},		 
+			});
+			
+		})();
+		
+		
+	});	
+	</script>
+<style>
+	div {
+		display:block;
+		float:left;
+		width:200px;
+		height:200px;
+		margin:0 5px 0 0;
+	}
+	div.red {
+		background:red;
+	}
+	div.blue {
+		background:blue;
+	}
+	div.demo {
+		border:1px solid #ccc;
+	}
+	div.redBorder {
+		border: 2px solid red;
+	}
+</style>
+<body>
+	<h1>放置拖动元素</h1>
+	<div class="red" name="red">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div class="blue" name="blue">
+		<ul>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li class="yc">z</li>
+		</ul>
+	</div>
+	<div class="demo" name="demo1">
+		
+	</div>
+	<div class="demo" name="demo2">
+		
+	</div>
+
+	
+</body>
+</html>

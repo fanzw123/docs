@@ -1,0 +1,70 @@
+http://git.corp.angejia.com/dw/docs/blob/master/service/dw-server/databases-user.md
+https://mail.euchost.com/owa/#path=/mail
+http://dw.corp.angejia.com/beeswax/#query
+
+DirectX Repair
+
+画图：
+https://www.processon.com/diagrams
+
+
+ucloudera：
+http://name-node.angejia.club:7180/cmf/home
+/opt/cloudera/parcels/CDH-5.4.8-1.cdh5.4.8.p0.4/
+admin
+admin
+
+slava：
+	用户名：angejia_dw
+	密码：Th872havAyaxEmEB
+
+打印机：
+	192.168.160.12
+
+////////////////////////////////////////////////
+10.10.2.91      bi0
+10.10.91.51     bi1
+10.10.111.226   bi2
+10.10.64.232    bi3
+10.10.235.204   bi4
+10.10.2.91      bastion-host
+
+# dw database
+10.10.64.146    angejia-bi-db
+10.10.39.153    agjdb2-bi
+
+# dw_service
+10.10.7.102     uhadoop-ociicy-master1
+10.10.20.223    uhadoop-ociicy-master2
+10.10.33.175    uhadoop-ociicy-core1
+10.10.7.68      uhadoop-ociicy-core2
+10.10.43.97     uhadoop-ociicy-core3
+10.10.240.22    uhadoop-ociicy-core4
+10.10.236.241   uhadoop-ociicy-core5
+10.10.222.21    uhadoop-ociicy-core6
+10.10.229.183   uhadoop-ociicy-task3
+10.10.234.131   uhadoop-ociicy-task4
+/////////////////////////////////////////////////
+
+
+
+bi0：
+   ~/bi_server_dir/bi4/data/app/recommend/run/
+
+kafka
+config/server-1.properties:
+            broker.id=1
+            port=9093
+            log.dir=/tmp/kafka-logs-1
+            zookeeper.connect=debugo01:2181,debugo02,debugo03
+
+bin/kafka-server-start.sh config/server-1.properties &
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic action
+bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic action
+
+
+
+
+ 
+ 
+ 

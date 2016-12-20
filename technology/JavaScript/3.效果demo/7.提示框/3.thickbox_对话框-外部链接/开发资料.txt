@@ -1,0 +1,30 @@
+//开发资料
+http://www.jscode.cn/web/v1763
+
+1.引入jquery.js  thickbox.js	thickbox.css  在对应元素上面加上 class="thickbox"
+
+2.修改thickbox.js中 var tb_pathToImage 的图片地址
+loadingAnimation.gif
+
+3.修改thickbox.css中 .TB_overlayMacFFBGHack  的图片地址	
+macFFBgHack.png
+
+
+四.自定义内容
+       1>更改右上角的关闭按钮文字"close or esc key"  199行
+           修改thickbox-compressed.js。
+           查找关键字"or esc key"，将其删除，并将前面的close更改为[x]或"关闭"，然后把文件另存为utf-8格式
+       2>修改遮罩层透明度
+           修改thickbox.css。 
+           查找.tb_overlaybg 修改相关数值
+       3>关闭层：如果我们需要自己添加一个关闭按钮或者图片可以使用：
+           onclick="self.parent.tb_remove();"
+       4>thickbox插件默认情况是点击灰色的遮罩层就会关闭取消
+           把两个$("#tb_overlay").click(tb_remove);去掉就可以取消掉
+       5>
+------------------------------------------------------------------------
+五. 总结
+     1>thickbox共有3种关闭弹窗的方式  close按钮 、key（左键点击） 、Esc键 ,可根据自己的需要修改thickbox中对应的代码 
+     2>设置 modal=true时会屏蔽 title栏 此时3种关闭的方式也会清除，关闭方法需自行添加  tb_remove()
+
+

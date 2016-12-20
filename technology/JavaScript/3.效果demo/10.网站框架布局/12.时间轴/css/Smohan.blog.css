@@ -1,0 +1,164 @@
+BODY {
+	BACKGROUND: url(../Images/Smohan_blog_header.png) #f9f9f9 repeat-x; COLOR: #363636; FONT-SIZE: 13px
+}
+
+A {
+	COLOR: #767676; FONT-SIZE: 13px; FONT-WEIGHT: 200
+}
+A:hover {
+	COLOR: #565656
+}
+
+#Container {
+	POSITION: relative; PADDING-BOTTOM: 30px; MARGIN: 0px auto 200px; PADDING-LEFT: 0px; WIDTH: 1040px; PADDING-RIGHT: 0px; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 30px
+}
+.timeline_container {
+	Z-INDEX: 50; TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 29px; DISPLAY: block; HEIGHT: 100%; CURSOR: pointer
+}
+.timeline {
+	POSITION: absolute; MARGIN: 0px auto; WIDTH: 4px; DISPLAY: block; BACKGROUND: #eeeeee; FLOAT: left; HEIGHT: 100%; FONT-SIZE: 0px; TOP: 0px; LEFT: 518px
+}
+.timeline DIV.plus {
+	Z-INDEX: 5000; POSITION: absolute; WIDTH: 29px; BACKGROUND: url(../Images/timeline.png) 0px -36px; HEIGHT: 10px; TOP: 0px; LEFT: -11px
+}
+.timeline DIV.plus2 {
+	POSITION: absolute; WIDTH: 10px; BOTTOM: 0px; BACKGROUND: url(../Images/timeline.png) -29px -26px; HEIGHT: 10px; LEFT: -3px
+}
+.leftCorner {
+	Z-INDEX: 99; POSITION: absolute; WIDTH: 36px; DISPLAY: block; HEIGHT: 26px; OVERFLOW: hidden
+}
+.rightCorner {
+	Z-INDEX: 99; POSITION: absolute; WIDTH: 36px; DISPLAY: block; HEIGHT: 26px; OVERFLOW: hidden
+}
+.rightCorner {
+	BACKGROUND: url(../Images/timeline.png) 0px 0px; TOP: 25px; RIGHT: -36px
+}
+.leftCorner {
+	BACKGROUND: url(../Images/timeline.png) -36px 0px; TOP: 10px; LEFT: -36px
+}
+.item {
+	BORDER-BOTTOM: #eaeaea 1px solid; POSITION: relative; BORDER-LEFT: #eaeaea 1px solid; PADDING-BOTTOM: 15px; LINE-HEIGHT: 30px; MARGIN: 20px 30px 0px; MIN-HEIGHT: 60px; PADDING-LEFT: 15px; WIDTH: 428px; PADDING-RIGHT: 15px; DISPLAY: block; FONT-FAMILY: "Microsoft JhengHei", "Microsoft YaHei"; WORD-WRAP: break-word; BACKGROUND: #ffffff; FLOAT: left; FONT-SIZE: 13px; BORDER-TOP: #eaeaea 1px solid; BORDER-RIGHT: #eaeaea 1px solid; PADDING-TOP: 15px; box-shadow: 0px 1px 8px rgba(202, 202, 202, 0.3)
+}
+.item H3 {
+	LINE-HEIGHT: 30px; WIDTH: 428px; DISPLAY: block; HEIGHT: 30px; FONT-WEIGHT: normal
+}
+.item H3 .fl {
+	FLOAT: left; COLOR: #363636; FONT-SIZE: 14px
+}
+.item H3 .fr {
+	TEXT-ALIGN: right; FLOAT: right; COLOR: #999999; FONT-SIZE: 12px
+}
+.item P.con {
+	BORDER-BOTTOM: #ececec 1px dashed; PADDING-BOTTOM: 15px; LINE-HEIGHT: 30px; WIDTH: 428px; DISPLAY: block; COLOR: #555555; BORDER-TOP: #ececec 1px dashed; FONT-WEIGHT: normal; PADDING-TOP: 15px
+}
+.item P {
+	TEXT-INDENT: 2em
+}
+.item H4 {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; WIDTH: 428px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 15px
+}
+#Loves {
+	BORDER-BOTTOM: #e0e0e0 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #e0e0e0 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 60px; MARGIN: 30px auto -1px; PADDING-LEFT: 0px; WIDTH: 978px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../Images/loves.png) #ffffff repeat-x; HEIGHT: 60px; FONT-SIZE: 16px; BORDER-TOP: #e0e0e0 1px solid; FONT-WEIGHT: 600; BORDER-RIGHT: #e0e0e0 1px solid; PADDING-TOP: 10px; box-shadow: 0px 1px 8px rgba(202, 202, 202, 0.3)
+}
+.item A.dan_title {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 30px; PADDING-LEFT: 38px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BACKGROUND: url(../Images/dan.png) no-repeat 0px 0px; HEIGHT: 30px; FONT-SIZE: 16px; FONT-WEIGHT: 600; PADDING-TOP: 5px
+}
+.item A.dan_title:hover {
+	BACKGROUND-POSITION: 0px -40px; COLOR: #f061dd
+}
+.item .dan_content {
+	BORDER-BOTTOM: #cecece 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 25px; PADDING-LEFT: 0px; WIDTH: 428px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-SIZE: 13px; OVERFLOW: hidden; BORDER-TOP: #cecece 1px solid; PADDING-TOP: 10px
+}
+.item .dan_content IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN: 5px auto; DISPLAY: block; BACKGROUND: url(../Images/Load.gif) no-repeat center center; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.item .dan_content EMBED {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN: 5px auto; DISPLAY: block; BACKGROUND: url(../Images/Load.gif) no-repeat center center; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.item .footer {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; DISPLAY: inline-block; HEIGHT: 30px; OVERFLOW: hidden; PADDING-TOP: 10px
+}
+.item .footer LI {
+	LINE-HEIGHT: 30px; DISPLAY: inline-block; HEIGHT: 30px; MARGIN-LEFT: 20px
+}
+* + HTML .item .footer LI {
+	LINE-HEIGHT: 30px; DISPLAY: inline-block; FLOAT: left; HEIGHT: 30px; MARGIN-LEFT: 20px
+}
+.item .footer LI.t {
+	PADDING-LEFT: 30px; BACKGROUND: url(../Images/icons.png) no-repeat 0px -40px; COLOR: #999999; FONT-SIZE: 12px
+}
+.item .footer LI.eyes {
+	PADDING-LEFT: 30px; FONT-FAMILY: Candara; BACKGROUND: url(../Images/icons.png) no-repeat 0px -70px; COLOR: #888888; FONT-SIZE: 16px
+}
+.item .footer LI.read {
+	PADDING-LEFT: 30px; BACKGROUND: url(../Images/icons.png) no-repeat 0px -100px
+}
+#Blog_Container {
+	POSITION: relative; PADDING-BOTTOM: 60px; MARGIN: 0px auto 100px; PADDING-LEFT: 26px; WIDTH: 954px; PADDING-RIGHT: 0px; FONT-FAMILY: "Microsoft JhengHei", "Microsoft YaHei", Arial, sans-serif; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 30px
+}
+#Blog_Timelines {
+	POSITION: absolute; WIDTH: 4px; DISPLAY: block; BACKGROUND: #eeeeee; HEIGHT: 100%; TOP: 0px; LEFT: 23px
+}
+#Postpage {
+	POSITION: relative; WIDTH: 580px; DISPLAY: block; FLOAT: left; HEIGHT: auto; MARGIN-LEFT: 46px
+}
+#Items {
+	BORDER-BOTTOM: #eaeaea 1px solid; POSITION: relative; BORDER-LEFT: #eaeaea 1px solid; PADDING-BOTTOM: 10px; MIN-HEIGHT: 100px; PADDING-LEFT: 15px; WIDTH: 548px; PADDING-RIGHT: 15px; DISPLAY: block; MARGIN-BOTTOM: 20px; BACKGROUND: #ffffff; HEIGHT: auto; BORDER-TOP: #eaeaea 1px solid; BORDER-RIGHT: #eaeaea 1px solid; PADDING-TOP: 10px; box-shadow: 0px 1px 8px rgba(202, 202, 202, 0.3)
+}
+#Items .corner {
+	POSITION: absolute; WIDTH: 25px; DISPLAY: none; BACKGROUND: url(../Images/blog_corner.png) no-repeat; HEIGHT: 25px; TOP: -1px; RIGHT: -2px
+}
+#Items:hover .corner {
+	DISPLAY: block
+}
+#Items #PostTags {
+	Z-INDEX: 101; POSITION: absolute; WIDTH: 50px; PADDING-RIGHT: 23px; DISPLAY: block; HEIGHT: 50px; TOP: 20px; CURSOR: pointer; LEFT: -73px
+}
+#Items .art#PostTags {
+	BACKGROUND: url(../Images/blog_timelines.png) no-repeat 0px -50px
+}
+#Items .share#PostTags {
+	BACKGROUND: url(../Images/blog_timelines.png) no-repeat 0px -100px
+}
+#Items .acc#PostTags {
+	BACKGROUND: url(../Images/blog_timelines.png) no-repeat 0px -150px
+}
+#Items .code#PostTags {
+	BACKGROUND: url(../Images/blog_timelines.png) no-repeat 0px -200px
+}
+#Items .Day {
+	Z-INDEX: 101; POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 40px; WIDTH: 50px; PADDING-RIGHT: 23px; DISPLAY: block; FONT-FAMILY: Candara; BACKGROUND: url(../Images/blog_timelines.png) no-repeat 0px 0px; HEIGHT: 50px; COLOR: #5db900; FONT-SIZE: 18px; TOP: 20px; FONT-WEIGHT: 600; LEFT: -73px
+}
+.font_month {
+	LINE-HEIGHT: 50px; FONT-STYLE: italic; FONT-SIZE: 12px
+}
+#Items A.post_title {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 30px; PADDING-LEFT: 38px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BACKGROUND: url(../Images/icons.png) no-repeat 0px 0px; HEIGHT: 30px; FONT-SIZE: 16px; FONT-WEIGHT: 600; PADDING-TOP: 5px
+}
+#Items .post_content {
+	BORDER-BOTTOM: #cfcfcf 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 22px; PADDING-LEFT: 0px; WIDTH: 548px; PADDING-RIGHT: 0px; DISPLAY: block; COLOR: #666666; BORDER-TOP: #cfcfcf 1px solid; PADDING-TOP: 10px
+}
+#Items .post_content EMBED {
+	MARGIN: 5px auto; DISPLAY: block; BACKGROUND: url(../Images/Load.gif) no-repeat center center
+}
+#Items .post_content PRE {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: #f8f8f8; COLOR: #666666; FONT-SIZE: 13px; BORDER-TOP: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid; PADDING-TOP: 4px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8)
+}
+#Items .footer {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; DISPLAY: inline-block; HEIGHT: 30px; OVERFLOW: hidden; PADDING-TOP: 10px
+}
+#Items .footer LI {
+	LINE-HEIGHT: 30px; DISPLAY: inline-block; HEIGHT: 30px; MARGIN-LEFT: 20px
+}
+* + HTML #Items .footer LI {
+	LINE-HEIGHT: 30px; DISPLAY: inline-block; FLOAT: left; HEIGHT: 30px; MARGIN-LEFT: 20px
+}
+#Items .footer LI.t {
+	PADDING-LEFT: 30px; BACKGROUND: url(../Images/icons.png) no-repeat 0px -40px; COLOR: #999999; FONT-SIZE: 12px
+}
+#Items .footer LI.eyes {
+	PADDING-LEFT: 30px; FONT-FAMILY: Candara; BACKGROUND: url(../Images/icons.png) no-repeat 0px -70px; COLOR: #888888; FONT-SIZE: 16px
+}
+#Items .footer LI.read {
+	PADDING-LEFT: 30px; BACKGROUND: url(../Images/icons.png) no-repeat 0px -100px
+}

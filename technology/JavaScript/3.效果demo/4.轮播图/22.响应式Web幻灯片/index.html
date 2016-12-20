@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网友Null分享jQuery响应式幻灯片插件</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/iview.css" />
+<link rel="stylesheet" href="css/skin 1/style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/raphael-min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script src="js/iview.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#iview').iView({
+            pauseTime: 7000,
+            directionNav: false,
+            controlNav: true,
+            tooltipY: -15
+        });
+    });
+</script>
+<body>
+
+<div id="cont">
+  <div class="container">
+    <div id="iview">
+      <div data-iview:image="photos/photo1.jpg" data-iview:transition="slice-top-fade,slice-right-fade">
+        <div class="iview-caption caption1" data-x="80" data-y="200">视图</div>
+        <div class="iview-caption" data-x="80" data-y="275" data-transition="wipeRight">世界上最真棒jQuery的图片及内容滑块</div>
+      </div>
+      <div data-iview:image="photos/photo2.jpg" data-iview:transition="zigzag-drop-top,zigzag-drop-bottom" data-iview:pausetime="3000">
+        <div class="iview-caption caption5" data-x="60" data-y="280" data-transition="wipeDown">字幕可以自由定位和调整</div>
+        <div class="iview-caption caption6" data-x="300" data-y="350" data-transition="wipeUp"><a href="http://www.jq-school.com">实例地址</a></div>
+      </div>
+      <div data-iview:image="photos/video.jpg" data-iview:type="video" data-iview:transition="strip-right-fade,strip-left-fade">
+        <iframe src="vidio.html" width="100%" height="100%" frameborder="0"  webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <div class="iview-caption caption2" data-x="450" data-y="340" data-transition="wipeRight">Video</div>
+        <div class="iview-caption caption3" data-x="600" data-y="345" data-transition="wipeLeft">Support</div>
+      </div>
+      <div data-iview:image="photos/photo3.jpg">
+        <div class="iview-caption caption4" data-x="50" data-y="80" data-width="312" data-transition="fade">一些测试选项:</div>
+        <div class="iview-caption blackcaption" data-x="50" data-y="135" data-transition="wipeLeft" data-easing="easeInOutElastic">iOS和Android设备的触摸刷卡</div>
+        <div class="iview-caption blackcaption" data-x="50" data-y="172" data-transition="wipeLeft" data-easing="easeInOutElastic">完全图像和缩略图</div>
+        <div class="iview-caption blackcaption" data-x="50" data-y="209" data-transition="wipeLeft" data-easing="easeInOutElastic">可以自定义的过渡效果</div>
+        <div class="iview-caption blackcaption" data-x="50" data-y="246" data-transition="wipeLeft" data-easing="easeInOutElastic">可任意定位，可样式化的字幕</div>
+        <div class="iview-caption blackcaption" data-x="50" data-y="283" data-transition="wipeLeft" data-easing="easeInOutElastic">跨浏览器兼容！</div>
+      </div>
+      <div data-iview:image="photos/photo4.jpg"></div>
+      <div data-iview:image="photos/photo5.jpg"></div>
+    </div>
+  </div>
+</div>
+<div id="background-image"> <img src="http://ww4.sinaimg.cn/large/adde8400gw1e55g2bp11lj21ek0sgtbv.jpg" width="1820" height="1024" /></div>
+<script type="text/javascript" src="js/jquery.fullscreen.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#background-image").fullscreenBackground();
+	});
+</script> 
+
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both; padding-top:600px; position:relative; z-index:1;">网友Null分享jQuery响应式幻灯片插件<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+    官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=47d9817e9e09f61b288b8ad6d33fb18cbd659ca6773f663918d6e5d3a2981a12"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂③群" title="Jquery学堂③群"></a> </div>
+</center>
+</body>
+</html>

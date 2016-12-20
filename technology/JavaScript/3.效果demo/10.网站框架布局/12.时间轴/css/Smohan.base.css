@@ -1,0 +1,198 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+HTML {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+IMG {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+TABLE {
+	BORDER-COLLAPSE: collapse
+}
+TR {
+	BORDER-COLLAPSE: collapse
+}
+TD {
+	BORDER-COLLAPSE: collapse
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+INPUT {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+BUTTON {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+SELECT {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+TEXTAREA {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+A {
+	TEXT-DECORATION: none
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV {
+	TEXT-ALIGN: left
+}
+.clear {
+	HEIGHT: 0px; CLEAR: both
+}
+.fr {
+	FLOAT: right
+}
+.fl {
+	FLOAT: left
+}
+.font1 {
+	COLOR: #f91919; FONT-SIZE: 16px; FONT-WEIGHT: 600
+}
+#Loading {
+	Z-INDEX: 99999; POSITION: fixed !important; FILTER: alpha(opacity=60); WIDTH: 100%; BACKGROUND: url(../Images/Loading.gif) #000000 no-repeat center center; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.60
+}
+#pagination {
+	POSITION: relative; PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; MARGIN: 30px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 30px; PADDING-TOP: 10px
+}
+#pagination UL {
+	POSITION: absolute; RIGHT: 0px
+}
+#pagination LI {
+	FLOAT: left; MARGIN-LEFT: 4px; PADDING-TOP: 2px
+}
+#pagination LI A {
+	TEXT-ALIGN: center; LINE-HEIGHT: 26px; WIDTH: 30px; DISPLAY: block; BACKGROUND: url(../Images/page_num.png) no-repeat -88px 0px; HEIGHT: 27px; COLOR: #474646; FONT-SIZE: 12px; TEXT-DECORATION: none; text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.3)
+}
+#pagination LI A:hover {
+	COLOR: #64c61d
+}
+#pagination LI A.on {
+	BACKGROUND-POSITION: -119px 0px; COLOR: #ffffff; text-shadow: 0px -1px 0px rgba(80, 80, 80, 0.3)
+}
+#pagination LI A.first {
+	WIDTH: 56px; DISPLAY: block; BACKGROUND: url(../Images/page_num.png) 0px 0px; HEIGHT: 27px
+}
+#pagination LI A.last {
+	WIDTH: 56px; DISPLAY: block; BACKGROUND: url(../Images/page_num.png) -184px 0px; HEIGHT: 27px
+}
+#pagination LI A.previous {
+	BACKGROUND-POSITION: -58px 0px
+}
+#pagination LI A.next {
+	BACKGROUND-POSITION: -152px 0px
+}
+.Smohan_Layer_Shade {
+	Z-INDEX: 99900; POSITION: fixed; WIDTH: 100%; ZOOM: 1; BACKGROUND: url(../Images/hei.png); HEIGHT: 100%; OVERFLOW: hidden; TOP: 0px; LEFT: 0px; _position: absolute
+}
+.Smohan_Layer_box {
+	Z-INDEX: 99999; POSITION: fixed; MIN-WIDTH: 300px; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: #ffffff; HEIGHT: auto; OVERFLOW: hidden; TOP: 50%; PADDING-TOP: 20px; LEFT: 50%; _position: absolute; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px
+}
+.Smohan_Layer_box H3 {
+	BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; DISPLAY: block; HEIGHT: 30px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.Smohan_Layer_box H3 .text {
+	TEXT-INDENT: 0.5em; DISPLAY: block; FONT-FAMILY: "Microsoft JhengHei", "Microsoft YaHei", Arial, sans-serif; FLOAT: left; COLOR: #84c017; FONT-SIZE: 16px; FONT-WEIGHT: 600
+}
+.Smohan_Layer_box H3 .close {
+	WIDTH: 30px; DISPLAY: block; BACKGROUND: url(../Images/Smohan.layer.close.png) no-repeat 0px 0px; FLOAT: right; HEIGHT: 30px
+}
+.Smohan_Layer_box H3 .close:hover {
+	BACKGROUND-POSITION: 0px -31px
+}
+.Smohan_Layer_box .layer_content {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; DISPLAY: block; MARGIN-BOTTOM: 10px; HEIGHT: 100%; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.Smohan_Layer_box .layer_content .loading {
+	POSITION: absolute; WIDTH: 36px; DISPLAY: block; BACKGROUND: url(../Images/Load.gif) no-repeat center center; HEIGHT: 36px; TOP: 0px; LEFT: 0px
+}
+#Share {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 10px; WIDTH: 360px; PADDING-RIGHT: 10px; DISPLAY: none; HEIGHT: 120px; PADDING-TOP: 15px
+}
+#Share UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#Share UL LI {
+	POSITION: relative; WIDTH: 50px; DISPLAY: block; FLOAT: left; HEIGHT: 50px; MARGIN-LEFT: 5px; CURSOR: pointer; MARGIN-RIGHT: 5px
+}
+#Share UL LI A {
+	MARGIN-TOP: 12px; WIDTH: 28px; DISPLAY: block; HEIGHT: 28px; MARGIN-LEFT: 11px
+}
+#Share UL LI SPAN {
+	POSITION: absolute; WIDTH: 40px; BOTTOM: 0px; DISPLAY: block; BACKGROUND: url(../Images/share_shade.png) no-repeat 0px 0px; HEIGHT: 10px; LEFT: 5px
+}
+#Share UL LI A.share1 {
+	BACKGROUND: url(../Images/share_icon.png) 0px 0px
+}
+#Share UL LI A.share2 {
+	BACKGROUND: url(../Images/share_icon.png) -28px 0px
+}
+#Share UL LI A.share3 {
+	BACKGROUND: url(../Images/share_icon.png) -56px 0px
+}
+#Share UL LI A.share4 {
+	BACKGROUND: url(../Images/share_icon.png) -84px 0px
+}
+#Share UL LI A.share5 {
+	BACKGROUND: url(../Images/share_icon.png) -112px 0px
+}
+#Share UL LI A.share6 {
+	BACKGROUND: url(../Images/share_icon.png) -140px 0px
+}
+#smohan_share {
+	POSITION: fixed; WIDTH: 52px; BOTTOM: 270px; DISPLAY: block; BACKGROUND: url(../Images/blog_icons.png) no-repeat 0px 0px; HEIGHT: 52px; OVERFLOW: hidden; RIGHT: 35px
+}
+#smohan_pagetop {
+	POSITION: fixed; WIDTH: 52px; BOTTOM: 210px; DISPLAY: none; BACKGROUND: url(../Images/blog_icons.png) no-repeat 0px -57px; HEIGHT: 52px; OVERFLOW: hidden; CURSOR: pointer; RIGHT: 35px
+}
+#CopyRight {
+	Z-INDEX: 1; POSITION: fixed; TEXT-ALIGN: center; PADDING-BOTTOM: 20px; LINE-HEIGHT: 30px; PADDING-LEFT: 0px; WIDTH: 100%; BOTTOM: 10px; PADDING-RIGHT: 0px; DISPLAY: block; HEIGHT: 30px; COLOR: #2f2f2f; FONT-SIZE: 13px; FONT-WEIGHT: 200; PADDING-TOP: 20px; LEFT: 0px
+}

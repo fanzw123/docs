@@ -1,0 +1,39 @@
+{
+    "name": "Webdesign-Podcast-SlideShow",
+    "title": "Webdesign-Podcast.de SlideShow",
+    "description": "The Webdesign-Podcast.de SlideShow Plugin is an easy to use MultiMedia Slider with some greate and dynamic effects. This jQuery Plugin has a lot of settings and is fully customizable. You can find a demo here http://www.webdesign-podcast.de/wp-content/uploads/2011/06/webdesign-podcast-slider/ and english written docs on GitHub.",
+    "keywords": [
+        "slideshow",
+        "ui",
+        "animation",
+        "effect",
+        "image",
+        "jquery"
+    ],
+    "version": "1.5.6",
+    "author": {
+        "name": "Pascal Bajorat",
+        "url": "https://www.pascal-bajorat.com"
+    },
+    "maintainers": [
+        {
+            "name": "Pascal Bajorat",
+            "email": "pascal@pascal-bajorat.com",
+            "url": "https://www.pascal-bajorat.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "http://www.gnu.org/licenses/gpl.txt"
+        }
+    ],
+    "bugs": "https://github.com/pascalbajorat/Webdesign-Podcast-SlideShow/issues",
+    "homepage": "http://www.webdesign-podcast.de/2011/06/27/modernes-webdesign-podcast-jquery-slideshow-plugin/",
+    "docs": "https://github.com/pascalbajorat/Webdesign-Podcast-SlideShow/wiki/Documentation",
+    "demo": "http://www.webdesign-podcast.de/wp-content/uploads/2011/06/webdesign-podcast-slider/",
+    "download": "https://github.com/pascalbajorat/Webdesign-Podcast-SlideShow/zipball/master",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}

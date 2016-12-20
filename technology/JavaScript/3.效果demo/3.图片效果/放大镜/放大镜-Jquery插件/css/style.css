@@ -1,0 +1,11 @@
+body { background:#f9f9f9; margin:0 auto; font:12px/24px tahoma, Helvetica, Arial; text-align:center; }
+body,iframe,div,p,h1,h2,h3,h4,h5,h6,fieldset,ul,dl,dt,dd,form,input,button,textarea,select,i { margin:0px; padding:0px; font-weight:normal; }
+ul { list-style:none; overflow:hidden; }
+img { border:none; }
+.main{ font:12px/24px "Microsoft YaHei"; width:730px; margin:100px auto; position:relative; text-align:left; }
+.main:after{ content:""; clear:both; display:table; }
+
+#show{ width:240px; height:338px; overflow:hidden; position:relative; left:0; }
+#show_mark{ position:absolute; top:0; left:0; width:200px; height:100px; background-color:#000; opacity:.5; filter:alpha(opacity=50); cursor:crosshair; border:1px solid #999; display:none; }
+#zoom{ position:absolute; left:250px; top:0; z-index:3; width:400px; height:400px; display:none; overflow:hidden; border:1px solid #eee; }
+#zoom img{ position:absolute; left:0; top:0; }

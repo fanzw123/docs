@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery实现猎豹浏览器4.0版欢迎页面滑动特效</title>
+<style type="text/css" media="screen">
+body,div{margin:0px;padding:0px;}
+body {overflow-y:hidden;background:#fe8e06;overflow-x:hidden;font-family: "微软雅黑", "Microsoft YaHei", Helvetica,sansation, Verdana, Arial, sans-serif;font-size: 12px;}
+.nag{position: fixed;z-index:5;top:250px;right:30px;background:url('zhuanti/welcome2/img8/nag.png') no-repeat;width:38px;height:213px;}
+.nag .ac{width:14px;height:14px;margin:14px 0px 28px 12px;cursor: pointer;}
+.nag .ac.active b{background:url('zhuanti/welcome2/img8/bw.png') no-repeat;width:38px;height:40px;display:inline-block;margin: -14px 0px 0px -12px;}
+.a1{width:100%;background:#fe8e06;position: relative;}
+.a2{width:100%;background:#ed6374;position: relative;z-index:2;}
+.a3{width:100%;background:#31aac4;position: relative;z-index:3;}
+.a4{width:100%;background:#58b873;position: relative;z-index:4;}
+.back{height:1000px;min-height:500px;min-width:1000px;}
+.a1 p{font-size:60px;color:#ffffff;text-align: center;top: 180px;position: relative;opacity:0;}
+
+.n11{width:63px;height:12px;position: absolute;left:50%;margin-left:-32px;top:200px;opacity:0;}
+.n12{width:120px;height:120px;position: absolute;left:50%;margin-left:-60px;top:355px;opacity:0;}
+
+.n2{background:url('zhuanti/welcome2/img8/01.gif') no-repeat;width:1000px;height:102px;position: absolute;top:120px;left:50%;margin-left:-500px;}
+.n3{background:url('zhuanti/welcome2/img8/02.gif') no-repeat;width:1000px;height:520px;position: absolute;top:50px;left:50%;margin-left:-500px}
+.n3 a{position: absolute;width:120px;height:35px;top:383px;left:50%;margin-left:4px;}
+
+.n4{background:url('zhuanti/welcome2/img8/03.gif') no-repeat;width:1000px;height:174px;position: absolute;top:125px;left:50%;margin-left:-500px;}
+.n5{background:url('zhuanti/welcome2/img8/04.gif') no-repeat;width:596px;height:76px;position: absolute;top:50%;left:50%;margin-left:-298px;margin-top:-140px;}
+.n5img{z-index:3;position: absolute;width: 40px;height: 32px;top: 450px;margin-left: 65px;left: 50%;opacity:0;}
+.n5 a{background:url('zhuanti/welcome2/img8/btn5.png') no-repeat;position: absolute;width:180px;height:60px;top:141px;left:50%;margin-left:-91px;}
+.n5 a:hover{background-position: 0px -60px;}
+.n5 a:active{background-position: 0px -120px;}
+
+.yue3{background:url('zhuanti/welcome2/img8/yue3.png') no-repeat;width:187px;height:85px;position: absolute;top: 150px;left: 50%;margin-left: -510px;}
+.n4yue1{background:url('zhuanti/welcome2/img8/yue1.png') no-repeat;width:175px;height:98px;position: absolute;top: 350px;left: 50%;margin-left: -240px;}
+.n4yue2{z-index:4;background:url('zhuanti/welcome2/img8/yue2.png') no-repeat;width:205px;height:96px;position: absolute;top: 410px;left: 50%;margin-left: 120px;}
+
+.n2yue1{z-index:3;background:url('zhuanti/welcome2/img8/yue1.png') no-repeat;width:175px;height:98px;position: absolute;top: 315px;left: 50%;margin-left: -560px;}
+.n2yue2{z-index:3;background:url('zhuanti/welcome2/img8/yue2.png') no-repeat;width:205px;height:96px;position: absolute;top: 415px;left: 50%;margin-left: 55px;}
+.hjimg{background:url('zhuanti/welcome2/img8/rocket.png') no-repeat;width:452px;height:409px;position: absolute;left: 50%;margin-left: -1020px;}
+
+.yu1{width:107px;height: 58px;position: absolute;left: 50px;top:260px;-webkit-transform:rotate(20deg);}
+.yu2{width:155px;height:80px;position: absolute;left: 250px;top:260px;-webkit-transform:rotate(-27deg);}
+.yu3{width:104px;height:56px;position: absolute;left: 450px;top:260px;-webkit-transform:rotate(-103deg);}
+.yu4{width:106px;height:58px;position: absolute;left: 650px;top:260px;-webkit-transform:rotate(-143deg);}
+
+.zhuoz{background:url('zhuanti/welcome2/img8/zhuoz.png') no-repeat;width:447px;height:227px;left:50%;margin-left:-140px;top:400px;position: absolute;}
+.divtop{width: 38px;height: 60px;position: fixed;bottom: 30px;left: 50%;margin-left: -19px;z-index: 6;}
+.btntop{cursor:pointer;z-index:5;margin-top:30px;width:38px;height:19px;}
+.icon{background:url('zhuanti/welcome2/img8/right.png') no-repeat;width:25px;height:70px;margin-left: 11px;margin-top: -10px;}
+.icon .xinlan{cursor: pointer;width: 18px;height: 15px;display: block;}
+.icon .tenxun{width: 18px;height: 16px;display: block;cursor: pointer;margin-top: 14px;}
+
+.a1_one{background:url('zhuanti/welcome2/img8/top1.gif') no-repeat center top;width:100%;margin-top:80px;height:462px;position: absolute;}
+.a_0{position: absolute;left:50%;top:178px;width: 120px;height: 34px;margin-left:84px;}
+/*.a1_img{width:744px;height:397px;position: absolute;top:200px;left:50%;margin-left:-372px;}
+.a1_img img{display:none;top: 0px;position: absolute;}
+.a1_img a{top:18px;width: 120px;height: 34px;position: absolute;}
+.a1_img a.a_0{right:93px;}
+.a1_img a.a_1{right:68px;}
+.a1_img a.a_2{right:96px;}*/
+</style>
+</head>
+<body>
+<div id="pic1" num="1">
+	<div class="nag">
+		<div  class="ac active"><b></b></div>
+		<div class="ac"><b></b></div>
+		<div class="ac"><b></b></div>
+		<div class="ac"><b></b></div>
+		<div class="icon">
+			<div class="xinlan"></div>
+			<div class="tenxun"></div>
+		</div>
+	</div>
+	<div class="divtop">
+		<img id="btntop" class="btntop" src="zhuanti/welcome2/img8/top.png" />
+	</div>
+	<div class="back a1">
+		<a class="a1_one"></a>
+		<a id="a1_a" class="a_0" target="_blank" href="http://www.jq-school.com/"></a>
+  
+	</div>
+
+	<div class="back a2">
+		<div class="n3">
+			<a target="_blank" href="http://www.jq-school.com/"></a>
+		</div>
+		<div id="n1yue3" class="yue3"></div>
+		<img src="zhuanti/welcome2/img8/$.png"  class="yu1" />
+		<img src="zhuanti/welcome2/img8/$.png"  class="yu2 yutop" />
+		<img src="zhuanti/welcome2/img8/$.png"  class="yu3 yutop" />
+		<img src="zhuanti/welcome2/img8/$.png"  class="yu4 yutop" />
+	</div>
+	<div class="back a3">
+		<div class="n4"></div>
+		<div id="n4yue1" class="n4yue1"></div>
+		<div id="n4yue2" class="n4yue2"></div>
+		<div class="zhuoz"></div>
+		<img id="n5img" class="n5img" src="zhuanti/welcome2/img8/n5.png" />
+	</div>
+	<div class="back a4">
+		<div class="n5">
+			<a target="_blank" href="http://www.jq-school.com/"></a>
+		</div>
+	</div>
+</div>
+<script language="javascript" type="text/javascript" src="zhuanti/welcome2/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="zhuanti/welcome2/jquery.easing.js"></script>
+
+<script>
+	//var index_img=0;
+	/*$(".a1_img img").eq(0).fadeIn("slow");
+	setInterval(function(){
+		var index_0=index_img;
+		index_img=index_img+1;
+		if(index_img>=3) index_img=0;
+		$(".a1_img img").eq(index_0).fadeOut("slow");
+		$(".a1_img img").eq(index_img).fadeIn("slow");
+		$("#a1_a").attr("class","a_"+index_img)
+	},5000);*/
+
+	function $en(tit){return encodeURIComponent(tit)}
+	var title="我的天啊，大家快来用下新版猎豹浏览器4.0~真的太快了！跟光速似的！其他浏览器都弱爆了！！！网购上当还赔你钱，48360元哦~~不用猎豹用啥？？不信？那就试试看！下载地址>>http://t.cn/zOTTjjD忽悠你的话，俺请你吃饭！";
+	//var url="http://www.liebao.cn/welcome4.html";
+	var pic="http://www.liebao.cn/zhuanti/welcome2/img8/iconpic.png";
+	$(".xinlan").click(function(){
+		window.open('http://v.t.sina.com.cn/share/share.php?appkey=962772401&title='+$en(title)+'&pic='+pic);
+	})
+	$(".tenxun").click(function(){
+		window.open('http://v.t.qq.com/share/share.php?title='+$en(title)+'&pic='+pic);
+	})
+
+	var h=$(window).height();
+	var w=$(window).width();
+	//var h1=(h1-500<30?30:h-580)+"px";
+	//$(".divtop").css("bottom",h1);
+
+	$(".back").css("height",h+"px");
+	$(".nag").css("top",$(window).scrollTop() + 250 +"px");
+
+	$(".yutop").css("top",(h+150)+"px");
+	$("#hjimg").css("top",(h+430)+"px");
+	
+	var yueAnimate={
+		lbyFun:function(){
+			$("#n11img").css({"width": "65px","height": "5px","top": "300px","margin-left": "-32px","opacity":"0"});
+			$("#n12img").css({"opacity":"0"});
+			$("#n1p").css({"opacity":"0"});
+			
+			var y=460;
+
+			$("#n12img").animate({
+				"opacity": 1
+			},800,'easeInCubic');
+			$("#n1p").animate({
+				"opacity": 1
+			},800,'easeInCubic',function(){
+				$("#n11img").animate({
+					"opacity": 0.8,
+					"width":"328px",
+					"height":"27px",
+					"top": "275px",
+					"margin-left":"-164px"
+				},400,'easeInCubic',function(){
+					$("#n11img").animate({
+						"opacity": 1,
+						"width":"273px",
+						"height":"22px",
+						"top": "285px",
+						"margin-left":"-137px"
+					},200,"easeInCubic")
+				});
+			});
+		},
+		btntop :function(){
+
+			$("#btntop").css({"margin-top": "0px"});
+			$("#btntop").animate({
+				"margin-top": "30px"
+			},1000,'easeOutBounce');
+			
+		},
+		yue :function(id,left,right,time){
+			$(id).animate({
+				"margin-left": right
+			},time,function(){
+				$(id).animate({
+					"margin-left": left
+				},time);
+			});
+		},
+		hjFun:function(){
+			$("#hjimg").css("top",($(window).height()+430)+"px");
+			$("#hjimg").css("margin-left","-824px");
+			$("#n2yue1").css("margin-left","-560px");
+			$("#n2yue2").css("margin-left","55px");
+			$("#hjimg").animate({
+				"top": "230px",
+				"margin-left":"-340px"
+			},1000,'easeInOutQuint');
+		},
+		yuFun:function(){
+			var x=$(window).width()/2-500+210;
+			x=x<210?210:x;
+			var y=460;
+			$(".yutop").css("top",(h+150)+"px");
+			$(".yu1").css({"left": "50px","top": "260px"});
+			$(".yu2").css({"left": "250px"});
+			$(".yu3").css({"left": "450px"});
+			$(".yu4").css({"left": "650px"});
+			$(".yu1").animate({
+				"left": x-170+"px",
+				"top":"384px"
+			},1000,'easeInCubic');
+			$(".yu2").animate({
+				"left": x-160+"px",
+				"top":"479px"
+			},1000,'easeInCubic');
+			$(".yu3").animate({
+				"left": x-55+"px",
+				"top":"509px"
+			},1000,'easeInCubic');
+			$(".yu4").animate({
+				"left": x+38+"px",
+				"top":"468px"
+			},1000,'easeInCubic');
+		},
+		n5imgFun:function(){
+			$("#n5img").css({"width": "20px","height": "16px","top": "470px","margin-left": "75px","opacity":"0"});
+			var y=460;
+			$("#n5img").animate({
+				"opacity": 0.5,
+				"width":"350px",
+				"height":"276px",
+				"top": "250px",
+				"margin-left":"-70px"
+			},800,'easeInBack',function(){
+				$("#n5img").animate({
+					"opacity": 1,
+					"width":"320px",
+					"height":"252px",
+					"top": "260px",
+					"margin-left":"-60px"
+				},300,"easeInBack")
+			});
+		}
+	}
+	
+	//鼠标滚动事件 
+	var shubiao=true;
+	var wheel = function(event) {  
+		var delta = 0;  
+		if (!event)
+			event = window.event;  
+		if (event.wheelDelta) {
+			delta = event.wheelDelta / 120;
+		} else if (event.detail) {
+			delta = -event.detail / 3;
+		}
+		if (delta) handle(delta);
+		if (event.preventDefault) event.preventDefault();  
+		event.returnValue = false;  
+	}
+	if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+	document.onmousewheel = wheel;
+	var $f=true;
+	var handle = function(delta) {
+		if(!shubiao) return;
+		shubiao=false;
+		var random_num = Math.floor((Math.random() * 100) + 50);
+		if (delta < 0) {
+			PicWheelScroll(1);
+			$f=false;
+			 //console.log("鼠标滑轮向下滚动：" + delta + "次！"); // 1  
+			return false;  
+		} else {
+			$f=true;
+			PicWheelScroll(0);
+			//console.log("鼠标滑轮向上滚动：" + delta + "次！"); // -1  
+			return false;  
+		}
+	}
+	$(".ac").each(function(i){
+		$(this).click(function(){
+			$(".ac").removeClass("active");
+			$(".ac").eq(i).addClass("active");
+			var num=i+1;
+			if(num=="4") $("#btntop").hide();
+			else $("#btntop").show();
+			gotoAnchor($(".a"+num));
+			getAnchroFun(num);
+		})
+	})
+	var PicWheelScroll = function(n){
+		
+		var num=$("#pic1").attr("num");
+		
+		if((num===4&&n===1) || (num===1&&n===0)) return;
+		if(n==1){
+			if(num<4) num++;
+		}else{
+			if(num>1) num--;
+		}
+
+		$(".ac").removeClass("active");
+		$(".ac").eq(num-1).addClass("active");
+
+		if(num=="4") $("#btntop").hide();
+		else $("#btntop").show();
+		gotoAnchor($(".a"+num));
+		getAnchroFun(num);
+	}
+
+	yueAnimate.yue("#n1yue3","-510px","-150px",10000);
+	yueAnimate.yue("#n2yue1","-560px","-375px",10000);
+	yueAnimate.yue("#n2yue2","55px","260px",10000);
+	yueAnimate.yue("#n4yue1","-240px","-160px",10000);
+	yueAnimate.yue("#n4yue2","120px","230px",10000);
+	setInterval(function(){
+		yueAnimate.yue("#n1yue3","-510px","-300px",10000);
+
+		yueAnimate.yue("#n2yue1","-560px","-375px",10000);
+		yueAnimate.yue("#n2yue2","55px","260px",10000);
+
+		yueAnimate.yue("#n4yue1","-240px","-160px",10000);
+		yueAnimate.yue("#n4yue2","120px","230px",10000);
+	},22000);
+
+	setInterval(yueAnimate.btntop,2000);
+	var getAnchroFun=function(num){
+		var h=$(window).height();
+		var h=(h-500<30?30:h-580)+"px";
+		$(".divtop").css("bottom","30px");
+		var n=$("#pic1").attr("num");
+		switch(parseInt(num)){
+			case 1:
+				if(n==1&&$f) return false;
+				yueAnimate.lbyFun();
+				break;
+			case 2:
+				yueAnimate.yuFun();
+				break;
+			case 3:
+				yueAnimate.n5imgFun();
+				break;
+			case 4:
+				break;
+		}
+		$("#pic1").attr("num",num);
+	}
+	var gotoAnchor = function(selector,isauto){
+		var anchor = $(selector);
+		if (anchor.length < 0) return;
+		var $win=$(window);
+		var $body = $(window.document.documentElement);
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.indexOf("webkit") > -1) {
+			$body = $(window.document.body)
+		}
+		var pos=anchor.offset();
+		if (isauto) {
+			var t = pos.top - $win.scrollTop(); //相对于屏幕显示区
+			var t2 = $win.height() - t;
+			if (t2 < anchor.outerHeight()) {
+				$body.animate({"scrollTop": pos.top}, "normal");
+			}
+			return;
+		}
+		$body.animate({"scrollTop": pos.top},{queue :false,complete: function(){shubiao=true;}});
+	}
+	gotoAnchor($(".a1"));
+	yueAnimate.lbyFun();
+	$(window).resize(function(){
+		var h=$(window).height();
+		$(".back").css("height",h+"px");
+		var n=$("#pic1").attr("num");
+		var h1=(h-500<30?30:h-580)+"px";
+		//if(n==1) $(".divtop").css("bottom",h1);
+		//else 
+		$(".divtop").css("bottom","30px");
+		gotoAnchor($(".a"+n));
+	});
+	$(".divtop").click(function(){
+		var n=$("#pic1").attr("num");
+		if(n=="3") $("#btntop").hide();
+		n=parseInt(n)+1;
+		if(n==5) {return;}
+		$(".ac").removeClass("active");
+		$(".ac").eq(n-1).addClass("active");
+		gotoAnchor($(".a"+n));
+		getAnchroFun(n);
+		$("#pic1").attr("num",n);
+	})
+
+</script>
+
+</body>
+</html>

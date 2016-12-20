@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>֧��flv��mp4��ʽ����ý�岥����jwplayer</title>
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+</head>
+
+<body>
+	
+<div id="player"></div>
+
+
+<script type="text/javascript">
+/*
+ * 参考资料:
+ * http://j-coriolanus.blog.163.com/blog/static/64211038200992011745532/ 
+ * http://blog.chinaunix.net/uid-25530360-id-3398943.html
+ “?”转换为“%3F”
+	“=”转换为“%3D”
+	“&”转换为“%26”
+ */		
+ 
+	jwplayer("player").setup({
+	  skin: "jwplayer/facebook.zip",			//皮肤文件
+	  flashplayer: "jwplayer/player.swf",	//必须文件
+	  stretching: "fill",								//图片延伸方式
+	  
+	//  image: "bkaovAYt-480.jpg",
+	  
+	  width: 400,
+	  height:270,
+	  levels: [
+	  {file: "http://127.0.0.1/demo/123.mp3"},	//(MP3/FLV/RTMP/JPG/SWF/PNG/GIF)
+	  ],
+	  
+	  //repeat:"always",		//重复播放
+	 //autostart:true		//自动播放
+	});
+</script>
+</body>
+</html>

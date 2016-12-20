@@ -1,0 +1,79 @@
+body {
+	padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px
+}
+ul {
+	padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px
+}
+li {
+	padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px
+}
+ul {
+	list-style-type: none; list-style-image: none
+}
+a {
+	color: #666; text-decoration: none
+}
+a:hover {
+	color: #dd0000
+}
+img {
+	border-bottom: 0px; border-left: 0px; border-top: 0px; border-right: 0px
+}
+.hidden {
+	display: none
+}
+.clear {
+	float: none; height: 0px; clear: both; overflow: hidden
+}
+.imgplayer{width: 789px; height: 366px; overflow:hidden; margin:150px auto;}
+.banner {
+	position: relative; width: 789px; height: 366px; clear: both; overflow: hidden
+}
+.img_prev {
+	z-index: 100; position: absolute; width: 30px; bottom: 5px; background: url(../images/imgshow.png) no-repeat; height: 60px
+}
+.img_next {
+	z-index: 100; position: absolute; width: 30px; bottom: 5px; background: url(../images/imgshow.png) no-repeat; height: 60px
+}
+.img_prev {
+	background-position: -5px top; left: 0px
+}
+.img_next {
+	background-position: -43px top; right: 0px
+}
+.focus ul#big_list {
+	position: absolute; width: 100000px; height: 366px
+}
+.focus ul#big_list li {
+	position: relative; width: 789px; float: left; height: 366px; overflow: hidden
+}
+.focus ul#big_list li div {
+	width: 789px; height: 366px; overflow: hidden
+}
+.small_show {
+	z-index: 99; position: absolute; margin: 0px auto; width: 762px; bottom: 10px; height: 44px; overflow: hidden; left: 13px
+}
+.small_show ul {
+	width: 10000px
+}
+.small_show li {
+	width: 124px; display: inline-block; background: url(../images/img_bg.png) no-repeat left -49px; float: left; height: 44px; margin-left: 3px; overflow: hidden; cursor: pointer
+}
+.small_show li.visited {
+	background-position: left top
+}
+.small_show li div {
+	padding-bottom: 2px; padding-left: 2px; width: 120px; padding-right: 2px; height: 40px; overflow: hidden; padding-top: 2px
+}
+.small_show .prev {
+	z-index: 100; position: absolute; width: 30px; bottom: 5px; background: url(../images/imgshow.png) no-repeat; height: 60px
+}
+.small_show .next {
+	z-index: 100; position: absolute; width: 30px; bottom: 5px; background: url(../images/imgshow.png) no-repeat; height: 60px
+}
+.small_show .prev {
+	background-position: -5px top; left: 0px
+}
+.small_show .next {
+	background-position: -43px top; right: 0px
+}

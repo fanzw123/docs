@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+.sm_img{margin-right:10px;}
+.left { float:left; }
+.right { float:right; }
+.autohei { height:auto; overflow:hidden; zoom:1; }
+.clear { font-size:0; line-height:0; clear:both; overflow:hidden; zoom:1; }
+.blank { height:10px; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.info_txt3{font-size:12px;}
+.BMap_bubble_content{padding-top:10px;}
+.info_txt1{font-size:12px;padding-bottom:10px;}
+a .map_info{ color:#444;text-decoration:none}
+a{text-decoration:none}
+</style>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D0e39c6e68bd900c80a2a50882556bae"></script>
+<title>酒店地图</title>
+</head>
+<body>
+
+
+<div id="allmap"></div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+var point = [];			//定位坐标
+var marker = [];		//坐标标签
+var coverage = [];		//弹出层
+
+
+
+//添加所有酒店坐标红点
+<!--{foreach from=$hotel_list item=val key=key}-->
+
+	point[{$key}] = new BMap.Point({$val.hotel_location_x},{$val.hotel_location_y});	//坐标
+	marker[{$key}] = new BMap.Marker(point[{$key}]);	//标签
+	map.addOverlay(marker[{$key}]);				//写入红点定位
+	
+	//为每张红点定位的添加填出图层
+	var tmp_html  = "<a href='http://yunqiserver.xicp.net/ftp/tjr/wxadmin/hotel_info.php?id={$val.link_id}&user_code={$user_code}' ><div id='{$key}'  class='map_info'>"
+		 +"<span class='left sm_img'><img src='images/small.jpg' /></span>"
+		 +"<div class='autohei'>"
+		 +"<div class='autohei info_txt1'><span class='left'>{$val.link_name}</span><span class='left'>{$val.hotel_xj}星级</span><span class='right'><small>￥</small>{$val.hotel_1}起</span></div>"
+		 +"<div class='autohei info_txt2'><span class='left'>{$val.hotel_pf}分</span><span class='right'><button>预订</button></span></div>"
+		 +"</div>"
+		 +"<div class='clear'></div>"
+		 +"<div class='info_txt3'>{$val.link_name}</div>"
+		 + "</div></a>";
+	coverage[{$key}] = new BMap.InfoWindow(tmp_html,{enableMessage:false});
+
+	marker[{$key}].addEventListener("click", function(){
+		this.openInfoWindow(coverage[{$key}]);
+	});
+<!--{/foreach}-->
+
+map.centerAndZoom(point[{$id}], 12);	//定位
+
+
+marker[{$id}].openInfoWindow(coverage[{$id}]);
+
+/*
+var map = new BMap.Map("l-map");            // 创建Map实例
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+var local = new BMap.LocalSearch(map, {
+  renderOptions: {map: map, panel: "r-result"}
+});
+local.search("餐饮");
+*/
+
+/*
+var sContent = "<div id=''  class='info_box'>"
+ +"<span class='left sm_img'><img style='margin-left:9px;margin-top: 8px;' src='images/small.jpg' /></span>"
+ +"<div class='autohei'>"
+ +"<div class='autohei info_txt1'><span class='left'>{$hotel.link_name}</span><span class='right'>{$hotel.hotel_xj}星级</span></div>"
+ +"<div class='autohei info_txt2'><span class='left'>{$hotel.hotel_pf}分</span><span class='right'><small>￥</small>{$hotel.hotel_1}起</span></div>"
+ +"</div>"
+ +"<div class='clear'></div>"
+ +"<div class='info_txt3'>{$hotel.link_name}</div>"
+ + "</div>";
+
+//定位当前酒店地图位置
+var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+marker.addEventListener("click", function(){          
+   this.openInfoWindow(infoWindow);
+   //图片加载完毕重绘infowindow
+   document.getElementById('imgDemo').onload = function (){
+       infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+   }
+});
+*/
+
+
+</script>
+
+
+

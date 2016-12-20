@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="aY-ZKSI-fX0">
+  <start-date>2015-08-24T02:45:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>&gt;任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>&gt;里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <schedule>
+      <schedule-day day-of-week="sunday"/>
+      <schedule-day day-of-week="monday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="tuesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="wednesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="thursday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="friday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="saturday"/>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes"/>
+    </schedule>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>资源 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t21"/>
+    <child-task idref="t42"/>
+    <child-task idref="t12"/>
+    <child-task idref="t29"/>
+    <child-task idref="t32"/>
+    <child-task idref="t4"/>
+    <child-task idref="t13"/>
+    <child-task idref="t7"/>
+    <child-task idref="t15"/>
+    <child-task idref="t18"/>
+    <child-task idref="t19"/>
+    <child-task idref="t20"/>
+    <child-task idref="t23"/>
+    <child-task idref="t24"/>
+    <child-task idref="t25"/>
+    <child-task idref="t30"/>
+    <child-task idref="t26"/>
+    <child-task idref="t31"/>
+    <child-task idref="t33"/>
+    <child-task idref="t44"/>
+    <child-task idref="t47"/>
+    <child-task idref="t48"/>
+  </task>
+  <task id="t4">
+    <title>summary_hive_dw_mobile_user_browsing_metrics_daily (stop)</title>
+    <effort>1366</effort>
+    <effort-done>4</effort-done>
+    <start-constraint-date>2015-08-25T16:08:10.000Z</start-constraint-date>
+    <prerequisite-task idref="t21"/>
+    <start-no-earlier-than>2015-08-25T16:08:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t7">
+    <title>dw_member_summary_detail_info_daily</title>
+    <effort>1234</effort>
+    <start-constraint-date>2015-08-25T16:31:35.000Z</start-constraint-date>
+    <prerequisite-task idref="t21"/>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T16:31:35.000Z</start-no-earlier-than>
+  </task>
+  <task id="t12">
+    <title>summary_hive_dw_property_inventory_detail_info_daily</title>
+    <effort>971</effort>
+    <start-constraint-date>2015-08-25T16:40:36.000Z</start-constraint-date>
+    <prerequisite-task idref="t31"/>
+    <start-no-earlier-than>2015-08-25T16:40:36.000Z</start-no-earlier-than>
+  </task>
+  <task id="t13">
+    <title>summary_hive_dw_property_community_detail_info_daily</title>
+    <effort>115</effort>
+    <start-constraint-date>2015-08-25T17:00:07.000Z</start-constraint-date>
+    <prerequisite-task idref="t12"/>
+    <start-no-earlier-than>2015-08-25T17:00:07.000Z</start-no-earlier-than>
+  </task>
+  <task id="t15">
+    <title>da_broker_summary_basis_info_daily</title>
+    <effort>21</effort>
+    <start-constraint-date>2015-08-25T17:09:48.000Z</start-constraint-date>
+    <prerequisite-task idref="t29"/>
+    <start-no-earlier-than>2015-08-25T17:09:48.000Z</start-no-earlier-than>
+  </task>
+  <task id="t18">
+    <title>dw_user_access_summary_daily</title>
+    <effort>824</effort>
+    <start-constraint-date>2015-08-25T17:04:34.000Z</start-constraint-date>
+    <prerequisite-task idref="t21"/>
+    <prerequisite-task idref="t42" kind="FF"/>
+    <start-no-earlier-than>2015-08-25T17:04:34.000Z</start-no-earlier-than>
+  </task>
+  <task id="t19">
+    <title>da_property_broker_followup_daily</title>
+    <effort>139</effort>
+    <start-constraint-date>2015-08-25T17:10:52.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T17:10:52.000Z</start-no-earlier-than>
+  </task>
+  <task id="t20">
+    <title>da_property_select_community_info</title>
+    <effort>165</effort>
+    <start-constraint-date>2015-08-25T17:13:16.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T17:13:16.000Z</start-no-earlier-than>
+  </task>
+  <task id="t21">
+    <title>uba-run</title>
+    <effort>354</effort>
+    <start-constraint-date>2015-08-25T16:00:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:00:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t23">
+    <title>summary_hive_dw_sem_summary_basis_info_daily</title>
+    <effort>538</effort>
+    <start-constraint-date>2015-08-25T16:09:48.000Z</start-constraint-date>
+    <prerequisite-task idref="t21"/>
+    <start-no-earlier-than>2015-08-25T16:09:48.000Z</start-no-earlier-than>
+  </task>
+  <task id="t24">
+    <title>scorecard</title>
+    <effort>1318</effort>
+    <start-constraint-date>2015-08-25T17:06:34.000Z</start-constraint-date>
+    <prerequisite-task idref="t4"/>
+    <prerequisite-task idref="t29"/>
+    <start-no-earlier-than>2015-08-25T17:06:34.000Z</start-no-earlier-than>
+  </task>
+  <task id="t25">
+    <title>da_property_summary_inventory_detail_daily</title>
+    <effort>79</effort>
+    <start-constraint-date>2015-08-25T17:18:30.000Z</start-constraint-date>
+    <prerequisite-task idref="t12"/>
+    <start-no-earlier-than>2015-08-25T17:18:30.000Z</start-no-earlier-than>
+  </task>
+  <task id="t26">
+    <title>da_mobile_chat_effect_info</title>
+    <effort>37</effort>
+    <start-constraint-date>2015-08-25T17:21:15.000Z</start-constraint-date>
+    <prerequisite-task idref="t29"/>
+    <start-no-earlier-than>2015-08-25T17:21:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t29">
+    <title>dw_broker_summary_basis_info_daily</title>
+    <effort>2120</effort>
+    <start-constraint-date>2015-08-25T16:28:31.000Z</start-constraint-date>
+    <prerequisite-task idref="t21" kind="FF"/>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T16:28:31.000Z</start-no-earlier-than>
+  </task>
+  <task id="t30">
+    <title>dw_block_summary_basis_info_daily</title>
+    <effort>127</effort>
+    <start-constraint-date>2015-08-25T17:02:24.000Z</start-constraint-date>
+    <prerequisite-task idref="t13"/>
+    <start-no-earlier-than>2015-08-25T17:02:24.000Z</start-no-earlier-than>
+  </task>
+  <task id="t31">
+    <title>dw_inventory_detail_info_daily</title>
+    <effort>161</effort>
+    <start-constraint-date>2015-08-25T16:35:52.000Z</start-constraint-date>
+    <prerequisite-task idref="t21"/>
+    <prerequisite-task idref="t42" kind="FF"/>
+    <start-no-earlier-than>2015-08-25T16:35:52.000Z</start-no-earlier-than>
+  </task>
+  <task id="t32">
+    <title>summary_hive_dw_connection_summary_detail_info_daily</title>
+    <effort>965</effort>
+    <effort-done>965</effort-done>
+    <start-constraint-date>2015-08-25T16:29:32.000Z</start-constraint-date>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T16:29:32.000Z</start-no-earlier-than>
+  </task>
+  <task id="t33">
+    <title>dw_scorecard_summary_daily</title>
+    <effort>556</effort>
+    <start-constraint-date>2015-08-25T17:22:36.000Z</start-constraint-date>
+    <prerequisite-task idref="t4"/>
+    <prerequisite-task idref="t21"/>
+    <prerequisite-task idref="t29"/>
+    <prerequisite-task idref="t42"/>
+    <prerequisite-task idref="t42"/>
+    <start-no-earlier-than>2015-08-25T17:22:36.000Z</start-no-earlier-than>
+  </task>
+  <task id="t42">
+    <title>m2h-sync-dump-run</title>
+    <effort>1629</effort>
+    <start-constraint-date>2015-08-25T16:00:04.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T16:00:04.000Z</start-no-earlier-than>
+  </task>
+  <task id="t44">
+    <title>art</title>
+    <effort>300</effort>
+    <start-constraint-date>2015-08-25T17:29:02.000Z</start-constraint-date>
+    <prerequisite-task idref="t4" kind="SF"/>
+    <prerequisite-task idref="t23" kind="FF"/>
+    <prerequisite-task idref="t29"/>
+    <start-no-earlier-than>2015-08-25T17:29:02.000Z</start-no-earlier-than>
+  </task>
+  <task id="t47">
+    <title>dw_broker_art_basis_info_daily</title>
+    <effort>556</effort>
+    <start-constraint-date>2015-08-25T17:24:50.000Z</start-constraint-date>
+    <prerequisite-task idref="t29"/>
+    <start-no-earlier-than>2015-08-25T17:24:50.000Z</start-no-earlier-than>
+  </task>
+  <task id="t48">
+    <title>dw_user_summary_user_browsing_metrics_daily</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-09-02T16:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-09-02T16:00:00.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="true" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>

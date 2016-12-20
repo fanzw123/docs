@@ -1,0 +1,76 @@
+<html> 
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" 
+ type="text/css"/>
+ <script type="text/javascript"src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript">   
+
+ var geocoder;    //地图对象
+ var map;    		 //	
+ function initialize() {        
+	 geocoder =new google.maps.Geocoder();    	//初始化对象
+	 
+	 var latlng =new google.maps.LatLng(139.69170639999993,35.6894875);      
+	 var myOptions = {           
+		 zoom: 12,           		//缩放等级 
+		 center: latlng,           	//中心坐标
+		 mapTypeId:google.maps.MapTypeId.ROADMAP      	//地图类型：如卫星地图
+ 	}; 
+ 
+ 	//把地图放入一个div中    
+ 	map =new google.maps.Map(document.getElementById("map_canvas"), myOptions);          
+ 
+	//定义图标对象   
+	 marker =new google.maps.Marker({               
+		 title: '',                   
+		 map: map,    	  //放入地图对象        
+		 position:latlng  //
+	 });        
+ 
+	 //地图窗口
+	 var infowindow =new google.maps.InfoWindow({                   
+		 content: '<strong>asd</strong>'              
+	 });     
+ 
+	 infowindow.open(map, marker);  
+}   
+ 
+ 
+ //定位图标
+function codeAddress() {     
+	// 获取地址
+	var address = document.getElementById("address1").value+document.getElementById("address2").value+document.getElementById("address3").value;
+	//把地址传入地图对象中，获取经纬度
+	geocoder.geocode({ 'address': address }, function(results, status) {            
+	 	if(status == google.maps.GeocoderStatus.OK) {		//如果找到地图
+			map.setCenter(results[0].geometry.location);      	//定位到中间
+				this.marker =new google.maps.Marker({                   
+				 	title: address,                  
+				 	map: map,                  
+				 	position:results[0].geometry.location                
+	 			});    
+			
+		 	document.getElementById("point").value = results[0].geometry.location.lat()+" "+results[0].geometry.location.lng();  
+			var infowindow =new google.maps.InfoWindow({                 
+				 content: '<strong>'+ address +'</strong><br/>'+'纬度 '+ results[0].geometry.location.lat() +'<br/>经度 '+ results[0].geometry.location.lng()                
+			 });              
+	 		infowindow.open(map, marker);         
+	 	} else {              
+	 		alert("Geocode was not successful for the following reason:"+ status);          
+		}           
+ 	});
+} 
+ </script>
+ </head> 
+ <body onload="initialize()">  
+ <div>    
+ <input id="address1" type="text" value="Tokyo"  onblur="codeAddress()"/>    
+<input id="address2" type="text" value=""  onblur="codeAddress()"/>    
+<input id="address3" type="text" value=""  onblur="codeAddress()"/>    
+<input id="point" type="text" size="60" name="latitude and longitude" onblur="codeAddress()" /> 
+ </div> 
+ <div id="map_canvas" style="height:90%;top:30px"></div> 
+ </body> 
+ </html>
+

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>运动框架</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<script src="../scripts/Move.js"></script>
+	
+	<script type="text/javascript">		
+	$(function () {
+		
+		StartMove($('#yd')[0],{'left':200},2);
+		(function () {
+			$("ul.hud li").mouseover(function () {
+				var _position = $(this).position();
+
+
+				
+			});
+			
+		})();
+
+
+	});	
+	</script>
+<style>	
+* {
+	padding:0;
+	margin:0;
+}
+#sidebar {
+	
+	widht:500px;
+	height:300px;
+	margin:50px;
+	border:1px solid #666;
+}
+#sidebar ul.hud {
+	position:relative;
+	width:450px;
+	height:30px;
+	border:1px solid black;
+	margin:50px auto;
+	padding:6px;
+}
+#sidebar ul.hud li {
+	list-style:none;
+	width:80px;
+	height:25px;
+	border:1px solid #666;
+	float:left;	
+	margin:0 8px 0 0;
+	text-align:center;
+	line-height:25px;
+}
+ #yd {
+ 	position:absolute;
+	display:block;
+	width:80px;
+	height:25px;
+	border:1px solid #666;
+	background:#ccc;
+	z-index:-1;
+}
+
+</style>
+</head>
+<body>
+<div id="sidebar">
+	
+	<ul class="hud">
+		<span id="yd"></span>
+		<li>导航一</li>
+		<li>导航二</li>
+		<li>导航三</li>
+		<li>导航四</li>
+		<li>导航五</li>
+	</ul>
+</div>
+
+
+
+
+</body>
+</html>

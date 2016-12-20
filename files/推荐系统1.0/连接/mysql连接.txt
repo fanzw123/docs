@@ -1,0 +1,65 @@
+********************
+*General Information
+********************
+连接名: dw
+主机名或 IP 地址: 10.10.64.146
+端口: 3306
+用户名: hadoop
+保存密码: True
+
+********************
+*Advanced Information
+********************
+设置位置: C:\Users\Angejia\Documents\Navicat\MySQL\servers\dw
+编码: 65001 (UTF-8)
+保持连接间隔 (秒): N/A
+使用 MySQL 字符集: True
+使用压缩: False
+自动连接: False
+使用高级连接: False
+
+********************
+*SSL Information
+********************
+使用 SSL: False
+使用验证: False
+客户端密钥: 
+客户端证书: 
+CA 证书: 
+
+********************
+*SSH Information
+********************
+使用 SSH 通道: True
+主机名或 IP 地址: 10.10.2.91
+端口: 22
+用户名: dwadmin
+验证方法: 公钥
+私钥: C:\Users\Angejia\.ssh\id_rsa
+保存密码短语: True
+
+********************
+*HTTP Information
+********************
+使用 HTTP 通道: False
+通道地址: 
+用 base64 编码传出查询: False
+使用密码验证: False
+用户名: 
+保存密码: False
+使用证书验证: False
+客户端密钥: 
+客户端证书: 
+CA 证书: 
+Use Proxy: False
+代理服务器 主机: 
+代理服务器 端口: 0
+代理服务器 用户名: 
+代理服务器 保存密码: False
+
+********************
+*Other Information
+********************
+服务器版本: 5.6.20-ucloudrel1-log
+通讯协定: 10
+信息: 127.0.0.1 via TCP/IP

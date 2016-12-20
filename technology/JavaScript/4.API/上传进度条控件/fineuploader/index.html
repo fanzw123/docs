@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>fineuploader-3.4.1</title>
+
+
+<link type="text/css"  href="fineuploader/fineuploader-3.4.1.css" rel="stylesheet"  />
+<script type="text/javascript" src="fineuploader/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="fineuploader/fineuploader-3.4.1.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  	
+	//实例类
+    var thumbnailuploader = new qq.FineUploader({
+      //上传配置
+	  debug: false,
+	  element: $('#thumbnail-fine-uploader')[0],	//上传按钮对象
+	  validation: {
+        //allowedExtensions: ['jpeg', 'jpg'],		//上传文件后缀，留空不限制
+      	//sizeLimit: 512000,								// 50 kB = 50 * 1024 字节		
+        //itemLimit : 5										//最多选中文件数
+       },	
+	  multiple: true,					//是否允许多文件上传  
+	  autoUpload: false,			//是否选中文件直接上传	(如果为false，则需要定义一个上传按钮)
+      maxConnections: 3,			//上传列队数
+	  validation: {
+        allowedExtensions: ['jpeg', 'jpg', 'gif', 'png'],
+        sizeLimit: 51200 // 50 kB = 50 * 1024 bytes
+      },
+     //按钮类型文本设置	
+	 text: {
+        uploadButton: '<i class="icon-plus icon-white"></i> Select Files',
+		 cancelButton: '取消',
+     },
+	  
+     //服务器配置：
+	  request: {
+         endpoint: 'upload.php',	
+         params: {							//POST附带参数	
+			},
+         inputName: 'qqfile',		//$_FIFLE['字段名']
+         uuidName: 'qquuid',		//交互id
+         totalFileSizeName: 'qqtotalfilesize'
+      },
+	  
+	  //上传回调函数
+      callbacks: {
+	  	//上传成功回调函数
+        onComplete: function(id, fileName, responseJSON) {
+          if (responseJSON.success) {
+            $('#thumbnail-fine-uploader').append('<img src="img/success.jpg" alt="' + fileName + '">');
+          }
+		 // 返回jSON格式
+		 //echo '{"success":true,"uploadName":"bbb-571.jpg"}';
+		  //删除节点$('.qq-upload-list li').eq(id).remove();
+        },
+		
+      },
+	  
+	  //报错文字
+	  messages: {
+            typeError: "{file}上传文件类型错误 {extensions}.",
+            sizeError: "{file} 文件太大 {sizeLimit}.",
+            minSizeError: "{file} 文件太小 {minSizeLimit}.",
+            emptyError: "{file} is empty, please select files again without it.",
+            noFilesError: "没有上传文件，请选择.",
+            tooManyItemsError: "您选择了 ({netItems}) 个文件.  一次只能选择 {itemLimit} 个.",
+            retryFailTooManyItems: "Retry failed - you have reached your file limit.",
+            onLeave: "文件被上传，如果你现在离开上传将被取消."
+        },
+    });
+  
+	//设置手动上传文件
+    $('#triggerUpload').click(function() {
+      thumbnailuploader.uploadStoredFiles();	//手动上传函数
+    });
+	
+ });
+</script>
+
+</head>
+<body>
+	
+<!-- 上传按钮 -->
+<div id="thumbnail-fine-uploader"></div>
+
+<!--  手动上传 -->
+<div id="triggerUpload" class="btn btn-primary" style="margin-top: 10px;">
+  <i class="icon-upload icon-white"></i>手动上传
+</div>
+</body>
+</html>

@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="aY-ZKSI-fX0">
+  <start-date>2015-08-24T02:45:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>&gt;任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>&gt;里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <schedule>
+      <schedule-day day-of-week="sunday"/>
+      <schedule-day day-of-week="monday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="tuesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="wednesday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="thursday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="friday">
+        <time-span start-time="0" end-time="39600"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="saturday"/>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes"/>
+    </schedule>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>资源 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t21"/>
+    <child-task idref="t49"/>
+    <child-task idref="t52"/>
+    <child-task idref="t53"/>
+    <child-task idref="t54"/>
+    <child-task idref="t55"/>
+    <child-task idref="t56"/>
+    <child-task idref="t57"/>
+    <child-task idref="t58"/>
+    <child-task idref="t59"/>
+    <child-task idref="t60"/>
+    <child-task idref="t61"/>
+    <child-task idref="t62"/>
+    <child-task idref="t63"/>
+    <child-task idref="t64"/>
+    <child-task idref="t65"/>
+    <child-task idref="t66"/>
+    <child-task idref="t67"/>
+    <child-task idref="t68"/>
+    <child-task idref="t69"/>
+    <child-task idref="t70"/>
+    <child-task idref="t71"/>
+    <child-task idref="t72"/>
+    <child-task idref="t73"/>
+    <child-task idref="t74"/>
+    <child-task idref="t75"/>
+    <child-task idref="t76"/>
+    <child-task idref="t77"/>
+    <child-task idref="t78"/>
+    <child-task idref="t79"/>
+    <child-task idref="t80"/>
+    <child-task idref="t81"/>
+    <child-task idref="t82"/>
+    <child-task idref="t83"/>
+    <child-task idref="t84"/>
+    <child-task idref="t85"/>
+    <child-task idref="t86"/>
+    <child-task idref="t87"/>
+    <child-task idref="t88"/>
+    <child-task idref="t89"/>
+    <child-task idref="t90"/>
+    <child-task idref="t91"/>
+    <child-task idref="t92"/>
+    <child-task idref="t93"/>
+    <child-task idref="t94"/>
+    <child-task idref="t95"/>
+    <child-task idref="t96"/>
+    <child-task idref="t97"/>
+    <child-task idref="t98"/>
+    <child-task idref="t99"/>
+    <child-task idref="t100"/>
+    <child-task idref="t101"/>
+  </task>
+  <task id="t21">
+    <title>经纪人效率表</title>
+    <effort>747</effort>
+    <start-constraint-date>2015-08-26T01:30:10.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T01:30:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t49">
+    <title>端口来电日报表</title>
+    <effort>116</effort>
+    <start-constraint-date>2015-08-26T01:50:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t52">
+    <title>经纪人拉用户周表</title>
+    <effort>348</effort>
+    <start-constraint-date>2015-08-26T01:10:50.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:10:50.000Z</start-no-earlier-than>
+  </task>
+  <task id="t53">
+    <title>经纪人服务体系周表</title>
+    <effort>321</effort>
+    <start-constraint-date>2015-08-26T01:10:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:10:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t54">
+    <title>业务漏斗</title>
+    <effort>3207</effort>
+    <start-constraint-date>2015-08-26T05:46:55.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T05:46:55.000Z</start-no-earlier-than>
+  </task>
+  <task id="t55">
+    <title>安个家用户端日报表</title>
+    <effort>939</effort>
+    <start-constraint-date>2015-08-26T00:00:20.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T00:00:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t56">
+    <title>用户APP分渠道报表</title>
+    <effort>472</effort>
+    <effort-done>472</effort-done>
+    <start-constraint-date>2015-08-26T01:00:14.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:14.000Z</start-no-earlier-than>
+  </task>
+  <task id="t57">
+    <title>SEM日报表</title>
+    <effort>310</effort>
+    <start-constraint-date>2015-08-26T01:10:20.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:10:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t58">
+    <title>用户来电明细表</title>
+    <effort>69</effort>
+    <start-constraint-date>2015-08-26T01:21:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:21:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t59">
+    <title>有经纪人服务的小区</title>
+    <effort>244</effort>
+    <start-constraint-date>2015-08-26T01:00:11.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>？？？</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:11.000Z</start-no-earlier-than>
+  </task>
+  <task id="t60">
+    <title>经纪人集团号</title>
+    <effort>561</effort>
+    <start-constraint-date>2015-08-26T00:10:25.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:10:25.000Z</start-no-earlier-than>
+  </task>
+  <task id="t61">
+    <title>安个家Scorecard</title>
+    <effort>1488</effort>
+    <start-constraint-date>2015-08-26T00:00:15.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-08-26T00:00:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t62">
+    <title>实勘审核报表</title>
+    <effort>97</effort>
+    <start-constraint-date>2015-08-26T01:20:30.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:20:30.000Z</start-no-earlier-than>
+  </task>
+  <task id="t63">
+    <title>经纪人生活照片信息</title>
+    <effort>207</effort>
+    <start-constraint-date>2015-08-26T01:00:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>？？？</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t64">
+    <title>经纪人录无效电话报表</title>
+    <effort>164</effort>
+    <start-constraint-date>2015-08-26T00:20:40.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+          <run>
+            <lit>？？？</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:20:40.000Z</start-no-earlier-than>
+  </task>
+  <task id="t65">
+    <title>安个家App使用情况日报</title>
+    <effort>752</effort>
+    <start-constraint-date>2015-08-26T00:00:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:00:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t66">
+    <title>每日用户咨询留电话明细</title>
+    <effort>48</effort>
+    <start-constraint-date>2015-08-26T01:50:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t67">
+    <title>经纪人实勘审核未通过详情</title>
+    <effort>68</effort>
+    <start-constraint-date>2015-08-26T01:50:25.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:25.000Z</start-no-earlier-than>
+  </task>
+  <task id="t68">
+    <title>用户虚假房源举报和反馈信息</title>
+    <effort>69</effort>
+    <start-constraint-date>2015-08-26T01:50:35.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:35.000Z</start-no-earlier-than>
+  </task>
+  <task id="t69">
+    <title>每日新增房源报表</title>
+    <effort>544</effort>
+    <start-constraint-date>2015-08-26T01:30:32.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:30:32.000Z</start-no-earlier-than>
+  </task>
+  <task id="t70">
+    <title>一周带看用户信息</title>
+    <effort>190</effort>
+    <start-constraint-date>2015-08-26T01:40:10.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t71">
+    <title>人员明细报表</title>
+    <effort>60</effort>
+    <start-constraint-date>2015-08-26T01:50:25.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:25.000Z</start-no-earlier-than>
+  </task>
+  <task id="t72">
+    <title>失效房源日报</title>
+    <effort>594</effort>
+    <start-constraint-date>2015-08-26T01:30:35.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:30:35.000Z</start-no-earlier-than>
+  </task>
+  <task id="t73">
+    <title>SEM分渠道日报表-new</title>
+    <effort>249</effort>
+    <start-constraint-date>2015-08-26T01:20:10.000Z</start-constraint-date>
+    <end-constraint-date>2015-08-26T01:24:31.000Z</end-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:20:10.000Z</start-no-earlier-than>
+    <start-no-later-than>2015-08-26T01:20:22.000Z</start-no-later-than>
+  </task>
+  <task id="t74">
+    <title>!web&amp;app的IP访问情况监控(TOP100)</title>
+    <effort>256</effort>
+    <start-constraint-date>2015-08-25T21:00:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T21:00:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t75">
+    <title>七月客户利用率报表</title>
+    <effort>647</effort>
+    <start-constraint-date>2015-08-26T01:00:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t76">
+    <title>百度推广 sem 日报</title>
+    <effort>296</effort>
+    <start-constraint-date>2015-08-26T01:40:40.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:40.000Z</start-no-earlier-than>
+  </task>
+  <task id="t77">
+    <title>区域板块房源数-安个家房源数</title>
+    <effort>445</effort>
+    <start-constraint-date>2015-08-26T01:10:20.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:10:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t78">
+    <title>短信到达情况</title>
+    <effort>161</effort>
+    <start-constraint-date>2015-08-26T01:31:12.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:31:12.000Z</start-no-earlier-than>
+  </task>
+  <task id="t79">
+    <title>六月客户利用率报表</title>
+    <effort>680</effort>
+    <start-constraint-date>2015-08-26T01:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t80">
+    <title>热门A类小区房源闪购日报</title>
+    <effort>410</effort>
+    <start-constraint-date>2015-08-26T00:10:10.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:10:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t81">
+    <title>闪电卖房源日报</title>
+    <effort>94</effort>
+    <start-constraint-date>2015-08-26T01:50:40.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:40.000Z</start-no-earlier-than>
+  </task>
+  <task id="t82">
+    <title>来电明细月表</title>
+    <effort>53</effort>
+    <start-constraint-date>2015-08-26T01:20:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:20:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t83">
+    <title>房源实勘质量报表</title>
+    <effort>378</effort>
+    <start-constraint-date>2015-08-26T00:30:33.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:30:33.000Z</start-no-earlier-than>
+  </task>
+  <task id="t84">
+    <title>闪购作战地图</title>
+    <effort>993</effort>
+    <start-constraint-date>2015-08-26T00:30:55.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:30:55.000Z</start-no-earlier-than>
+  </task>
+  <task id="t85">
+    <title>闪购过程日报表</title>
+    <effort>570</effort>
+    <start-constraint-date>2015-08-26T00:31:05.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:31:05.000Z</start-no-earlier-than>
+  </task>
+  <task id="t86">
+    <title>八月客户利用率报表</title>
+    <effort>708</effort>
+    <start-constraint-date>2015-08-26T01:00:30.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:00:30.000Z</start-no-earlier-than>
+  </task>
+  <task id="t87">
+    <title>经纪人实勘高清精装日报</title>
+    <effort>133</effort>
+    <start-constraint-date>2015-08-26T00:50:50.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:50:50.000Z</start-no-earlier-than>
+  </task>
+  <task id="t88">
+    <title>各部当月在线过的闪购量</title>
+    <effort>350</effort>
+    <start-constraint-date>2015-08-26T01:30:45.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:30:45.000Z</start-no-earlier-than>
+  </task>
+  <task id="t89">
+    <title>!监控各大主体宽表</title>
+    <effort>995</effort>
+    <start-constraint-date>2015-08-25T22:00:30.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-25T22:00:30.000Z</start-no-earlier-than>
+  </task>
+  <task id="t90">
+    <title>精选小区房源日报</title>
+    <effort>292</effort>
+    <start-constraint-date>2015-08-26T00:10:20.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:10:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t91">
+    <title>九项指标日报表</title>
+    <effort>430</effort>
+    <start-constraint-date>2015-08-26T00:41:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:41:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t92">
+    <title>手拉手日报</title>
+    <effort>113</effort>
+    <start-constraint-date>2015-08-26T01:50:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:50:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t93">
+    <title>九项指标月累积报表</title>
+    <effort>243</effort>
+    <start-constraint-date>2015-08-26T00:50:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:50:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t94">
+    <title>经纪人新绩效</title>
+    <effort>182</effort>
+    <start-constraint-date>2015-08-26T01:30:56.000Z</start-constraint-date>
+    <recalculate>effort</recalculate>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:30:56.000Z</start-no-earlier-than>
+  </task>
+  <task id="t95">
+    <title>百度推广 sem 周报</title>
+    <effort>217</effort>
+    <start-constraint-date>2015-08-26T01:40:15.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:15.000Z</start-no-earlier-than>
+  </task>
+  <task id="t96">
+    <title>合伙经纪人日表</title>
+    <effort>238</effort>
+    <start-constraint-date>2015-08-26T01:40:20.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t97">
+    <title>房源初始层房源在线时长月报</title>
+    <effort>49</effort>
+    <start-constraint-date>2015-08-26T02:00:30.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T02:00:30.000Z</start-no-earlier-than>
+  </task>
+  <task id="t98">
+    <title>户型图报表</title>
+    <effort>157</effort>
+    <start-constraint-date>2015-08-26T01:40:10.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:10.000Z</start-no-earlier-than>
+  </task>
+  <task id="t99">
+    <title>房源初始层房源来源与报盘率日报</title>
+    <effort>274</effort>
+    <start-constraint-date>2015-08-26T02:00:08.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T02:00:08.000Z</start-no-earlier-than>
+  </task>
+  <task id="t100">
+    <title>房源360监控对盘日报</title>
+    <effort>225</effort>
+    <start-constraint-date>2015-08-26T01:40:20.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T01:40:20.000Z</start-no-earlier-than>
+  </task>
+  <task id="t101">
+    <title>合伙经纪人月累积报表</title>
+    <effort>508</effort>
+    <start-constraint-date>2015-08-26T00:40:55.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit> </lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <start-no-earlier-than>2015-08-26T00:40:55.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="true" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>

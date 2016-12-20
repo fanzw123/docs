@@ -1,0 +1,27 @@
+/* CSS Document */
+*{ margin:0; padding:0;}
+ 
+img{ cursor: pointer; border:0px;}
+img:hover{ border:1px #ffffff solid}
+.frame{ width:100%; height:1000px; background-color:#003547}
+.frame .frame_1{ width:1104px; height:678px; margin:0px auto; padding-top:100px;}
+.frame .frame_1 .frame_1_1{ width:1104px; height:161px; margin-bottom:10px; }
+.frame .frame_1 .frame_1_1 img{ float:left; margin-right:10px; }
+
+body{ background-color:#003547; color:#ffffff}
+
+
+.min{ width:162px; height:162px; margin-right:11px; float:left}
+.max{ width:333px; height:162px; margin-right:11px; float:left}
+ 
+
+
+
+
+
+h1{ text-align:center; width:900px; margin-top:40px; font-size:50px; color:#ffffff;}
+.info{ width:900px;margin:0px auto; text-align:center; padding-top:80px; background-color:#003547; }
+.content{ padding:20px; widows:900px; line-height:30px;text-indent:2em; text-align:left; color:#ffffff;}
+
+
+

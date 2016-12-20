@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 手动控制元素大小</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/yellow/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	<script type="text/javascript">
+	
+	$(function () {
+		(function () {
+			/** 
+			 * 3.手动控制元素尺寸
+			 * 函数：		resizable() 	需要CSS库支持
+			 * 实验室：	http://www.bibeault.org/jqia2/chapter10/resizables/lab.resizables.html
+			 * 书本：		302页
+			 */		 
+			var options = {
+				//属性
+				animate:false, 							//是否开启动画
+				animateDuration:"normal"	,		//运动速度
+				autoHide:true, 							//是否显示拖动标示
+				containment:"parent", 				//范围控制
+				
+				//fn  移动函数
+				start : function () {				//改变大小事执行	
+					$('#con').html('当前长度：' +this.offsetWidth + '...当前高度：' + this.offsetHeight);
+				},
+				resize : function () {				//移动过程中持续执行
+					$('#con').html('当前长度：' +this.offsetWidth + '...当前高度：' + this.offsetHeight);
+				},
+				stop : function () {				//改变尺寸结束时执行
+					$('#con').html('当前长度：' +this.offsetWidth + '...当前高度：' + this.offsetHeight);
+				},
+			};
+			$('#imgpage').children().resizable(options);	
+			//控制元素尺寸
+			//$('#imgpage').children().resizable('disable');		//禁用包装集中的	元素尺寸
+			//$('#imgpage').children().resizable('enable');			//开启包装集中的	元素尺寸
+			//$('#imgpage').children().resizable('destroy');		//删除包装集中的	元素尺寸
+			
+		})();
+		
+		
+		
+		
+	});	
+	</script>
+<style>
+	#imgpage {
+		width:auto;
+		height:400px;
+		border:1px solid #666;
+	}
+    #imgpage div.testSubject {
+        width: 260px;
+        height: 200px;
+        border: 1px solid black;
+		background:#ccc;
+		margin:5px;
+		float:left;
+      }
+	  
+</style>
+<body>
+	<H1>手动控制元素大小</H1>
+	<p id="con"></p>
+	<div id="imgpage">
+	 <div class="testSubject" >Hi there!</div>
+	<div class="testSubject" >Hi there!</div>
+	<div class="testSubject" >Hi there!</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 自动完成</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	<script type="text/javascript">
+
+	$(function () {
+		/** 
+		 * 1.autocomplete  自动完成	
+		 * 	函数：	autocomplete()	进度条  
+		 * 	实验室：	http://www.bibeault.org/jqia2/chapter11/autocompleters/lab.autocompleters.html
+		 *  书本：	339页。
+		 * http://www.jb51.net/article/24219.htm //详解
+		 */
+		(function () {		
+			var options = {
+				cacheLength : 10,//缓存的长度.即对从数据库中取到的结果集要缓存多少条记录.设成1为不缓存.Default: 10 	
+				
+					
+				//请求数据方式
+				//运动时执行函数
+				source : function (request,response) {	
+				
+					var term = request.term;						//文本框输入内容
+					
+					
+					/**
+					本地获取数据
+					本地数据源为本地js数组或本地的json对象，如： 
+					var data = ["c++","java", "php", "coldfusion","javascript"]; 
+					var data = [{text:'Link A', url:'/page1'}, {text:'Link B', url: '/page2'} ]; 		
+					*/
+					
+					
+					//服务器获取数据
+					$.post("http://127.0.0.1/demo/jQuery UI/mysqli.php",{
+						term : term,
+					},function(obj){
+						var arr = [];	
+						for (var i =0;i<obj.length;i++) {	//
+							for (var x in obj[i]) {
+								var ob = {
+									label : obj[i][x],
+									value : obj[i][x]
+								};
+								arr.push(ob);
+								var ob = null;
+							}
+						} 
+						response(arr);
+						
+						/*
+						var arr = [];	
+						for (var i =0;i<obj.length;i++) {	
+							arr.push({
+								'label' : obj[i]['loupan_name']+' - '+ obj[i]['city_name'] + ' - ' + obj[i]['loupan_id'],
+								'value' : obj[i]['loupan_name'],
+								//扩展信息
+								'loupan_info' : {
+									loupan_id : obj[i]['loupan_id'],
+									loupan_name : obj[i]['loupan_name'],
+									region_id : obj[i]['region_id'],
+									sub_region_id : obj[i]['sub_region_id'],
+									city_id :  obj[i]['city_id']
+								}
+							});	
+						} 
+						response(arr);
+						*/
+						
+					},'json');							
+				},	
+					
+				//打开时
+				open: function (event,ui) {	
+					
+				},	
+				
+				//选择后执行
+				select : function (event,ui) {		
+					alert(ui.item.loupan_id)
+				},
+						
+				//获得焦点时获取
+				focus: function (event,ui) {
+					alert($(ui.item).attr("id"));
+				},
+				
+				//关闭时获取
+				close : function (event,ui) {	//点击后执行函数
+					//var loupan_info = ui.item.loupan_info;  //详细的信息
+					
+					alert(ui.item.loupan_id)
+					
+					$("#search").append('<p>'+this.value + '</p>');
+				},
+				
+			};
+			$('.testSubject').autocomplete(options);
+
+		})();
+		
+
+	});	
+	</script>
+<style>
+* {
+	padding:0;
+	margin:0;
+}
+#search {
+	width:300px;
+	height:100px;
+	margin:0 auto;
+	border:1px solid black;
+}
+.ui-autocomplete.ui-menu {opacity:0.6;width:300px;font-size:15px;}
+</style>
+<body>	
+	<h1>自动完成</h1>
+	
+	<div id="search">
+		<input type="text" class="testSubject"/>
+	</div>
+	
+</body>
+</html>

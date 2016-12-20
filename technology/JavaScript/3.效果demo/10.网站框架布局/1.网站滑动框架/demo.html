@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友JC分享原创框架锚点Jquery插件</title>
+<style>
+<!--
+/* public - CSS */
+* { margin:0; padding:0; list-style:none; font-family:"微软雅黑","宋体",Arial; font-size:12px; color:#666; }
+/* jcFrame - CSS */
+body,html { height:100%; overflow:hidden; width:100%; }
+#jcFrame { position:absolute; left:0; right:0; top:0; bottom:0; background:url(img/square-grid.png) repeat; }
+#jcSide { background:#202020 url(img/plates.png) no-repeat right 0; width:360px; position:fixed; left:0; top:0; bottom:0; padding:80px 30px 0 50px; }
+#jcSide li { height:45px;}
+#jcSide li a { cursor:pointer; display:block; font-size:27px; color:#fff; text-shadow:1px 1px 0 #000; text-align:right; line-height:45px; letter-spacing:0.1em; height:45px;  }
+#jcSide li a:hover,#jcSide li.select a { color:#2b99e6; }
+.title{ text-decoration:none; font-size:20px; font-weight:bold;}
+#jcContent { position:absolute; right:0; top:0; left:440px; bottom:0; }
+#jcConWraper { width:660px; position:absolute; left:0; top:0; margin:50px 30px;  }
+/* User - CSS */
+#jcContent .jcTitle { height:60px; font-size:25px; text-shadow:1px 1px 0 #fff; text-align:right; border-bottom:4px solid #eaeaea; margin-bottom:10px; }
+#jcContent dt.select .jcTitle { color:#2b99e6; }
+-->
+</style>
+<script src="js/jQuery.1.7.1.min.js" language="javascript" type="text/javascript"></script>
+<script src="js/jQuery-jcFrame.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+$(function(){
+	// 调用
+	$("#jcFrame").jcFrame({
+		property : "rel",
+		speed : "fast"
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="jcFrame">
+	<ul id="jcSide">
+		<li><a href="http://www.jq-school.com/" target="_blank" class="title">JquerySchool</a></li>
+    	<li class="select"><a rel="index">首页</a></li>
+    	<li><a rel="about">个人简介</a></li>
+    	<li><a rel="photo">相册</a></li>
+    	<li><a rel="blog">好友QQ博客</a></li>
+    	<li><a rel="message">留言</a></li>
+    </ul>
+    <dl id="jcContent">
+        <dt id="index" class="select">
+            <div class="jcTitle">首页</div>
+            <p style="height:100px;"></p>
+        </dt>
+        <dt id="about">
+            <div class="jcTitle">个人简介</div>
+            <p style="height:200px;"></p>
+        </dt>
+        <dt id="photo">
+            <div class="jcTitle">相册</div>
+            <p style="height:600px;"></p>
+        </dt>
+        <dt id="blog">
+            <div class="jcTitle">好友QQ博客</div>
+            <p style="height:350px;"></p>
+        </dt>
+        <dt id="message">
+            <div class="jcTitle">留言</div>
+            <p style="height:400px;"></p>
+        </dt>
+    </dl>
+</div>
+</body>
+</html>

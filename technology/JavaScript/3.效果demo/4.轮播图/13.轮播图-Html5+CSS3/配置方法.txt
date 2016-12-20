@@ -1,0 +1,14 @@
+data-overpause="false"       <!-- 鼠标移入停止播放 true false -->
+<div data-type="info" class="info1" data-align="right"><!-- 显示文字信息背景1 右边 -->
+<ul data-type="controls">       <!-- 显示控制功能 -->
+<li data-type="captions"></li>       <!-- 显示文字信息 -->
+<li data-type="link"></li>       <!-- 显示链接 <a data-type="link" href="http://html6game.com" target="_blank"></a> -->
+<li data-type="video"></li>       <!-- 显示视频 -->
+<li data-type="slideinfo"></li>       <!-- 显示文字信息 -->
+<li data-type="next"> </li>       <!-- 显示下一张按钮 -->
+<li data-type="previous"></li>       <!-- 显示上一张按钮 -->
+<li data-type="bartimer"></li>       <!-- 显示底部时间进度条 bartimer | previous -->
+<li data-type="circletimer"></li>       <!-- 显示圆形时间进度条 -->
+<li data-type="thumblist" data-dir="" data-autohide="true"></li><!-- 显示缩略图 -->
+</ul>
+

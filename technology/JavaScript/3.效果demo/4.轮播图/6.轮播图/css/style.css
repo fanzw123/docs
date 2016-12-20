@@ -1,0 +1,21 @@
+
+#warpper,#warpper2,#warpper3,warpper4{width:100%;height:320px;position:relative;}
+#focus,#focus2,#focus3,#focus4{width:800px;height:320px;position:relative;margin:0 auto;overflow:hidden;position:relative; display:none; background:#c1c1c1;}
+.focusWarp{width:800px;height:320px;overflow:hidden;position:relative;}
+.imgList{position:absolute;}
+.imgList li{float:left;text-align:center;height:320px;}
+.imgList_two{position:absolute;z-index:10;top:100px;}
+.imgList_two li{float:left;text-align:center;}
+.imgList_two li img{margin-left:-330px;}
+.imgBtn{position:absolute;bottom:10px;z-index:10;}
+.btnWarp{overflow:hidden;}
+/* 默认圆点样式 */
+.imgBtn li{width:19px;height:20px;float:left;font-size:14px;margin-right:10px;background:url(../images/btnBg_03.png) no-repeat right top;_background:url(../images/btnBg_03.gif) no-repeat right top;text-align:center;line-height:18px;cursor:pointer;}
+.imgBtn li.hover{background:url(../images/btnBg_03.png) no-repeat left top;_background:url(../images/btnBg_03.gif) no-repeat left top;}
+/* 圆点样式结束 */
+.sizeBox{width:300px; position:absolute;z-index:10;top:0;left:0;}
+.prev,.next{display:block;height:77px;width:36px;position:absolute;top:120px;z-index:100;background:url(../images/prevNext.png) no-repeat;outline:none;*background:url(../images/prevNext.gif) no-repeat;background:url(../images/prevNext.gif) no-repeat\0;}
+.prev{left:50%;}
+.next{right:50%;background-position:right top;}
+.thumPrev,.thumNext{width:20px;height:20px;display:block;background:url(../images/sprevNext.png) no-repeat;_background:url(../images/sprevNext.gif) no-repeat;margin-top:10px;margin-right:10px; outline:none;}
+.thumNext{background-position:right top;}

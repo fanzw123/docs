@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/jquery.min.js'></script>
+<script src='../lib/jquery-ui.custom.min.js'></script>
+<script src='../fullcalendar/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+	
+	
+		/*初始化外部事件
+		-----------------------------------------------------------------*/
+	
+		$('#external-events div.external-event').each(function() {
+		
+			// 创建一个事件对象(http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+			// 它不需要有一个开始或结束
+			var eventObject = {
+				title: $.trim($(this).text()) // 使用元素的文本事件标题
+			};
+			
+			// 将事件对象存储在DOM元素,这样我们就可以去
+			$(this).data('eventObject', eventObject);
+			
+			// 使用jQuery UI事件拖拽
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // 将导致事件回到它的
+				revertDuration: 0  //  原始位置后的阻力
+			});
+			
+		});
+	
+	
+		/* 以下是初始化的calendar
+		-----------------------------------------------------------------*/
+		var calendar = $('#calendar');
+		calendar.fullCalendar({
+			
+			monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],  
+       	 	monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],  
+         	dayNames: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],  
+         	dayNamesShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],  
+        	today: ["今天"],  
+       		buttonText: {  
+        		today: '今天',  
+     			month: '月',  
+  			    week: '周',  
+   				day: '日'
+			},
+			
+			height: 850,						//日历高度,包括表头
+			contentHeight: 600,		//内容高度，不包括表头
+			
+			defaultView:'agendaWeek',		//默认显示的视图，这里的师徒分别为month,basicWeek,basicDay,agendaWeek,agendaDay
+			titleFormat:{
+			    month: 'yyyy-MM',                            
+			    week: "{yyyy}-MM", 	//
+			    day: 'yyyy-MM-dd dddd'               
+			},
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+				//right: 'month,basicWeek,basicDay,agendaWeek,agendaDay'
+			},
+			
+			firstDay:1,	//Sunday=0, Monday=1, Tuesday=2, etc. 设置每个星期第一天是
+	
+			weekends:true,		//是否显示周末
+				
+			axisFormat:'HH(:mm)',	//week的左边显示的时间
+			timeFormat :'HH:mm{ - HH:mm}',		//日程时间格式24小时制		
+/**
+ * 以下的参数，适用于axisFormat、timeFormat
+ 1. s: 秒
+2. ss: 秒, 两位
+3. m: 分钟
+4. mm: 分钟, 两位
+5. h: 小时, 12小时制
+6. hh: 小时, 12小时制, 两位
+7. H: 小时, 24小时制
+8. HH: 小时, 24小时制, 两位
+9. d: 日期数字
+10. dd: 日期数字, 两位
+11. ddd: 日期名称, 缩写
+12. dddd: 日期名称, 全名
+13. M: 月份数字
+14. MM: 月份数字, 两位
+15. MMM: 月份名称, 缩写
+16. MMMM: 月份名称, 全名
+17. yy: 两位的年份
+18. yyyy: 4位的年份
+19. t: 上下午加 a或者p
+20. tt: 上下午加am或pm
+21. T: 上下午加A 或者P
+22. TT: 上下午加AM或PM
+23. u: ISO8601格式
+24. S: 给日期加上st, nd, rd, th等后缀, 表明是第几天
+ */			
+			
+			/* 日程编辑 */
+			slotMinutes : 5,		// 两个时间之间的间隔分数为单位
+			editable: true,		//用来设置日历中的日程是否可以编辑.  可编辑是指可以移动, 改变大小等.
+			disableDragging : false,		//默认false, 所有的event可以拖动, 必须editable = true
+			diableResizing : false,		//默认false, 所有的event可以改变大小, 必须editable = true	
+			
+			/**日程对象
+				id:String/Integer (optional)
+				title:String
+				allDay:true or false (optional)  指定是否是全天事件
+				start:Date 事件开始时间，格式如下
+					IETF format (ex: "Wed, 18 Oct 2009 13:00:00 EST")
+					ISO8601 format (ex: "2009-11-05T13:15:30Z")
+				end: Date (optional) 事件结束时间
+					如果事件是一个全天事件，则结束时间包括在内
+					如果事件不是全天事件，结束时间是0:00，则结束时间的第二天不包括在内
+				url:String (optional)  当用户点击时，将会访问的网址
+				className: String/Array (optional) 这个事件使用的css 类名
+				editable:true or false (optional) 事件是否可编辑
+				source: Array/String/Function (automatically populated) 事件源，自动指定
+				backgroundColor: 背景颜色
+				除了以上属性外，你可以自己指定属性和值
+			*/
+				
+			/**
+			 * （第一种，预先定义好） 
+			events: [
+			        {
+			            title  : 'event1',
+			            start  : '2013-11-01'
+			        },
+			        {
+			            title  : 'event2',
+			            start  : '2010-01-05',
+			            end    : '2010-01-07'
+			        },
+			        {
+			            title  : 'event3',
+			            start  : '2010-01-09 12:30:00',
+			            allDay : false // 添加的日期是否为一整天
+			        }
+			    ],
+				*/
+				/**
+				 * 第二种，AJAX加载
+				 * @param {Object} start
+				 * @param {Object} end
+				 * @param {Object} callback
+				events: function(start, end, callback) {
+			        $.ajax({
+			            url: 'myxmlfeed.php',
+			            dataType: 'xml',
+			            data: {
+			                // our hypothetical feed requires UNIX timestamps
+			                start: Math.round(start.getTime() / 1000),
+			                end: Math.round(end.getTime() / 1000)
+			            },
+			            success: function(doc) {
+			
+			                var events = [];
+			
+			                $(doc).find('event').each(function() {
+			                    event.push({
+			                        title: $(this).attr('title'),
+			                        start: $(this).attr('start') // will be parsed
+			                        allDay: false,
+			                    });
+			                });
+			
+			                callback(events);
+			            }
+			        });
+			   },
+			*/
+		
+			//	4个关于鼠标的回调方法
+			//点击触发
+			eventClick:function( event, jsEvent, view ) { 		
+				//删除一个日程，需要日程的ID，日程的ID由添加的时候手动分配，idOrFilter
+				calendar.fullCalendar('removeEvents', [event.idOrFilter]);	//calendar.fullCalendar('removeEvents', [日程的ID]);
+				
+					alert('Event: ' + event.title);	//或者是ID
+			        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+			        alert('View: ' + view.name);
+			
+			        // change the border color just for fun
+			        $(this).css('border-color', 'red');
+			},
+			//当鼠标悬停在一个事件上触发此操作
+			eventMouseover:function( event, jsEvent, view ) { },
+			//当鼠标从一个事件上移开触发此操作
+			eventMouseout:function( event, jsEvent, view ) { },
+		
+			//当拖拽完成并且时间改变
+			eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
+
+//		        alert(
+//		            event.title + "、 " +
+//		            dayDelta + "、" +
+//		            minuteDelta + "、"
+//		        );
+		
+//		        if (allDay) {
+//		            alert("现在全天的事件");
+//		        }else{
+//		            alert("事件有一个时段");
+//		        }
+//		
+//		        if (!confirm("你确定这种变化呢?")) {
+//		            revertFunc();
+//		        }
+		
+		    },
+			
+			//当日程状态改变时。
+			eventResize:function( event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view ) {
+				
+				//alert(1);
+			},
+	
+	
+			/* 外部手动添加日历（在日历中的drop回调中进行构造event并描绘） */
+			droppable: true, // 这允许将东西滴落在日历上! ! !
+			drop: function(date, allDay) { //添加后删除日程
+			
+				// 检索了元素的存储事件对象
+				var originalEventObject = $(this).data('eventObject');
+				
+				// 我们需要把它复制,所以多个事件没有引用同一个对象
+				var copiedEventObject = $.extend({}, originalEventObject);
+				
+				//分配它报告的日期
+	
+				copiedEventObject.start = date;
+				copiedEventObject.allDay = allDay;
+
+				//添加一个日程
+				calendar.fullCalendar('renderEvent', copiedEventObject, true);
+				
+				// 添加后删除event标签
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(this).remove();
+				}
+				
+			}
+			
+			
+		});
+		
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	#wrap {
+		width: 1100px;
+		margin: 0 auto;
+		}
+		
+	#external-events {
+		float: left;
+		width: 150px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+		}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+		}
+		
+	.external-event { /* try to mimick the look of a real event */
+		margin: 10px 0;
+		padding: 2px 4px;
+		background: #3366CC;
+		color: #fff;
+		font-size: .85em;
+		cursor: pointer;
+		}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+		}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+		}
+
+	#calendar {
+		float: right;
+		width: 900px;
+		}
+
+</style>
+</head>
+<body>
+<div id='wrap'>
+
+<div id='external-events'>
+<h4>Draggable Events</h4>
+<div class='external-event'>My Event 1</div>
+<div class='external-event'>My Event 2</div>
+<div class='external-event'>My Event 3</div>
+<div class='external-event'>My Event 4</div>
+<div class='external-event'>My Event 5</div>
+<p>
+<input type='checkbox' id='drop-remove' /> <label for='drop-remove'>remove after drop</label>
+</p>
+</div>
+
+<div id='calendar'></div>
+
+<div style='clear:both'></div>
+</div>
+</body>
+</html>

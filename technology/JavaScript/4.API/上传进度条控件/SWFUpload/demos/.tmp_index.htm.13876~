@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SWFUpload v2.5.0 Demos</title>
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<!-- This page is intentially left as HTML for ease of distribution -->
+</head>
+<body>
+<div id="header">
+	<h1 id="logo">SWFUpload</h1>
+	<div id="version">v2.5.0</div>
+</div>
+<div id="content">
+	<h2>SWFUpload Demos</h2>
+	<p>&nbsp;</p>
+	<p>PHP</p>
+	<ul>
+		<li><a href="simpledemo/index.php">普通上传</a></li>
+		<li><a href="multiinstancedemo/index.php">多个上传显示在一个页面上</a></li>
+		<li><a href="formsdemo/index.php">表单验证通过后才上传</a></li>
+		<li><a href="featuresdemo/index.php">Features Demo</a></li>
+		<li><a href="applicationdemo/index.php">上传文件后返回小缩略图</a></li>
+		<li><a href="cookiebugdemo/index.php">Cookie Bug Demo</a></li>
+		<li><a href="swfobjectdemo/index.php">多文件列队上传</a></li>
+		<li><a href="overlaydemo/index.php">Overlay Demo</a></li>
+		<li><a href="eidemo/index.php">External Interface Demo</a></li>
+		<li><a href="speeddemo/index.php">上传速度插件</a></li>
+		<li><a href="resizedemo/index.php">上传后显示原图片</a></li>
+	</ul>
+	<p>NET 2.0</p>
+	<ul>
+		<li><a href="applicationdemo.net/">Application Demo C#</a></li>
+		<li><a href="applicationdemo.vb.net/">Application Demo VB.net</a></li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI 拖动条</title>
+	<script src="../scripts/jquery-1.9.0.js"></script>
+	<script src="../scripts/jquery-ui-1.10.0.custom.min.js"></script>
+	<link href="../themes/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+	<script type="text/javascript">
+	$(function () {
+		/**
+		 * 1.dialog  对话框
+		 * 	函数：	dialog()	对话框
+		 * 	实验室：	http://www.bibeault.org/jqia2/chapter11/dialogs/lab.dialogs.html
+		 *  书本：	373页。
+		 */
+		(function () {
+			$('#btn').click(function () {
+				var options = {
+					//打开特效、关闭特效动画
+					autoOpen: true,
+					show: {
+				        effect: "blind",	//slide
+				        duration: 1000
+				      },
+				     hide: {
+				         effect: "explode",//slide
+				     	 duration: 1000
+				     },
+					modal : true,					//对话框开启期间，阻止交互
+					position:'center',			//设置打开的位置参数有：left 、 right、bottom
+					//title : '123',					//设置对话框的标题名，也可以在标签中自定义
+
+					//width: '100',			//宽度  默认300
+					//height: '100',		//高度
+
+					//创建自定义按钮函数
+					buttons:{
+						'知道了':function (event) {
+							$(this).dialog('close');
+						},
+						'oa':function (event) {
+							$(this).dialog('close');
+						},
+					},
+				};
+
+				$('.Popup').dialog(options);
+
+			});
+
+			//控制
+			//$('div.Popup').dialog('open');					//打开一个关闭的对话框
+			//$('div.Popup').dialog('close');					//关闭一个打开的对话框
+			//$('div.Popup').dialog('disable');				//禁用包装集中的 对话框
+			//$('div.Popup').dialog('enable');				//开启包装集中的 对话框
+			//$('div.Popup').dialog('destroy');				//删除包装集中的 对话框
+		})();
+
+
+	});
+	</script>
+<style>
+
+</style>
+<body>
+	<h2 class="demoHeaders">弹出框</h2>
+
+
+	<button id="btn">点我弹出对话框</button>
+
+	<!-- 弹出层 -->
+	<div class="Popup" title="我是标题" style="display:none;">
+     	我是内容我是内容我是内容我是内容我是内容
+    </div>
+</body>
+</html>

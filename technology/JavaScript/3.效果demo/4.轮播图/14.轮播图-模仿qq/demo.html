@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网友Wind分享仿QQ相册Jquery特效</title>
+<meta name="Keywords" content="网友Wind分享仿QQ相册Jquery特效,Jquery插件,Jquery原创,Jquery资源,Jquery特效,js特效,div+css,JquerySchool" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、jquery插件、jquery特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+
+
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+		<noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+	
+				<span class="right_ab">
+					<a href="#" target="_blank">Wind QQ:2531100810(小号) 461477285(大号)</a>
+
+				</span>
+				<div class="clr"></div>
+			</div><!-- header -->
+			
+			<div class="content">
+				<h1>请尊重开发者的成果！！仿QQ相册。。Wind QQ:2531100810 461477285(大号) <span></h1>
+				<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Previous</span>
+								<span class="es-nav-next">Next</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+								
+									<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="Wind QQ:2531100810(小号) 461477285（大号）。。也可以输入字的！！想输入什么就什么" /></a></li>
+									<li><a href="#"><img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/5.jpg" data-large="images/5.jpg" alt="image05" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/6.jpg" data-large="images/6.jpg" alt="image06" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/7.jpg" data-large="images/7.jpg" alt="image07" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/8.jpg" data-large="images/8.jpg" alt="image08" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/9.jpg" data-large="images/9.jpg" alt="image09" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/10.jpg" data-large="images/10.jpg" alt="image10" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/11.jpg" data-large="images/11.jpg" alt="image11" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/12.jpg" data-large="images/12.jpg" alt="image12" data-description="如有问题请联系wind QQ：" /></a></li>
+									<li><a href="#"><img src="images/thumbs/13.jpg" data-large="images/13.jpg" alt="image13" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/14.jpg" data-large="images/14.jpg" alt="image14" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/15.jpg" data-large="images/15.jpg" alt="image15" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/16.jpg" data-large="images/16.jpg" alt="image16" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/17.jpg" data-large="images/17.jpg" alt="image17" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/18.jpg" data-large="images/18.jpg" alt="image18" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/19.jpg" data-large="images/19.jpg" alt="image19" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/20.jpg" data-large="images/20.jpg" alt="image20" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/21.jpg" data-large="images/21.jpg" alt="image21" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/22.jpg" data-large="images/22.jpg" alt="image22" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/23.jpg" data-large="images/23.jpg" alt="image23" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+									<li><a href="#"><img src="images/thumbs/24.jpg" data-large="images/24.jpg" alt="image24" data-description="Wind QQ:2531100810(小号) 461477285。。也可以输入字的！！" /></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+			</div><!-- content -->
+		</div><!-- container -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+    </body>
+</html>

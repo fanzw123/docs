@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浮动导航</title>
+<style type="text/css">
+ *{ margin:0; padding:0;}
+ body{ background:#eee; text-shadow:0px 1px 0px rgba(255,255,255,0.60); color:#333;}
+ a{color:#fff; text-decoration:none;}
+ #header{display:block; height:200px; background:#09F; line-height:100px; text-align:center; color:#fff; font-size:16px;text-shadow:0px -1px 0px rgba(30,30,30,0.60);}
+ #header h3{font-size:50px; font-weight:600;height:120px; line-height:120px;}
+ #header h4{ font-size:18px; font-weight:600; height:80px; line-height:80px;}
+ #box{ width:980px; margin:60px auto; height:2600px; background:#eee;}
+ #mynav{ width:100%; height:40px; background:#093; border-bottom:1px solid #fff; position:relative; z-index:99; color:#fff; line-height:40px;}
+ #mynav ul{width:1000px; padding:0; margin:0 auto; list-style-type:none;}
+ #mynav ul li{ float:left; margin：0px 5px; border-right:1px solid #fff;}
+ #mynav ul li a{ display:block; padding:0px 20px; height:40px; line-height:40px; color:#fff; text-shadow:0px -1px 0px rgba(30,30,30,0.60);}
+</style>
+</head>
+
+<body>
+<div id="header">
+ <h3>导航随滚动条浮动定位到顶部</h3>
+ <h4>Autho:Smohan <a href="http://www.smohan.net" target="_blank">http://www.smohan.net</a></h4>
+</div>
+<div id="mynav">
+  <ul>
+   <li><a href="http://www.jq-school.com/" target="_blank">Jquery学堂</a></li>
+   <li><a href="http://www.smohan.net/" target="_blank">水墨寒</a></li>
+   <li><a href="http://www.jq-school.com/" target="_blank">Jquery学堂</a></li>
+   <li><a href="http://www.smohan.net/" target="_blank">水墨寒</a></li>
+   <li><a href="http://www.jq-school.com/" target="_blank">Jquery学堂</a></li>
+   <li><a href="http://www.smohan.net/" target="_blank">水墨寒</a></li>
+   <li><a href="http://www.jq-school.com/" target="_blank">Jquery学堂</a></li>
+   <li><a href="http://www.smohan.net/" target="_blank">水墨寒</a></li>
+   <li><a href="http://www.smohan.net/" target="_blank">www.smohan.net</a></li>
+  </ul> 
+</div>
+<div id="box">
+ <p>使用方式：</p>
+  $(document).ready(function(e) { <br/>
+       &nbsp;&nbsp;$('#mynav').smohanfixednav(0,999); <br/>    
+  });<br/>
+ //第一个值： 你期望导航在距离顶部多少的位置浮动<br/>  
+//第二个值： 导航zindex<br/>  
+      <center>
+    <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both; position:relative; z-index:1;">网友水墨寒分享随滚动条固定导航到顶部Jquery插件<br />
+      JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank" style="color:#000000">http://www.jq-school.com</a>）<br />
+	  Smohan  官网：  <a href="http://www.smohan.net" target="_blank" style="color:#000000">http://www.smohan.net</a>
+	  <br />
+      官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=47d9817e9e09f61b288b8ad6d33fb18cbd659ca6773f663918d6e5d3a2981a12"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂③群" title="Jquery学堂③群"></a> </div>
+  </center>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="smohan.fixednav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+ $('#mynav').smohanfixednav(0,999);    
+});
+//第一个值： 你期望导航在距离顶部多少的位置浮动
+//第二个值： 导航zindex
+</script>
+</body>
+</html>

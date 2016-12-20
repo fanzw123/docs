@@ -1,0 +1,56 @@
+一、
+<?php 
+/*	在线编辑器。
+ * 1、HTML方法实现  ，
+	<form method="post" action="">
+		//引入js文件
+		<script type="text/javascript" src="ckeditor/ckeditor.js" ></script> 
+		//html中写入
+		<textarea name="content" id="TextArea1" class="ckeditor"></textarea>
+		<input type="submit" />
+	</form>
+
+
+ * 2、PHP方法实现
+	echo $_POST[editor1];
+	require 'ckeditor/ckeditor.php';	
+	echo '<form method="post" action="">';
+	$CKEditor = new CKEditor();
+	$code = $CKEditor->editor("editor1", "<p>Initial value.</p>");
+	echo $code;
+	echo '<input type="submit" />';
+	echo '</form>';
+ */
+?>
+
+
+二、config.js文件配置布局等信息
+/*
+ * config.language = 'zh-cn';//设置界面字符集
+ * config.width = 400; //设置长度
+ * config.height = 400; //设置高度
+ * config.skin = 'v2'; //有三种样式：'kama'（默认）、'office2003'、'v2'
+ * config.uiColor = '#FFF';//自定义背景颜色
+ */
+
+CKEDITOR.editorConfig = function( config )
+{
+	config.language = 'zh-cn';
+	config.uiColor = '#FFF';
+};
+
+
+三、删除不必要的文件：_开头的文件。
+_samples和_source
+
+
+四、文件说明
+lang字符集
+skins界面样式
+
+
+
+
+
+
+

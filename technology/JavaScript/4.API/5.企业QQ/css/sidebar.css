@@ -1,0 +1,86 @@
+﻿html {overflow-x:hidden;}
+
+.qqserver p img {display: inline; margin-top:-5px; vertical-align:middle;}
+.scrollsidebar{position:absolute; z-index:999; top:220px;}
+.side_content{width:154px; height:auto; overflow:hidden; float:left; }
+.side_content .side_list {width:154px;overflow:hidden;}
+.show_btn{ width:0; height:112px; overflow:hidden; margin-top:50px; float:left; cursor:pointer;}
+.show_btn span { display:none;}
+.close_btn{width:24px;height:24px;cursor:pointer;}
+.side_title,.side_bottom,.close_btn,.show_btn {background:url(../images/service/sidebar_bg.gif) no-repeat;}
+.side_title {height:46px;}
+.side_bottom { height:8px;}
+.side_center {font-family:Verdana, Geneva, sans-serif; padding:5px 12px; font-size:12px;}
+.close_btn { float:right; display:block; width:21px; height:16px; margin:17px 10px 0 0; _margin:17px 5px 0 0;}
+.close_btn span { display:none;}
+.side_center .qqserver p { text-align:center; padding:6px 0; margin:0; vertical-align:middle;}
+.phoneserver  {font-size:14px; text-align:center;}
+.phoneserver p { padding:2px 0; _height:16px; margin:0;color: #666666;}
+.msgserver { text-align:center; margin-bottom:5px;}
+.msgserver a { background:url(../images/service/sidebar_bg.gif) no-repeat -119px -115px; padding-left:20px;}
+.side_content hr { border-bottom:1px solid #E6E6E6; height:1px; margin:10px 0; clear:both;}
+
+
+/* gray skin as the default skin */
+.side_title, .side_gray .side_title {background-position:-1165px 0;}
+.side_center, .side_gray .side_center { background:url(../images/service/gray_line.gif) repeat-y center;}
+.side_bottom, .side_gray .side_bottom {background-position:-1165px -50px;}
+.close_btn, .side_gray .close_btn {background-position:-44px -90px;}
+.close_btn:hover, .side_gray .close_btn:hover {background-position:-67px -90px;}
+.show_btn , .side_gray .show_btn {background-position:-231px 0;}
+.msgserver a, .side_gray .msgserver a { color:#6c6c6c;}
+hr, .side_gray hr{border-bottom::1px solid #e4e4e4;}
+
+
+
+
+
+/* blue skin  */
+.side_blue .side_title {background-position:-365px 0; }
+.side_blue .side_center { background:url(../images/service/blue_line.gif) repeat-y center;}
+.side_blue .side_bottom {background-position:-365px -50px;}
+.side_blue .close_btn {background-position:-44px 0;}
+.side_blue .close_btn:hover {background-position:-66px 0;}
+.side_blue .show_btn {background-position:-119px 0;}
+.side_blue .msgserver a { color:#06C;}
+.side_blue hr{ border-bottom::1px solid #dbe4e9;}
+
+/* yellow skin  */
+.side_yellow .side_title {background-position:-565px 0;}
+.side_yellow .side_center { background:url(../images/service/yellow_line.gif) repeat-y center;}
+.side_yellow .side_bottom {background-position:-565px -50px;}
+.side_yellow .close_btn {background-position:-44px -23px;}
+.side_yellow .close_btn:hover {background-position:-66px -23px;}
+.side_yellow .show_btn {background-position:-147px 0;}
+.side_yellow .msgserver a { color:#f78b00;}
+.side_yellow hr{border-bottom::1px solid #f7f5df;}
+
+/* green skin  */
+.side_green .side_title {background-position:-765px 0;}
+.side_green .side_center { background:url(../images/service/green_line.gif) repeat-y center;}
+.side_green .side_bottom {background-position:-765px -50px;}
+.side_green .close_btn {background-position:-44px -46px;}
+.side_green .close_btn:hover {background-position:-66px -46px;}
+.side_green .show_btn {background-position:-175px 0;}
+.side_green .msgserver a { color:#769a0f;}
+.side_green hr{border-bottom::1px solid #edf2e5;}
+
+/* orange skin  */
+.side_orange .side_title {background-position:-965px 0;}
+.side_orange .side_center { background:url(../images/service/orange_line.gif) repeat-y center;}
+.side_orange .side_bottom {background-position:-965px -50px;}
+.side_orange .close_btn {background-position:-44px -67px;}
+.side_orange .close_btn:hover {background-position:-66px -67px;}
+.side_orange .show_btn {background-position:-203px 0;}
+.side_orange .msgserver a { color:#d25b04;}
+.side_orange hr{border-bottom::1px solid #feefde;}
+
+/* white skin  */
+.side_white .side_title {background-position:-1365px 0;}
+.side_white .side_center { background:url(../images/service/white_line.gif) repeat-y center;}
+.side_white .side_bottom {background-position:-1365px -50px;}
+.side_white .close_btn {background-position:-67px -90px;}
+.side_white .close_btn:hover {background-position:-45px -90px;}
+.side_white .show_btn {background-position:-259px 0;}
+.side_white .msgserver a { color:#6c6c6c;}
+.side_white hr{border-bottom::1px solid #e4e4e4;}

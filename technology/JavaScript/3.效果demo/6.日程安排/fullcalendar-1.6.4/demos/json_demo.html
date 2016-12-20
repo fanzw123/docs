@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/jquery.min.js'></script>
+<script src='../lib/jquery-ui.custom.min.js'></script>
+<script src='../fullcalendar/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+	
+	var calendar = $('#calendar');
+		calendar.fullCalendar({
+			monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],  
+       	 	monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],  
+         	dayNames: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],  
+         	dayNamesShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],  
+        	today: ["今天"],  
+       		buttonText: {  
+        		today: '今天',  
+     			month: '月',  
+  			    week: '周',  
+   				day: '日'
+			},
+			
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			
+			slotMinutes : 5,
+		
+			editable: true,
+			
+			events: "json-events.php",
+			
+			eventClick:function( event, jsEvent, view ) { 
+				calendar.fullCalendar('removeEvents', [111]);
+					alert('Event: ' + event.title);	//或者是ID
+			        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+			        alert('View: ' + view.name);
+			
+			        // change the border color just for fun
+			        $(this).css('border-color', 'red');
+			},
+			
+			eventDrop: function(event, delta) {
+			//	alert(event.start)
+				alert(event.title + ' was moved ' + delta + ' days\n' +
+					'(should probably update your database)');
+			},
+			
+			loading: function(bool) {
+				if (bool) $('#loading').show();
+				else $('#loading').hide();
+			}
+			
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	#loading {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		}
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+
+</style>
+</head>
+<body>
+<div id='loading' style='display:none'>loading...</div>
+<div id='calendar'></div>
+<p>json-events.php needs to be running in the same directory.</p>
+</body>
+</html>
