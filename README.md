@@ -83,7 +83,7 @@
   - [sqoop](technology/hadoop-docs/sub-project/hbase) (sqoop)
   - [zookeeper](technology/hadoop-docs/sub-project/hbase) (zookeeper)
   - [kafka](technology/hadoop-docs/sub-project/kafka) (kafka)
-  - [flue](technology/hadoop-docs/sub-project/flume) (flume)
+  - [flume](technology/hadoop-docs/sub-project/flume) (flume)
 - [Java-docs](technology/Java/) (java 文档)
   - [jvm](technology/Java/jvm.md) (jvm 文档)
 - [Scala-docs](technology/scala/) (scala 文档)
