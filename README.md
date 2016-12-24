@@ -87,7 +87,7 @@
 - [Java-docs](technology/Java/) (java 文档)
   - [jvm](technology/Java/jvm.md) (jvm 文档)
 - [Scala-docs](technology/scala/) (scala 文档)
-  - [sbt](technology/scala/sbt.md) (jvm 文档)
+  - [sbt](technology/scala/sbt.md) (sbt 文档)
 - [python-docs](technology/python/) (python 文档)
 - [shell-docs](technology/Shell/) (shell 文档)
 - [git-docs](technology/git-docs/) (git使用文档)
