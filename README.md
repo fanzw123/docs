@@ -5,7 +5,12 @@
 ### 1、[数据仓库框架](framework/)
 
 - [DW Service](framework/design/dw-service.md)
-- [运行时间约定](framework/convention/run-time.md)
+- PPT 团队分享
+ - [数据部 - 推荐系统](files/分享/数据部 - 推荐系统.pptx)
+ - [数据部 hadoop 实践](files/分享/数据部 hadoop 实践)
+ - [数据部 - DW现状](files/分享/数据部状况/数据部 - DW现状.pptx)
+ - [数据部现状以及bi3.0规划](files/分享/数据部现状以及bi3.0规划.pptx)
+ - [智能配盘配盘3.0](files/分享/数据部状况/智能配盘配盘3.0.pptx)
 
 ### 2、dw 数据仓库设计
 
