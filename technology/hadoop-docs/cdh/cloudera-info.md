@@ -35,11 +35,13 @@
 
 
 ### 二、Centos 系统
-- Yum 所有版本
+
+- yum 所有版本
   - [CM5](http://archive.cloudera.com/cm5/redhat/)
   - [CDH](http://archive.cloudera.com/cdh5/redhat/)
 
 #### 1、Centos 5
+
 - CM5
  - [CM5 Yum-根](http://archive.cloudera.com/cm5/redhat/5/x86_64/cm/)
  - [CM5 Yum-源](http://archive.cloudera.com/cm5/redhat/5/x86_64/cm/cloudera-manager.repo)
@@ -62,7 +64,8 @@
 
 
 ### 三、Ubuntu 系统
-- Apt-get 所有版本
+
+- apt-get 所有版本
   - [CM5](http://archive.cloudera.com/cm5/ubuntu/)
   - [CDH](http://archive-primary.cloudera.com/cdh5/ubuntu/)
 
@@ -95,6 +98,13 @@
  - [CDH Apt-根](http://archive-primary.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh/)
  - [CDH Apt-源](http://archive-primary.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh/cloudera.list)
  - [CDH Apt-key](http://archive-primary.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh/archive.key)
+
+
+### 四、本地源地址
+
+下载所有, 可以用于搭建本地源
+
+- [one-click-install](http://archive.cloudera.com/cdh5/one-click-install/)
 
 
 ## * 所有端口文档

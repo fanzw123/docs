@@ -20,16 +20,18 @@
 
 -- my.conf
 
+
+[mysqld]
+datadir=/data/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+
 # 不区分大小写
 lower_case_table_names = 1
 
 # innodb缓冲池大小  4294967296 字节 = 4 G
 innodb_buffer_pool_size = 4294967296
 
-[mysqld]
-datadir=/data/mysql
-socket=/var/lib/mysql/mysql.sock
-user=mysql
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 
@@ -52,7 +54,8 @@ innodb_data_file_path = ibdata1:10M:autoextend
 innodb_additional_mem_pool_size = 32M
 innodb_thread_concurrency = 16
 
-log-slow-queries=/data/mysql/slow.log
+# 慢查询
+slow_query_log=/var/log/mysql/slow.log
 long_query_time=1
 log-queries-not-using-indexes
 log-slow-admin-statements

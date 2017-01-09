@@ -270,7 +270,7 @@ mkdir /opt/cloudera-manager
 mv /opt/cm-5.3.2/ /opt/cloudera-manager/
 
 2) 为 Cloudera Manager Server 建立数据库
-#添加 java mysql 驱动类
+#添加 java mysql 驱动类(下载地址 http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.40)
 cp -arip  mysql-connector-java-5.1.31-bin.jar /opt/cloudera-manager/cm-5.3.2/share/cmf/lib/
 
 a) mysql 上建立scm数据库

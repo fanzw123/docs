@@ -677,26 +677,37 @@ tock.stdtime.gov			//时间服务器
 						wade    ALL=(ALL)       ALL		<<<在此加上一个用户
 					ii) sudo nl /etc/shadow				//被设置的账号，执行部分管理员命令。
 
-			3) 首先执行以下命令(该命令用来修改 /etc/sudoers 文件)：
+
+			3) centos 配置 sudo 权限
+				vim /etc/sudoers
+
+				a) 注释 root
+					#root   ALL=(ALL)       ALL
+					替换成:	%sudo ALL=(ALL:ALL) NOPASSWD:ALL
+
+				b) 注释 wheel (sudo 权限组)
+					%wheel        ALL=(ALL)       NOPASSWD: ALL
+					替换成:	%wheel  ALL=(ALL)       NOPASSWD: ALL
+
+				c) 添加到 sudo 组(在 centos 下是 wheel 组)
+					usermod -a -G dwadmin wheel
+
+			3) ubuntu 配置 sudo 权限
 					vim /etc/sudoers
-					(1) 把  %sudo ALL=(ALL:ALL) ALL  这行注释掉
 
-					(2) 用这句替代刚刚注释掉的那句
-							%sudo ALL=(ALL:ALL) NOPASSWD:ALL  移动到文件未尾，
+				a) 把  %sudo ALL=(ALL:ALL) ALL  这行注释掉
 
-					(3) 然后再执行以下命令：
-				 			sudo adduser 用户名 sudo
+			  b) 用这句替代刚刚注释掉的那句
+						%sudo ALL=(ALL:ALL) NOPASSWD:ALL  移动到文件未尾，
 
-							注意 ：
-							在 ubuntu 下是 sudo 组
-							在 centos 下是 wheel 组
-							修改用户所在组即可获得 sudo 权限
-							usermod -a -G dwadmin sudo
-					(4) 退出账号重新登录
-							exit
+				c) 添加到 sudo 组(在 ubuntu 下是 sudo 组)
+				 	sudo adduser 用户名 sudo
 
-				b) sudo -u wade touch /tmp/aaa.txt				//以wade身份执行创建文件的命令 (root命令)
-				   sudo su hdfs -c "touch /tmp/aaa.txt"             //却换身份到 hdfs 运行指定脚本
+					usermod -a -G dwadmin sudo
+
+
+			4) sudo -u wade touch /tmp/aaa.txt				//以wade身份执行创建文件的命令 (root命令)
+				 sudo su hdfs -c "touch /tmp/aaa.txt"             //却换身份到 hdfs 运行指定脚本
 
 
 
@@ -1220,9 +1231,9 @@ tock.stdtime.gov			//时间服务器
 
 	2、软件安装：RPM、SRPM
 		1) 各版本的distribution 依附关系	(686)
-			distribution (代表)		软件管理机制		使用命令				在线升级机制(命令)
-			Red Hat/Fedora   		RPM				rpm,rpmbuild		yum
-			Debian/Ubunt				DPKG				dpkg					apt-get
+			distribution (代表)		软件管理机制		使用命令					在线升级机制(命令)
+			Red Hat/Fedora   			RPM						rpm,rpmbuild		yum
+			Debian/Ubunt					DPKG					dpkg						apt-get
 
 		2) RPM  //软件管理机制，提供软件安装时，需要依赖其他软件的名称（690）
 			注：安装目录：/	/bin、/usr/lib、/usr/share/doc、/usr/share/man
@@ -1447,6 +1458,9 @@ tock.stdtime.gov			//时间服务器
 			b) date -s 3/15/14				//将CentOS系统日期设定成2014年3月15日的命令
 			c) date -s 13:16:00				//修改系统时间
 
+		3) 同步网络时区
+			yum install ntp
+			ntpdate time.nist.gov
 
 	2、输出
 		watch -n1 ls -lh 			//每隔一秒监控指令输出状态，动态
