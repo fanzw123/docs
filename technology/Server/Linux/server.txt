@@ -150,11 +150,24 @@
 	1、目录
 		注：主机名：Internet中为域名。局域网中为某台计算机的名字
 		1) /etc/sysconfig/network-scripts/ifcfg-eth0			//IP的参数设置
+			service network start 	启动网络
+
+			DEVICE        设备名，不要自己乱改，和文件ifcfg-ethX里的ethX要一致
+			BROADCAST     广播地址
+			HWADDR        物理地址，不要乱改
+			ONBOOT        启动或者重启网络时，是否启动该设备，yes是启动，no是不启动
+			BOOTPROTO     开机协议，最常见的三个参数如下：
+			              static(静态IP)
+			              none(不指定,设置固定ip的情况，这个也行，但是如果要设定多网口绑定bond的时候，必须设成none）
+			              dhcp(动态获得IP相关信息）
+			IPADDR        IP地址
+			NETMASK       子网掩码
+
 
 		2) /etc/sysconfig/network										//hostname
 			ubuntu /etc/hotsname
 
-		3) /etc/resolv.conf													//DNS域名服务器设置
+		3) /etc/resolv.conf												//DNS域名服务器设置
 			a)	说明
 				nameserver     //定义DNS服务器的IP地址
 				domain      		 //定义本地域名

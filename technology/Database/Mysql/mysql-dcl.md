@@ -47,8 +47,18 @@ CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 
 ```
 
-# 三、显示所用用户
+# 三、用户操作
 
-``` sh
+``` sql
+--
 SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
+
+-- 修改用户密码
+UPDATE mysql.user SET password=password("2345.com") WHERE user="root";
+
+-- 删除用户
+DELETE FROM mysql.user WHERE user='';
+
+-- 修改内容刷新
+flush privileges;
 ```

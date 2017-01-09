@@ -1460,7 +1460,10 @@ tock.stdtime.gov			//时间服务器
 
 		3) 同步网络时区
 			yum install ntp
-			ntpdate time.nist.gov
+			ntpdate -d time.nist.gov
+			ntpdate -d pool.ntp.org
+
+			ntpq -c version 查看版本
 
 	2、输出
 		watch -n1 ls -lh 			//每隔一秒监控指令输出状态，动态

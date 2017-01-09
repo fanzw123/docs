@@ -7,8 +7,8 @@
 ``` sh
 yum install ntp
 
-同步时间
-ntpdate time.nist.gov
+ntpdate -d time.nist.gov
+ntpdate -d pool.ntp.org
 ```
 
 ### 2. 系统服务
@@ -16,12 +16,14 @@ ntpdate time.nist.gov
 ``` sh
 关闭防火墙
   service iptables stop
+  chkconfig iptables off
+
+  service ip6tables stop
+  chkconfig ip6tables off
 
 关闭selinux
   setenforce 0
-
-需要重启
-  vim /etc/selinux/config
+  vi /etc/selinux/config
   SELINUX=disabled
 ```
 
@@ -45,7 +47,7 @@ ntpdate time.nist.gov
 
 ``` sh
 1. 添加 cloudera-manager.repo 源
-  vim /etc/yum.repos.d/cloudera.repo
+  vim /etc/yum.repos.d/cloudera-manager.repo
   http://archive.cloudera.com/cm5/redhat/5/x86_64/cm/cloudera-manager.repo
 
 2. 更新 yum
@@ -66,15 +68,36 @@ yum install cloudera-manager-server-db
 ### 3. 启动服务
 
 ``` sh
-1. mysql 上建立 scm 数据库
-  授权 mysql 用户(root 权限下执行)
+1. 安装 cm 数据库(root 权限)
+  a) 使用脚本配置
+    /usr/share/cmf/schema/scm_prepare_database.sh mysql -hdw0 -P3306 -uroot -p2345.com --scm-host dw0 scm scm scm
+    #---格式是:  scm_prepare_database.sh 数据库类型  数据库 服务器 用户名 密码  --scm-host  Cloudera_Manager_Server 所在的机器
+    具体参数看配置 : /usr/share/cmf/schema/scm_prepare_database.sh --help
 
-  GRANT ALL PRIVILEGES ON cmf.* TO 'hadoop'@'%' WITH GRANT OPTION;
+  b) 编写配置文件 /etc/cloudera-scm-server
+    com.cloudera.cmf.db.type=mysql
+    com.cloudera.cmf.db.host=dw0:3306
+    com.cloudera.cmf.db.name=scm
+    com.cloudera.cmf.db.user=scm
+    com.cloudera.cmf.db.password=scm
+    com.cloudera.cmf.db.setupType=EXTERNAL
 
-2. 安装数据库
-/usr/share/cmf/schema/scm_prepare_database.sh mysql -hdw0 -uhadoop -p2345.com --scm-host dw0 scm scm scms
-#---格式是:  scm_prepare_database.sh 数据库类型  数据库 服务器 用户名 密码  --scm-host  Cloudera_Manager_Server 所在的机器
+2. root 权限登录 Mysql 查看账户
+  SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
 
 
+3. 启动服务
+  监控日志: tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+
+  启动 cm 服务, 开启端口在 7180, http 的服务
+  service cloudera-scm-server restart
+
+4. 关机服务
+  http://host:7180
+  user: admin
+  pass: admin
 
 ```
+
+## 二、安装
+scp /etc/yum.repos.d/cloudera-manager.repo root@dw1:/etc/yum.repos.d/cloudera-manager.repo
