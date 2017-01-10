@@ -85,7 +85,7 @@ apt-get -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold -y
 ```
 * 配置环境变量,在/etc/profile中添加
 
-```
+``` sh
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle-cloudera
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib

@@ -577,8 +577,8 @@ tock.stdtime.gov			//时间服务器
 	2、用户管理
 			###root命令###
 			快捷命令
-			groupadd -r dwadmin
-			useradd -m -s /bin/bash -g  dwadmin dwadmin   -m:创建用户主文件夹 -s:新用户的默认shell
+			groupadd -r dwadmin组
+			useradd -m -s /bin/bash -g  dwadmin组 dwadmin   -m:创建用户主文件夹 -s:新用户的默认shell
 
 
 		1) 编辑用户 ：用户分为普通用户(500以后的账户)和系统用户(100-499)，普通用户有自己的工作文件夹，系统用户没有
@@ -587,10 +587,10 @@ tock.stdtime.gov			//时间服务器
 				ii) useradd -g groupsss user1			//创建一个普通账号，分配到users组中, 即一般用户
 				iii) useradd -r admin1				//创建一个系统账号
 				iiii) useradd -m[-M|-n|-d]
-					-m自动建立用户的登入目录、
-					-M不要自动建立用户的登入目录、
-					-n取消建立以用户名称为名的群组、
-					-d指定用户登入时的启始目录。
+					-m 自动建立用户的登入目录、
+					-M 不要自动建立用户的登入目录、
+					-n 取消建立以用户名称为名的群组、
+					-d 指定用户登入时的启始目录。
 				useradd -r -g mysql mysql	//创建一个不可以登录的账号
 
 			b) passwd (413)		//用户创建完毕要修改密码后激活
@@ -603,7 +603,7 @@ tock.stdtime.gov			//时间服务器
 				ii) usermod -g     group1  wade1			//修改wade1的组为group1
 					usermod -G 	apache wade1 				//把用户追加到apache组中
 				iii) usermod 	-l     aaa 	   wade1			//把wade1账号名称修改为aaa
-				usermod -a -G www-data apache	//追加apache到一个组
+						usermod -a -G www-data apache	//追加apache到一个组
 
 			d) userdel (417)		//删除用户账号与数据
 				i) userdel  -r  wade						//连同用户的文件夹一起删除
@@ -690,7 +690,10 @@ tock.stdtime.gov			//时间服务器
 					替换成:	%wheel  ALL=(ALL)       NOPASSWD: ALL
 
 				c) 添加到 sudo 组(在 centos 下是 wheel 组)
-					usermod -a -G dwadmin wheel
+					usermod -a -G  wheel username
+
+				x) 直接在 /etc/sudoers 里面加入
+				 username  ALL=(ALL)       NOPASSWD: ALL
 
 			3) ubuntu 配置 sudo 权限
 					vim /etc/sudoers
@@ -702,8 +705,6 @@ tock.stdtime.gov			//时间服务器
 
 				c) 添加到 sudo 组(在 ubuntu 下是 sudo 组)
 				 	sudo adduser 用户名 sudo
-
-					usermod -a -G dwadmin sudo
 
 
 			4) sudo -u wade touch /tmp/aaa.txt				//以wade身份执行创建文件的命令 (root命令)
@@ -1250,6 +1251,7 @@ tock.stdtime.gov			//时间服务器
 			c) 查询 （692）
 				i) rpm -qalc (跟软件名称，查看该软件的信息)					//查看所有安装到Linux的软件
 				ii) rpm -q logrotate												//查找是否有安装logrotate
+				iii) rpm -ql cloudera-manager-server 			// 软件包的所有数据,配置,执行路径等等
 
 			d) 查看被改动过的文件 (695)
 				i)  rmp -Va 软件名称

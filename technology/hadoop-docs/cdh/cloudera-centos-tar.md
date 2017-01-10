@@ -60,7 +60,7 @@ ssh-keygen -t rsa -P ""
 
 #### 4.1、说明 authorized_keys
 
-```
+``` sh
 master 需要对所有的 slave 免密码访问
 
 master 需要对 master 免密码访问
@@ -70,7 +70,7 @@ master 要分发给所有的 slave
 
 #### 4.2、具体实现 authorized_keys
 
-```
+``` sh
 a) 设置authorized_keys
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
  (OR)
@@ -88,7 +88,7 @@ scp ~/.ssh/authorized_keys hadoop@dev3.jsonlin.cn:~/.ssh/
 
 具体百度啦，这个怎么可能难道你呢，出现的结果这样就对了
 
-```
+``` sh
 [root@dev1 hadoop]# java -version
 java version "1.7.0_75"
 Java(TM) SE Runtime Environment (build 1.7.0_75-b13)
@@ -270,12 +270,12 @@ mkdir /opt/cloudera-manager
 mv /opt/cm-5.3.2/ /opt/cloudera-manager/
 
 2) 为 Cloudera Manager Server 建立数据库
-#添加 java mysql 驱动类(下载地址 http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.40)
+#添加 java mysql 驱动类(下载地址 http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar)
 cp -arip  mysql-connector-java-5.1.31-bin.jar /opt/cloudera-manager/cm-5.3.2/share/cmf/lib/
 
 a) mysql 上建立scm数据库
 /opt/cloudera-manager/cm-5.3.2/share/cmf/schema/scm_prepare_database.sh mysql -h127.0.0.1 -uroot -p514591 --scm-host localhost scm scm scm
-#---格式是:  scm_prepare_database.sh 数据库类型  数据库 服务器 用户名 密码  --scm-host  Cloudera_Manager_Server所在的机器
+#---格式是:  scm_prepare_database.sh 数据库类型 数据库服务器 数据库管理用户名 管理密码 --scm-host Cloudera_Manager_Server 所在的机器 database-name(Cloudera Manager Server 数据库的名称) username( Cloudera Manager Server 数据库的用户名) password(Cloudera Manager Server 数据库的密码)
 
 #---出现如下表示成功
 ully connected to database.
@@ -318,7 +318,8 @@ vim /etc/rc.d/rc.local
 #### 4.2、准备Parcels，用以安装CDH5
 
 ##### 4.2.1、下载地址
-```
+
+``` sh
  http://archive.cloudera.com/cdh5/parcels/latest/
 
 Centos6 :
@@ -335,7 +336,7 @@ manifest.json
 
 ##### 4.2.2、存放目录
 
-```
+``` sh
 1) 存放目录 (master)
 #---没有则创建一个 (存放到 master 的 /opt/cloudera/parcel-repo)
 ll /opt/cloudera/parcel-repo
@@ -352,7 +353,7 @@ mv /opt/cloudera/parcel-repo/CDH-5.3.2-1.cdh5.3.2.p0.5-el6.parcel.sha1  /opt/clo
 
 #### 4.3 准备浏览器跑起来，辛苦这么久嘿嘿
 
-```
+``` sh
 1) 访问 master 的服务 7180 端口
 http://dev1.jsonlin.cn:7180
 
@@ -381,17 +382,24 @@ netstat -tunlp | grep jave --- 7182
 
 
 #### 4.4 错误处理
-```
+
+``` sh
 1) cloudera-scm-agent restart报错：ImportError: No module named _io
 
 a) tar 包安装解决方案
-cp /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python2.7 /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python-2015-03-05
-cp /usr/bin/python2.7 /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python
+  cp /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python2.7 /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python-2015-03-05
+  cp /usr/bin/python2.7 /opt/cloudera-manager/cm-5.3.2/lib/cmf/agent/build/env/bin/python
 
-b) yum/apt 安装解决方案
-mv /usr/lib/cmf/agent/build/env/bin/python /usr/lib/cmf/agent/build/env/bin/python.bak
-cp /usr/bin/python2.7 /usr/lib/cmf/agent/build/env/bin/python
-文章地址 : http://www.aboutyun.com/blog-10256-891.html
+b) yum/apt 安装解决方案, 文章地址 : http://www.aboutyun.com/blog-10256-891.html
+ 32 位系统
+  mv /usr/lib/cmf/agent/build/env/bin/python /usr/lib/cmf/agent/build/env/bin/python.bak
+  cp /usr/bin/python2.7 /usr/lib/cmf/agent/build/env/bin/python
+
+ 64 位系统
+ mv /usr/lib64/cmf/agent/build/env/bin/python /usr/lib/cmf/agent/build/env/bin/python.bak
+ cp /usr/bin/python2.7 /usr/lib/cmf/agent/build/env/bin/python
+
+
 
 2) 安装 hive 的时候 Failed to Create Hive Metastore Database Tables
 a) 安装 java 驱动类
@@ -425,7 +433,7 @@ CDH5 在 Apache hadoop2.5.0 版本基础上演化而来的
 
 ### 2、CDH 下载地址
 
-```
+``` sh
 CDH4 http://archive.cloudera.com/cdh4/cdh/4/
 CDH5 http://archive.cloudera.com/cdh5/cdh/5/
 
@@ -445,7 +453,7 @@ Hue : hue-3.6.0-cdh5.3.2.tar.gz
 
 详细指导文章(请查看指导文章安装)： http://www.aboutyun.com/thread-9219-1-1.html
 
-```
+``` sh
 1) Yum/Apt 包
 
 2) RPM 包

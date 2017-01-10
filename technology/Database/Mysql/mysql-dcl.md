@@ -61,4 +61,5 @@ DELETE FROM mysql.user WHERE user='';
 
 -- 修改内容刷新
 flush privileges;
+
 ```
