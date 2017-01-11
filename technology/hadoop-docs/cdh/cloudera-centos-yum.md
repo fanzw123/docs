@@ -39,6 +39,8 @@
   ntpdate -d time.nist.gov
   或者 ntpdate -d pool.ntp.org
 
+  ntpdate -d dw0
+
 
 3. 关闭防火墙
   service iptables stop
@@ -172,6 +174,28 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 ```
 
+## 三、授权数据库服务
+
+``` sql
+-- hive
+CREATE DATABASE `hive` /*!40100 DEFAULT CHARACTER SET utf8 */;
+GRANT ALL PRIVILEGES ON hive.* TO 'hadoop'@'%' WITH GRANT OPTION;
+flush privileges;
+
+
+-- hue
+CREATE DATABASE `hue` /*!40100 DEFAULT CHARACTER SET utf8 */;
+GRANT ALL PRIVILEGES ON hue.* TO 'hadoop'@'%' WITH GRANT OPTION;
+flush privileges;
+
+
+-- oozie
+CREATE DATABASE `oozie` /*!40100 DEFAULT CHARACTER SET utf8 */;
+GRANT ALL PRIVILEGES ON oozie.* TO 'hadoop'@'%' WITH GRANT OPTION;
+flush privileges;
+
+
+```
 
 
 ## 三、重新安装,删除所有组件
