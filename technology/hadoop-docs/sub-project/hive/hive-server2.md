@@ -24,11 +24,15 @@
 
 ### beeline 连接 HiveServer2
 
-```
+``` sh
 beeline
-beeline> !connect jdbc:hive2://192.168.160.45:10000 hadoop org.apache.hive.jdbc.HiveDriver
+beeline> !connect jdbc:hive2://hostname:10000 hadoop org.apache.hive.jdbc.HiveDriver
 
-show databases;
+  show databases;
+
+或
+
+beeline -u jdbc:hive2://hostname:10002/default -nhadoop -phadoop
 ```
 
 

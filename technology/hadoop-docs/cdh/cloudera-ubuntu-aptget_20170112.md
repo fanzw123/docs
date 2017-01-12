@@ -1,29 +1,25 @@
-# Ubuntu 14.04 下安装 Cloudera
-
-- lsb_release -a
+# Ubuntu14.04 下安装 Cloudera
+	lsb_release -a
+	Cloudera 目前对 Ubuntu14.04支持不好，需要解决复杂的依赖问题
+	本文以Ubuntu12.04为例，快速搭建Cloudera
+	本文结尾会补充Ubuntu14.04安装时一些解决依赖的方法
 
 ## 一、准备工作（所有机器）
 
 ### 1、设置免密码 sudo
+	首先执行以下命令(该命令用来修改 /etc/sudoers 文件)：
+	vim /etc/sudoers
+	把  %sudo    ALL=(ALL:ALL) ALL  这行注释掉
+	用这句替代刚刚注释掉的那句
+	%sudo   ALL=(ALL:ALL) NOPASSWD:ALL  移动到文件未尾，
+	然后再执行以下命令：
+ 	sudo adduser 用户名 sudo
 
-``` sh
-首先执行以下命令(该命令用来修改 /etc/sudoers 文件)：
+### 2、确保正确的apt源，如果没有请添加以下
 
-vim /etc/sudoers
-把  %sudo    ALL=(ALL:ALL) ALL  这行注释掉
-
-用这句替代刚刚注释掉的那句
-%sudo   ALL=(ALL:ALL) NOPASSWD:ALL  移动到文件未尾，
-然后再执行以下命令：
-sudo adduser 用户名 sudo
+* vim /etc/apt/sources.list
 
 ```
-
-### 2、确保正确的 apt 源，如果没有请添加以下
-
-* vim /etc/apt/sources-ext.list
-
-``` sh
 deb http://cn.archive.ubuntu.com/ubuntu/ precise main restricted
 deb-src http://cn.archive.ubuntu.com/ubuntu/ precise main restricted
 deb http://cn.archive.ubuntu.com/ubuntu/ precise-updates main restricted
@@ -45,25 +41,28 @@ deb-src http://security.ubuntu.com/ubuntu precise-security universe
 deb http://security.ubuntu.com/ubuntu precise-security multiverse
 deb-src http://security.ubuntu.com/ubuntu precise-security multiverse
 
-
-# 更新
-sudo apt-get update（可选）
-sudo apt-get install curl -y
 ```
+
+### 3、添加curl
+	sudo apt-get update（可选）
+	sudo apt-get install curl -y
 
 
 ## 二、安装server
 
 ### 1、在 /etc/hosts 中增加配置（根据实际情况）
 
-	192.168.33.100   dw0
-	192.168.33.101   dw1
-	192.168.33.102   dw2
-	192.168.33.103   dw3
-	192.168.33.104   dw4
-	192.168.33.105   dw5
+	192.168.33.100   CDH
+	192.168.33.101   CDH1
+	192.168.33.102   CDH2
+	192.168.33.103   CDH3
+	192.168.33.104   CDH4
+	192.168.33.105   CDH5
 
-### 2、添加 Cloudera 源 (我们用的是 ubuntu14.04)
+### 2、修改/etc/hostname
+	修改为 CDH
+
+### 3、添加 Cloudera 源 (我们用的是 ubuntu14.04)
 
 - [对应版本选择详细文档](cloudera-info.md)
 
@@ -74,8 +73,7 @@ cd /etc/apt/sources.list.d/
 	wget http://archive-primary.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list
 
 	# 安装 key
-	wget http://archive-primary.cloudera.com/cm5/ubuntu/trusty/amd64/cm/archive.key -O archive.key
-	sudo apt-key add archive.key
+	curl -s http://archive-primary.cloudera.com/cm5/ubuntu/trusty/amd64/cm/archive.key | sudo apt-key add -
 	apt-get update
 
 2) CDH 配置源
@@ -95,30 +93,30 @@ cd /etc/apt/sources.list.d/
 
 ```
 
-### 3、安装 java 环境
+### 5、安装java环境
+
+* 安装jdk
 
 ``` sh
-# PS: 这个包在 CM 的源中
 apt-get -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold -y install oracle-j2sdk1.7
+```
+* 配置环境变量,在/etc/profile中添加
 
-# 配置环境变量,在/etc/profile中添加
-
-# JAVA
+``` sh
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle-cloudera
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
-
-source /etc/profile
 ```
+* 执行source /etc/profile
 
-### 4、配置 mysql
+### 6、安装mysql以及JDBC驱动
+	sudo apt-get install mysql-server libmysql-java -y
 
-``` sh
-sudo apt-get install mysql-server libmysql-java -y
+### 7、配置mysql
+* /etc/mysql/conf.d/mysql_cloudera_manager.cnf
 
-vim /etc/mysql/conf.d/mysql_cloudera_manager.cnf
-
+```
 [mysqld]
 transaction-isolation=READ-COMMITTED
 # Disabling symbolic-links is recommended to prevent assorted security risks;
@@ -160,37 +158,60 @@ innodb_log_file_size = 512M
 log-error=/var/log/mysqld.log
 pid-file=/var/run/mysqld/mysqld.pidv
 ```
+* 编辑my.cnf
 
-* 编辑 my.cnf
-
-``` sh
+```
 vim /etc/mysql/my.cnf
 把下面这一行注释掉
 #bind-address           = 127.0.0.1
-```
 
+```
 * 注意事项：
 
-``` sh
+```
 在安装的过程中一定保证内存足够大，否则会遇到下面问题
 上面配置需要根据自己的实际情况，在配置过程中重启mysql的时候，发生了下面错误
 stop: Unknown instance:
 start: Job failed to start
-```
 
-### 5、安装 cloudera-manager以及agent(因为master也是一个节点)
+```
+### 8、配置innodb
+	mv /var/lib/mysql/ib_logfile* /var/tmp/
+
+### 9、初始化数据库
+* service mysql restart
+* mysql -uroot -p
+* 写入一下sql
+
+```
+create database amon DEFAULT CHARACTER SET utf8;
+grant all on amon.* TO 'amon'@'%' IDENTIFIED BY 'amon_password';
+grant all on amon.* TO 'amon'@'CDH' IDENTIFIED BY 'amon_password';
+create database smon DEFAULT CHARACTER SET utf8;
+grant all on smon.* TO 'smon'@'%' IDENTIFIED BY 'smon_password';
+grant all on smon.* TO 'smon'@'CDH' IDENTIFIED BY 'smon_password';
+create database rman DEFAULT CHARACTER SET utf8;
+grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'rman_password';
+grant all on rman.* TO 'rman'@'CDH' IDENTIFIED BY 'rman_password';
+create database hmon DEFAULT CHARACTER SET utf8;
+grant all on hmon.* TO 'hmon'@'%' IDENTIFIED BY 'hmon_password';
+grant all on hmon.* TO 'hmon'@'CDH' IDENTIFIED BY 'hmon_password';
+create database hive DEFAULT CHARACTER SET utf8;
+grant all on hive.* TO 'hive'@'%' IDENTIFIED BY 'hive_password';
+grant all on hive.* TO 'hive'@'CDH' IDENTIFIED BY 'hive_password';
+```
+### 10、安装 cloudera-manager以及agent(因为master也是一个节点)
 	apt-get install cloudera-manager-daemons cloudera-manager-server  cloudera-manager-agent -y
 
-### 6、配置cloudera-manager-server数据库
+### 11、配置cloudera-manager-server数据库
 	sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql  -uroot -p --scm-host localhost scm scm scm_password
 
-### 7、修改agent的配置文件
+### 12、修改agent的配置文件
 * vim /etc/cloudera-scm-agent/config.ini
 	* 修改server_host＝CDH
 
-### 8、更改交换分区频率
+### 13、更改交换分区频率
 	echo 'vm.swappiness=0' >> /etc/sysctl.conf
-
 
 ## 三、配置其余节点（cdh1、cdh2 ...）
 
@@ -207,10 +228,9 @@ start: Job failed to start
 	echo 'CDH1' > /etc/hostname
 
 ### 4、添加Cloudera源
-
 * 直接拷贝
 
-``` sh
+```
 scp vagrant@192.168.33.100:/etc/apt/sources.list.d/cloudera.list /etc/apt/sources.list.d/
 ```
 
@@ -290,7 +310,7 @@ apt-get update
 ```
 ### 3、12.04的源
 
-``` sh
+```
 deb http://cn.archive.ubuntu.com/ubuntu/ precise main restricted
 deb-src http://cn.archive.ubuntu.com/ubuntu/ precise main restricted
 deb http://cn.archive.ubuntu.com/ubuntu/ precise-updates main restricted
@@ -311,12 +331,9 @@ deb http://security.ubuntu.com/ubuntu precise-security universe
 deb-src http://security.ubuntu.com/ubuntu precise-security universe
 deb http://security.ubuntu.com/ubuntu precise-security multiverse
 deb-src http://security.ubuntu.com/ubuntu precise-security multiverse
-
 ```
-
-### 4、如果遇到python报错：ImportError: No module named
-
-``` sh
+### 4、如果遇到python报错：ImportError: No module named _io
+```
 mv /usr/lib/cmf/agent/build/env/bin/python /usr/lib/cmf/agent/build/env/bin/python.bak
 cp /usr/bin/python2.7 /usr/lib/cmf/agent/build/env/bin/python
 ```

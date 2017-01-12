@@ -1,4 +1,4 @@
--- 缓冲区用于序列文件的大小, KB
+-- 缓冲区用于序列文件的大小
 set io.file.buffer.size=131072;
 
 --- MapReduce 任务环境优化 Start ---
@@ -40,29 +40,6 @@ set mapreduce.job.jvm.numtasks=-1;
 
 -- map task 完成数目达到 5% 时,开始启动 reduce task
 set mapreduce.job.reduce.slowstart.completedmaps=0.05;
-
-
--- 启用洗牌预读来提高 MapReduce 洗牌处理程序的性能
-set mapreduce.shuffle.manage.os.cache=true;
-set mapreduce.shuffle.readahead.bytes=4MB;
-
-
--- 启用 IFILE 预读可提高合并操作的性能
-set mapreduce.ifile.readahead=true;
-set mapreduce.ifile.readahead.bytes=4MB;
-
-
--- 在任务完成后立刻发送检测信号
-set mapreduce.tasktracker.outofband.heartbeat=true;
-
--- JobClient 向控制台报告状态和检查作业完成情况的时间间隔（以毫秒为单位
-set jobclient.progress.monitor.poll.interval=10;
-
--- TaskTracker 到 JobTracker 检测信号的最小时间间隔调整到较小的值可能会在小型群集上提高 MapReduce 性能
-set mapreduce.jobtracker.heartbeat.interval.min=10;
-
--- 立即启动 MapReduce JVM,对于需要快速周转的小作业，此值设置为 0 可提高性能；较大的值（最高 50%）可能更适合较大的作业
-set mapred.reduce.slowstart.completed.maps=0;
 
 
 --- MapReduce 任务环境优化 End ---

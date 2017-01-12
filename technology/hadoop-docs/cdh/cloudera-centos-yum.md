@@ -15,11 +15,14 @@
 
 ## * 系统环境配置
 
+### 1. 环境属性
 ``` sh
 1. 创建用户 cloudera-scm, 给与免密码 sudo 权限
   1) 方法 1
     userdel cloudera-scm
     useradd -m -s /bin/bash -g  wheel cloudera-scm
+
+      useradd -m -s /bin/bash -g  wheel hadoop
 
   2) 方法 2
     %cloudera-scm ALL=(ALL) NOPASSWD: ALL  账号其他配置
@@ -59,6 +62,7 @@
 
 
 5. 安装 JAVA
+  # PS 这个包在 CM 的源中, 请转到下面的配置源方法中
   yum install oracle-j2sdk1.7
 
 6. 加入环境变量
@@ -68,6 +72,41 @@ export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
+
+```
+
+### 2. 服务属性
+
+``` sh
+1. 禁用大透明页
+  cat /sys/kernel/mm/redhat_transparent_hugepage/defrag
+    [always] never 表示已启用透明大页面压缩。
+    always [never] 表示已禁用透明大页面压缩。
+
+  如果启用, 请关闭
+  echo 'never' > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+
+  加入开机启动中
+  vim /etc/rc.local
+  # 禁用大透明页
+  echo 'never' > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+
+2. vm.swappiness Linux 内核参数
+  # 默认为 60 , 用于控制将内存页交换到磁盘的幅度, 介于 0-100 之间的值；值越高，内核寻找不活动的内存页并将其交换到磁盘的幅度就越大。
+  cat /proc/sys/vm/swappiness
+
+  # 设置为 0
+  sysctl -w vm.swappiness=0
+
+3. 集群挂载的文件系统,不使用 RAID 和 LVM 文件系统
+
+4. 最大打开的文件数
+  sysctl -a | grep fs.file
+
+  如果比 65535 下, 则设置如下参数
+  sudo vim /etc/security/limits.conf
+  hdfs soft nofile 65535
+
 
 ```
 

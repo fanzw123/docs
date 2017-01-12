@@ -1268,6 +1268,9 @@ tock.stdtime.gov			//时间服务器
 
 
 	3、 yum 在线查询、安装、升级、删除 (705)、(主要解决rmp软件安装依赖性问题)
+
+		*) 资源路径: /etc/yum.repos.d , 文件以 .repo 结尾
+
 			注意，安装时：Install 1 Package(s)				//表示有1个依赖软件要安装
 					 删除时：remove	1 Package(s)			//标示有1个依赖软件要删除
 
@@ -1323,6 +1326,8 @@ tock.stdtime.gov			//时间服务器
 
 
 	4、apt-get 管理
+
+		*) 资源路径 /etc/apt/sources.list.d , 文件以 list 结尾
 
 			1) dpkg
 					dpkg -l 列出所有安装包
