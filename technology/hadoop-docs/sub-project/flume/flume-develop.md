@@ -41,19 +41,27 @@
 ```
 
 
-## 三、配置
+## 三、Flume 结构
+
+- Event：一个数据单元，带有一个可选的消息头
+- Flow：Event从源点到达目的点的迁移的抽象
+- Client：操作位于源点处的Event，将其发送到Flume Agent
+- Agent：一个独立的Flume进程，包含组件Source、Channel、Sink
+- Source：用来消费传递到该组件的Event
+- Channel：中转Event的一个临时存储，保存有Source组件传递过来的Event
+- Sink：从Channel中读取并移除Event，将Event传递到Flow Pipeline中的下一个Agent（如果有的话）
 
 - [Flume Source](http://flume.apache.org/FlumeUserGuide.html#flume-sources) 收集各种数据源
   - avro、exec、netcat、spooling-directory、syslog 等
-  - [Flume Source Interceptors](http://flume.apache.org/FlumeUserGuide.html#flume-interceptors)  将 source event 数据提取出来, 加入到 header 中
-    - Timestamp Interceptor 将当前时间戳（毫秒）加入到events header中，key名字为：timestamp，值为当前时间戳
+  - [Flume Source Interceptors](http://flume.apache.org/FlumeUserGuide.html#flume-interceptors)  将 source event(每行/条) 数据提取出来, 加入到 header 中
+    - Timestamp Interceptor 将当前时间戳（毫秒）加入到 events header 中，key 名字为：timestamp，value 值 : 为当前时间戳
     - Host Interceptor  主机名拦截器。将运行Flume agent的主机名或者IP地址加入到events header中，key名字为：host（也可自定义）
     - Static Interceptor  静态拦截器，用于在events header中加入一组静态的key和value。
     - UUID Interceptor  在每个events header中生成一个UUID字符串，例如：b5755073-77a9-43c1-8fad-b7a586fc1b97。生成的UUID可以在sink中读取并使用
-    - Morphline Interceptor  使用Morphline对每个events数据做相应的转换
-    - Search and Replace Interceptor  将events中的正则匹配到的内容做相应的替换
-    - Regex Filtering Interceptor  使用正则表达式过滤原始events中的内容
-    - Regex Extractor Interceptor  使用正则表达式抽取原始events中的内容，并将该内容加入events header中
+    - Morphline Interceptor  使用 Morphline 对每个 events 数据做相应的转换
+    - Search and Replace Interceptor  将 events 中的正则匹配到的内容做相应的替换
+    - Regex Filtering Interceptor  使用正则表达式过滤原始 events 中的内容
+    - Regex Extractor Interceptor  使用正则表达式抽取原始 events 中的内容，并将该内容加入 events header 中
 
 - [Flume Channel](http://flume.apache.org/FlumeUserGuide.html#flume-channels) 负责传输和暂时储存
   - JDBC、file-channel、custom-channel 等

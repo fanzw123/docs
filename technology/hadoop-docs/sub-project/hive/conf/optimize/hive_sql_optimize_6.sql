@@ -4,7 +4,7 @@ set io.file.buffer.size=131072;
 --- MapReduce 任务环境优化 Start ---
 
 -- task 任务 JVM 内存设置
-set mapred.child.java.opts=-Xmx6144M;
+set mapred.child.java.opts=-Xmx4096M;
 
 -- 运行 map 任务的 JVM 环境内存,需要根据具体环境设置, 可以指定 -XX:-UseGCOverheadLimit
 set mapreduce.map.java.opts=-Xmx2048M;
@@ -44,8 +44,10 @@ set mapreduce.job.reduce.slowstart.completedmaps=0.05;
 
 -- 启用洗牌预读来提高 MapReduce 洗牌处理程序的性能
 set mapreduce.shuffle.manage.os.cache=true;
+set mapreduce.shuffle.readahead.bytes=4194304;
 
--- 启用 IFILE 预读可提高合并操作的性能(字节)
+
+-- 启用 IFILE 预读可提高合并操作的性能
 set mapreduce.ifile.readahead=true;
 set mapreduce.ifile.readahead.bytes=4194304;
 
@@ -69,7 +71,7 @@ set mapred.reduce.slowstart.completed.maps=0;
 ---  MapReduce Shuffle 过程优化 START ---
 
 -- 设置 Map Buffle 环形缓冲区的容量
-set mapreduce.task.io.sort.mb=512;
+set mapreduce.task.io.sort.mb=256;
 
 -- Map 排序、溢出写磁盘阶段,buffle 的阀值
 set mapreduce.map.sort.spill.percent=0.8;
@@ -94,10 +96,9 @@ set mapreduce.output.fileoutputformat.compress.codec=org.apache.hadoop.io.compre
 
 
 -- 设置 Reduce 复制阶段的复制 Map 结果的线程数
--- (mapreduce.task.io.sort.mb * mapreduce.reduce.shuffle.parallelcopies) * mapreduce.reduce.shuffle.input.buffer.percent < mapred.child.java.opts
-set mapreduce.reduce.shuffle.parallelcopies=5;
--- Reduce 复制阶段,复制到 reduceTask 的堆内存上限阀值(如果 reduce 内存溢出,调整这里的比例到 0.1)
-set mapreduce.reduce.shuffle.input.buffer.percent=0.8;
+set mapreduce.reduce.shuffle.parallelcopies=10;
+-- Reduce 复制阶段,复制到 reduceTask 的堆内存上限阀值
+set mapreduce.reduce.shuffle.input.buffer.percent=0.80;
 
 -- Reduce 合并阶段的堆内存上限阀值
 set mapreduce.reduce.shuffle.merge.percent=0.66;
@@ -126,9 +127,9 @@ set hive.exec.parallel=true;
 set hive.exec.parallel.thread.number=2;
 
 -- 开启本地mr
-set hive.exec.mode.local.auto=true;
--- 设置local mr的最大输入数据量,当输入数据量小于这个值的时候会采用local  mr的方式(字节) 1024000000
-set hive.exec.mode.local.auto.inputbytes.max=5120000000;
+set hive.exec.mode.local.auto=false;
+-- 设置local mr的最大输入数据量,当输入数据量小于这个值的时候会采用local  mr的方式
+set hive.exec.mode.local.auto.inputbytes.max=1024000000;
 -- 设置local mr的最大输入文件个数,当输入文件个数小于这个值的时候会采用local mr的方式
 set hive.exec.mode.local.auto.tasks.max=6;
 
@@ -166,4 +167,8 @@ set hive.optimize.index.filter=true;
 --- Hive 优化 End ---
 
 
-SELECT COUNT(*) FROM ods.ods_browser_use;
+DROP TABLE dw_db_temp.jason_test_1;
+create table dw_db_temp.jason_test_1 AS
+select * from access_log.access_log_20160703;
+
+-- select p_dt,count(*) from dw_db.dw_sem_baidu_sd group by p_dt ;
