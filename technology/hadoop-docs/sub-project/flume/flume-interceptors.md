@@ -11,8 +11,12 @@
   flume-ng agent -c /etc/flume-ng/conf -f /etc/flume-ng/conf/flume.conf -n agentDw --classpath /usr/lib/flume-ng/lib/dw-flume-1.0.0.jar
 
 
-方法 2 指定放到 /usr/lib/flume-ng/lib/ 下
+方法 2 放到插件目录下
+  /usr/lib/flume-ng/lib
 
+  /usr/lib/flume-ng/plugins.d
+
+  $FLUME_HOME/plugins.d
 ```
 
 
@@ -48,7 +52,7 @@ agentDw.sources.SrcBrowserUseLog.interceptors = in1
 # 自定义 header 拦截器
 agentDw.sources.SrcBrowserUseLog.interceptors.in1.type = com.angejia.dw.flume.source.interceptors.RegexExtractorHeaderInterceptor$Builder
 # 拦截则正则规则
-agentDw.sources.SrcBrowserUseLog.interceptors.in1.regex = browser_use/monitor/(.*)$
+agentDw.sources.SrcBrowserUseLog.interceptors.in1.regex = browser_use/monitor/([A-Za-z0-9/._-]+)/
 agentDw.sources.SrcBrowserUseLog.interceptors.in1.extractorHeader = true
 # 拦截的 header key
 agentDw.sources.SrcBrowserUseLog.interceptors.in1.extractorHeaderKey = file
@@ -67,7 +71,7 @@ agentDw.channels.ChBrowserUseLog.threads = 2
 agentDw.sinks.SinkBrowserUseLog.type = hdfs
 agentDw.sinks.SinkBrowserUseLog.channel = ChBrowserUseLog
 # 写入目录和文件规则,格式
-agentDw.sinks.SinkBrowserUseLog.hdfs.path = hdfs://nameservice1/ods/browser_use/test/%{log_path}
+agentDw.sinks.SinkBrowserUseLog.hdfs.path = hdfs://nameservice1/ods/browser_use/%{log_path}
 agentDw.sinks.SinkBrowserUseLog.hdfs.filePrefix = log
 agentDw.sinks.SinkBrowserUseLog.hdfs.fileSuffix = .log
 
@@ -83,7 +87,7 @@ agentDw.sinks.SinkBrowserUseLog.hdfs.roundUnit = minute
 agentDw.sinks.SinkBrowserUseLog.hdfs.minBlockReplicas=1
 agentDw.sinks.SinkBrowserUseLog.hdfs.rollSize = 0
 agentDw.sinks.SinkBrowserUseLog.hdfs.rollCount = 0
-agentDw.sinks.SinkBrowserUseLog.hdfs.rollInterval = 300
+agentDw.sinks.SinkBrowserUseLog.hdfs.rollInterval = 0
 
 # 写入格式
 agentDw.sinks.SinkBrowserUseLog.hdfs.writeFormat = Text
@@ -94,7 +98,7 @@ agentDw.sinks.SinkBrowserUseLog.hdfs.batchSize = 100
 # hdfs 打开、写、刷新、关闭的超时时间, 毫秒
 agentDw.sinks.SinkBrowserUseLog.hdfs.callTimeout = 60000
 # 多少秒没有写入就关闭这个文件, 0 不关闭
-agentDw.sinks.SinkBrowserUseLog.hdfs.idleTimeout = 0
+agentDw.sinks.SinkBrowserUseLog.hdfs.idleTimeout = 1
 # 使用本地时间
 agentDw.sinks.SinkBrowserUseLog.hdfs.useLocalTimeStamp = true
 
