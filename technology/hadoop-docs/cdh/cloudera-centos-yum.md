@@ -233,11 +233,10 @@ CREATE DATABASE `oozie` /*!40100 DEFAULT CHARACTER SET utf8 */;
 GRANT ALL PRIVILEGES ON oozie.* TO 'hadoop'@'%' WITH GRANT OPTION;
 flush privileges;
 
-
 ```
 
 
-## 三、重新安装,删除所有组件
+## 四、重新安装,删除所有组件
 
 ``` sh
 # 删除组件
@@ -255,3 +254,10 @@ sudo rm -rf /var/run/cloudera-manager-server
 sudo rm -rf /var/lib/cloudera-scm-agent
 sudo rm -rf /var/run/cloudera-scm-agent
 ```
+
+## 五、常见问题
+
+oozie 找不到 mysql-connector.jar
+
+> 把 mysql-connector.jar 复制到 /var/lib/oozie 中.
+cp /path/mysql-connector-java-5.1.40.jar /var/lib/oozie  中
