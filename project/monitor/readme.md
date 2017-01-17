@@ -22,8 +22,9 @@
   ln -s ~/app/conf/monitor/resources ~/app/monitor/src/resources
 
 # 配置 monitor 工作目录
-  mkdir -p /data/log/dwlogs/schedule_log/excute_logs/
-  mkdir -p /data/log/dwlogs/monitor/mini/upload/
+  mkdir -p /data/log/dwlogs/schedule_log/excute_logs/ ||  mkdir -p /var/log/schedule_log/excute_logs
+
+  mkdir -p /data/log/dwlogs/monitor/mini/upload/ || mkdir -p /var/log/monitor/mini/upload/
 ```
 
 ### 2. web 集成开发环境
@@ -73,7 +74,6 @@
  - 注意 com.ajk.dw.modules.scheduler.service.impl 是这个类的成员属性(host) 来绑定调度的
 - 依赖 dw_hive_server (必须开启)
 - 依赖 dw_general_loader
-- 依赖 dw_script
 
  ``` sh
   1. 配置 dw_general_loader 模块, 用于执行 hive sql 脚本
@@ -120,7 +120,7 @@
 
 # 部署 线上
 
-  scp ~/app/monitor/run/monitor.war dwadmin@bi0:/home/dwadmin/bi_server_dir/bi1/data/app/monitor/run/
+  scp ~/app/monitor/run/monitor.war hadoop@dw6:/home/hadoop/app/monitor/run
 
   查看日志
     tail -f $TOMCAT_HOME/logs/catalina.out

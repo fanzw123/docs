@@ -14,7 +14,7 @@
   注意下载二进制包 :
   Binary Distributions
     - Core
-    - tar.gz(http://apache.fayea.com/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.tar.gz)
+    - tar.gz(http://mirrors.hust.edu.cn/apache/tomcat/tomcat-7/v7.0.73/bin/apache-tomcat-7.0.73.tar.gz)
   ```
 
 ## 配置 Eclipse

@@ -44,6 +44,8 @@ create /dw_scheduler/testlocks "调度系统Test分布式启动锁"
   mkdir ~/app
   cd ~/app
 
+  mkdir -p /var/log/schedule_log/excute_logs
+
 2. 克隆最新代码到本地
   dw_scheduler_agent 所在仓库
   git clone git@git.corp.angejia.com:dw/dw_scheduler_agent.git
@@ -91,13 +93,13 @@ create /dw_scheduler/testlocks "调度系统Test分布式启动锁"
     scp $DW_SCHEDULER_AGENT_HOME/scripts/dw_scheduler_agent.jar hadoop@dwtest:/home/hadoop/app/dw_scheduler_agent/scripts/
 
    2) 上传到 bi3 线上环境
-    scp $DW_SCHEDULER_AGENT_HOME/scripts/dw_scheduler_agent.jar dwadmin@bi0:/home/dwadmin/bi_server_dir/bi3/data/app/dw_scheduler_agent/scripts/
+    scp $DW_SCHEDULER_AGENT_HOME/scripts/dw_scheduler_agent.jar hadoop@dw6:/home/hadoop/app/dw_scheduler_agent/scripts/
 
    3) 启动脚本
     $DW_SCHEDULER_AGENT_HOME/scripts/scheduler_restart.sh
 
    4）监控日志 (根据配置文件路径决定)
-    tail -f /data/log/dwlogs/schedule_log/schedule_info.log
+    tail -f /var/log/schedule_log/schedule_info.log
 
    5) 查看是否启动
     netstat -tunlp | grep 39800

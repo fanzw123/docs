@@ -13,6 +13,11 @@
   https://nodejs.org/en/download/
   Linux Binaries (.tar.gz)
 
+  # 安装
+  sudo apt-get install nodejs
+  # 安装 npm 包管理器
+	sudo apt-get install npm
+
 2.解压安装
   cd [node-versions]/lib
 
@@ -23,15 +28,16 @@
   git clone tools 仓库代码后
 
   通过启动脚本
-    node ~/app/tools/dw_script/node_socket_server/node_server.js
+    nodejs ~/app/dw_scheduler_agent/scripts/node_socket_server/node_server.js
 
   挂起服务
-    ~/app/tools/dw_script/node_socket_server/node_server_restart.sh
+    mkdir -p /var/log/socket_log
+    ~/app/dw_scheduler_agent/scripts/node_socket_server/node_server_restart.sh
 
   查看进程
     ps -aux | grep node_server
 
-4.通过 nginx 代理转发配置
+4.通过 nginx 代理转发配置(如果有需要的话)
   server {
       listen 80;
       # 请求的域名

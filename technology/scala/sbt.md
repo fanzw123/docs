@@ -18,15 +18,14 @@
    下载 sbt-launch.jar
 
 2. 安装变量
-  export your_path=/data/usr
+  export SBT_HOME=/data/usr/sbt
 
   1) 存放目录
-     mkdir -p $your_path/sbt
-     mv sbt-launch.jar  $your_path/sbt
-     sudo ln -s $your_path/sbt /usr/local/sbt
+     mv sbt-launch.jar  $SBT_HOME
+     sudo ln -s $SBT_HOME /usr/local/sbt
 
   2) 编写 stb 执行文件
-    vim $your_path/sbt/sbt
+    vim $SBT_HOME/sbt
       #!/bin/bash
       # 这里是你的 JAVA_HOME 安装目录
       # JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home"
@@ -34,12 +33,11 @@
       $JAVA_HOME/bin/java $SBT_OPTS -jar `dirname $0`/sbt-launch.jar "$@"
 
     #增加执行权限
-    chmod u+x $your_path/sbt/sbt
+    chmod u+x $SBT_HOME/sbt
 
   3) sbt 写入环境变量
     vim ~/.bashrc
     # SBT
-    export SBT_HOME=/usr/local/sbt
     export PATH=$SBT_HOME:$PATH
 
     source ~/.bashrc

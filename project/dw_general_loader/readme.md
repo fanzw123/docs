@@ -15,6 +15,11 @@
   mkdir ~/app
   cd ~/app
 
+  mkdir -p /data/log/dwlogs/hivetmplog/ || /var/log/dw_general_loader/hivetmplog/
+  mkdir -p /data/log/dwlogs/mysqltmplog/ || /var/log/dw_general_loader/mysqltmplog/
+  mkdir -p /data/log/dwlogs/tmplog/ || /var/log/dw_general_loader/tmplog/
+  mkdir -p /tmp/dw_tmp_file || /var/log/dw_general_loader/dw_tmp_file
+
 2. 克隆最新代码到本地
   dw_general_loader 所在仓库
   git clone git@git.corp.angejia.com:dw/dw_general_loader.git
@@ -36,6 +41,7 @@
 
     export HIVE_HOME=/usr/local/hive
 
+    source ~/.bashrc
   2) 配置 conf 仓库
     conf 仓库有 2 个分支，分别是 master 线上分支，和 develop 开发分支，分别放了线上和线下的配置参数, 软链配置目录
 

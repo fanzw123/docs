@@ -17,6 +17,8 @@
   mkdir ~/app
   cd ~/app
 
+  mkdir -p /var/log/dw_hive_server/tmplog  or  /data/log/dwlogs/tmplog
+
 2. 克隆最新代码到本地, dw_hive_server 所在仓库
   cd ~/app/
   git clone git@git.corp.angejia.com:dw/dw_hive_server.git;
