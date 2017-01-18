@@ -12,6 +12,8 @@
 
 
 方法 2 放到插件目录下
+  /opt/cloudera/parcels/CDH/lib/flume-ng/lib
+
   /usr/lib/flume-ng/lib
 
   /usr/lib/flume-ng/plugins.d

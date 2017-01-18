@@ -12,17 +12,24 @@
   - 3.2 修改配置 Cloudera Manager Agent 服务指向 Cloudera Manager Server 服务所在的 host
   - 3.3 启动 Cloudera Manager Agent 服务(监控报错日志)
 - 4. Cloudera Manager Server 和 Cloudera Manager Agent 安装完成后再配置集群
+- 5. 向集群添加主机
+  - 5.1 Cloudera Manager Agent 正常向 Cloudera Manager Server 汇报后
+  - 5.2 管理界面, 点击添加主机到集群中
 
 ## * 系统环境配置
 
 ### 1. 环境属性
 ``` sh
 1. 创建用户 cloudera-scm, 给与免密码 sudo 权限
+  vim /etc/sudoers
+  # 以下注释取消
+  %wheel  ALL=(ALL)       NOPASSWD: ALL
+
   1) 方法 1
     userdel cloudera-scm
     useradd -m -s /bin/bash -g  wheel cloudera-scm
 
-      useradd -m -s /bin/bash -g  wheel hadoop
+    useradd -m -s /bin/bash -g  wheel hadoop
 
   2) 方法 2
     %cloudera-scm ALL=(ALL) NOPASSWD: ALL  账号其他配置
@@ -60,19 +67,8 @@
   vi /etc/selinux/config
   SELINUX=disabled
 
-
-5. 安装 JAVA
-  # PS 这个包在 CM 的源中, 请转到下面的配置源方法中
-  yum install oracle-j2sdk1.7
-
-6. 加入环境变量
-vim /etc/profile
-# JDK
-export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
-
+5. 安装 scp
+  yum -y install openssh-clients
 ```
 
 ### 2. 服务属性
@@ -114,12 +110,28 @@ export PATH=${JAVA_HOME}/bin:$PATH
 ## 一、安装 Cloudera Manager Server
 
 ``` sh
+* 登录 cloudera-scm 账号
 
 1. 添加 cloudera-manager.repo 源(所有节点)
   sudo wget http://archive.cloudera.com/cm5/redhat/6/x86_64/cm/cloudera-manager.repo --directory-prefi=/etc/yum.repos.d
 
   更新 yum
   yum update
+
+
+1.1. 安装 JAVA
+  # PS 这个包在 CM 的源中, 请转到下面的配置源方法中
+  yum install oracle-j2sdk1.7
+
+1.2. 加入环境变量
+
+vim /etc/profile
+# JDK
+export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
 
 2. 下载安装组件
   sudo yum install cloudera-manager-daemons
@@ -173,6 +185,8 @@ export PATH=${JAVA_HOME}/bin:$PATH
 ## 二、安装 Cloudera Manager Agent
 
 ``` sh
+* 登录 cloudera-scm 账号
+
 
 1. 下载安装组件
   sudo yum install cloudera-manager-daemons
@@ -198,7 +212,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
   mkdir -p /opt/cloudera
   sudo chown cloudera-scm:cloudera-scm -R /opt/cloudera
 
-  # 启动 cm 服务, 开启端口在 7180, http 的服务
+  # 启动 agent 服务, 开启端口
   sudo service cloudera-scm-agent restart
 
   # 查看运行状态
@@ -210,6 +224,15 @@ export PATH=${JAVA_HOME}/bin:$PATH
   9000 : HTTP （调试）端口
   19001 : supervisord 状态和控制端口；用于 Agent 和 supervisord 之间的通信；仅内部打开（本地主机上）
 
+
+4. 从 cm 拉取 /opt/cloudera/parcel-repo 中的 CDH 软件包, 或者官网拉去
+  scp cloudera-scm@dw0:/opt/cloudera/parcel-repo/* /opt/cloudera/parcel-repo/
+
+*. 注册可能遇到的问题
+
+  1. 时间与 cm 相差太多导致无法 agent 无法向 cm 注册
+
+  2. host 与 ip 设置错误
 
 ```
 

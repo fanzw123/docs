@@ -22,6 +22,7 @@ sudo apt-get install openssh-server
   ssh -t ac@ad command 执行远程命令
   ssh -vvv ac@ad command 显示调试模式
   ssh-add ~/.ssh/id_rsa   添加本地 key 到缓存
+  ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname  拷贝本机公钥到远程服务器
 
   执行远程脚本，需要免密码登陆
   ssh -t -p 22 hadoop@192.168.160.45 touch /tmp/aaaaa.txt

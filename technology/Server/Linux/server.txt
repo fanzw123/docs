@@ -150,6 +150,7 @@
 	1、目录
 		注：主机名：Internet中为域名。局域网中为某台计算机的名字
 		1) /etc/sysconfig/network-scripts/ifcfg-eth0			//IP的参数设置
+			设置 ONBOOT 为 : yes
 			service network start 	启动网络
 
 			DEVICE        设备名，不要自己乱改，和文件ifcfg-ethX里的ethX要一致
