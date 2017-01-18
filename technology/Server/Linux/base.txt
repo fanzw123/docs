@@ -82,8 +82,8 @@ tock.stdtime.gov			//时间服务器
 	3、目录操作命令
 		1)cd: 切换目录
 			a)cd wade/aaa   //进入目录
-			b)cd ~root	//进入root用户主目录（cd ~ 回到自己的主目录）
-			c)cd cd -	//回到上一层目录
+			b)cd ~	//进入root用户主目录（cd ~ 回到自己的主目录）
+			c)cd -	//回到上一层目录
 
 		2)pwd: 显示当前所在目录
 			a)pwd	//显示当前目录
@@ -120,7 +120,7 @@ tock.stdtime.gov			//时间服务器
 		8) ln (213)	 连接文件
 			a) 硬连接			//通过文件系统的inode链接产生新的文件
 			b) 软链接			//类似window的快捷方式，用来快速连接目标文件或者目录
-							ln -s file.txt symlink		//链接文件
+					ln -s file.txt symlink		//链接文件
 
 
 	4、文件内容及影藏属性
@@ -566,8 +566,9 @@ tock.stdtime.gov			//时间服务器
 十一、使用者管理
 	1、概念
 		1) 账号信息：
-			a)	/etc/passwd		系统所有账号信息(如UID、GID、账号所属文件夹)
+			a) /etc/passwd		系统所有账号信息(如UID、GID、账号所属文件夹)
 			b) /etc/shadow		系统所有账号信息(如密码、失效时间)
+			5) vipw			修改账号信息, 默认组等(配合 id 命令使用)
 
 		2) 组信息：
 			a) /etc/group		      系统所有组信息	(如组名、组id、组下的用户)

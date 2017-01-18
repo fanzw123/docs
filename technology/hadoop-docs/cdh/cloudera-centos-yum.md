@@ -19,17 +19,30 @@
 ## * 系统环境配置
 
 ### 1. 环境属性
+
 ``` sh
 1. 创建用户 cloudera-scm, 给与免密码 sudo 权限
+
   vim /etc/sudoers
   # 以下注释取消
   %wheel  ALL=(ALL)       NOPASSWD: ALL
 
   1) 方法 1
+    # 创建cm部署用户
     userdel cloudera-scm
-    useradd -m -s /bin/bash -g  wheel cloudera-scm
+    groupadd -r cloudera-scm
+    #  分配到 组
+    useradd -m -s /bin/bash -g  cloudera-scm cloudera-scm
+    # 追加用户到 sudo 组
+    usermod -G 	wheel cloudera-scm
 
-    useradd -m -s /bin/bash -g  wheel hadoop
+
+    # 创建hadoop用户
+    userdel hadoop
+    groupadd -r hadoop
+    useradd -m -s /bin/bash -g  hadoop hadoop
+    # 追加用户到 sudo 组
+    usermod -G 	wheel hadoop
 
   2) 方法 2
     %cloudera-scm ALL=(ALL) NOPASSWD: ALL  账号其他配置
@@ -44,7 +57,7 @@
     session         required        pam_limits.so
 
 
-2. 同步系统时区
+2. 同步系统时区(每台服务器的时区必须一样)
   yum install ntp
   ntpdate -d time.nist.gov
   或者 ntpdate -d pool.ntp.org
@@ -69,9 +82,16 @@
 
 5. 安装 scp
   yum -y install openssh-clients
+
+6. ssh key  
+  # 生成 key
+  sssh-keygen
+
+  # 分配
+  ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname
 ```
 
-### 2. 服务属性
+### 2. 系统属性
 
 ``` sh
 1. 禁用大透明页
@@ -103,7 +123,6 @@
   sudo vim /etc/security/limits.conf
   hdfs soft nofile 65535
 
-
 ```
 
 
@@ -115,9 +134,13 @@
 1. 添加 cloudera-manager.repo 源(所有节点)
   sudo wget http://archive.cloudera.com/cm5/redhat/6/x86_64/cm/cloudera-manager.repo --directory-prefi=/etc/yum.repos.d
 
+  PS: 若要安装指定的版本, 修改如下参数
+  sudo vim /etc/yum.repos.d/cloudera-manager.repo
+  # 修改 baseurl 属性中的 url (url 可以指定版本)
+  baseurl=http://archive.cloudera.com/cm5/redhat/6/x86_64/cm/5.9.0/
+
   更新 yum
   yum update
-
 
 1.1. 安装 JAVA
   # PS 这个包在 CM 的源中, 请转到下面的配置源方法中
@@ -187,6 +210,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
 ``` sh
 * 登录 cloudera-scm 账号
 
+  配置 一、Cloudera Manager Server 中的 yum 源
 
 1. 下载安装组件
   sudo yum install cloudera-manager-daemons
@@ -236,7 +260,35 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 ```
 
-## 三、授权数据库服务
+
+## 三、安装 CDH 组件
+
+- 配置源 CDH 源
+
+``` sh
+*. 登录 hadoop 用户
+
+  sudo wget http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/cloudera-cdh5.repo --directory-prefi=/etc/yum.repos.d
+
+  PS: 若要安装指定的版本, 修改如下参数
+  sudo vim /etc/yum.repos.d/cloudera-cdh5.repo
+  # 修改 baseurl 属性中的 url (url 可以指定版本)
+  baseurl=https://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/5.9.0/
+
+```
+
+### 1. 安装 Flume
+
+- 具体说明转 flume 文档
+
+``` sh
+sudo yum install flume-ng-agent
+```
+
+
+
+
+## 四、授权数据库服务
 
 ``` sql
 -- hive
@@ -259,7 +311,7 @@ flush privileges;
 ```
 
 
-## 四、重新安装,删除所有组件
+## 五、重新安装,删除所有组件
 
 ``` sh
 # 删除组件
@@ -278,9 +330,9 @@ sudo rm -rf /var/lib/cloudera-scm-agent
 sudo rm -rf /var/run/cloudera-scm-agent
 ```
 
-## 五、常见问题
+## * 常见问题
 
-oozie 找不到 mysql-connector.jar
+### 1. oozie 找不到 mysql-connector.jar
 
 > 把 mysql-connector.jar 复制到 /var/lib/oozie 中.
 cp /path/mysql-connector-java-5.1.40.jar /var/lib/oozie  中
