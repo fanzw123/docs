@@ -328,6 +328,7 @@ agentBi0.sources.SrcDwAccessLog.interceptors.in2.preserveExisting = true
 agentBi0.channels.ChDwAccesslog.type = file
 agentBi0.channels.ChDwAccesslog.checkpointDir = /var/log/flume/dw_access_log/checkpoint
 agentBi0.channels.ChDwAccesslog.dataDirs = /var/log/flume/dw_access_log/data
+agentBi0.channels.ChDwAccesslog.capacity = 10000
 agentBi0.channels.ChDwAccesslog.threads = 2
 
 # SinkDwAccesslog To File sinks 配置
@@ -396,24 +397,30 @@ agentBi0.sinkgroups.SinkGroupSinkDwAccesslog.processor.maxpenalty = 10000
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.inUseSuffix = .tmp
 #
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.round = true
-#agentBi0.sinks.SinkDwAccesslog1.hdfs.roundValue = 10
+# 时间上进行”舍弃”的单位，包含：second,minute,hour
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.roundUnit = minute
+# 时间上进行“舍弃”的值, 2015-10-16 17:38:59 会被舍弃成  17:35, 5 分钟内的时间都被舍弃掉
+#agentBi0.sinks.SinkDwAccesslog1.hdfs.roundValue = 5
 
 # 复制块, 用于控制滚动大小
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.minBlockReplicas=1
-#agentBi0.sinks.SinkDwAccesslog1.hdfs.rollSize = 0
-#agentBi0.sinks.SinkDwAccesslog1.hdfs.rollCount = 0
+# hdfs 间隔多长将临时文件重命名成最终目标文件, 并新打开一个临时文件来写入数据, 0 则表示不根据时间来滚动文件 (单位秒)
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.rollInterval = 300
+# hdfs 临时文件达到 rollSize 值, 则滚动成目标文件, 0 则表示不根据临时文件大小来滚动文件(单位：bytes)
+#agentBi0.sinks.SinkDwAccesslog1.hdfs.rollSize = 0
+#events 数据达到该数量时候，将临时文件滚动成目标文件, 0 则表示不根据 events 数据来滚动文件
+#agentBi0.sinks.SinkDwAccesslog1.hdfs.rollCount = 0
+
 
 # 写入格式
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.writeFormat = Text
 # 文件格式 :  SequenceFile, DataStream(数据不会压缩输出文件) or CompressedStream
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.fileType = DataStream
-# 批处理达到这个上限, 写到 HDFS
-#agentBi0.sinks.SinkDwAccesslog1.hdfs.batchSize = 100
+# 每个批次刷新到 HDFS上 的 events 数量
+#agentBi0.sinks.SinkDwAccesslog1.hdfs.batchSize = 10000
 # hdfs 打开、写、刷新、关闭的超时时间, 毫秒
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.callTimeout = 60000
-# 多少秒没有写入就关闭这个文件, 0 不关闭
+# 当目前被打开的临时文件在该参数指定的时间（秒）内，没有任何数据写入，则将该临时文件关闭并重命名成目标文件
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.idleTimeout = 0
 # 使用本地时间
 #agentBi0.sinks.SinkDwAccesslog1.hdfs.useLocalTimeStamp = true
