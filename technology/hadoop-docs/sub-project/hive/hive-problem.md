@@ -40,23 +40,22 @@
 -  加载jar包的方式：http://www.cnblogs.com/tangtianfly/archive/2012/11/06/2756745.html
 - 自己编写jar包：http://blog.cloudera.com/blog/2012/12/how-to-use-a-serde-in-apache-hive/
 
-```
+``` sh
 下载包
-	wget https://hive-json-serde.googlecode.com/files/hive-json-serde-0.2.jar
+	wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hive-json-serde/hive-json-serde-0.2.jar
 
 
 添加jar包
 	add jar /home/heyuan.lhy/develop/wanke_http_test/hive-json-serde-0.2.jar;
 
-	CREATE TABLE test_json
-	(
-		id BIGINT,
-	  text STRING,
-	)
-	ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.JsonSerde'
-	STORED AS TEXTFILE
-	;
-	LOAD DATA LOCAL INPATH "test.json" OVERWRITE INTO TABLE test_json;
+CREATE TABLE test_json (
+id BIGINT,
+text STRING
+) ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.JsonSerde'
+STORED AS TEXTFILE
+;
+
+LOAD DATA LOCAL INPATH "test.json" OVERWRITE INTO TABLE test_json;
 ```
 
 

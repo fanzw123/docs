@@ -99,7 +99,7 @@ Hadoop : Hive 的数据都是放在 Hadoop 里面的
   ALTER TABLE student add columns(sage int  comment "the student's age");
 
   -- 替换，仅保存被替换的列(可以用来删除)
-  ALTER TABLE student replace columns(s1 string ,s2 int,s2 int);  
+  ALTER TABLE student replace columns(s1 string ,s2 int, s2 int);  
 
   -- 重命名列
   ALTER TABLE TABLE_name CHANGE old_col_name new_col_name String;

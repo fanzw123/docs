@@ -29,7 +29,7 @@ df # SparkSql ＋ UDF 支持
 ```
 access_log 表使用了正则表示，如下语句  'input.regex'='([^\\t]*)........',所以必须引入相应的正则解析包，如下方式：
 
-SPARK_HOME/sbin/start-thriftserver.sh  --jars file:///usr/local/hive/lib/hive-serde.jar
+SPARK_HOME/sbin/start-thriftserver.sh  --jars file:///usr/local/hive/lib/hive-json-serde.jar
 
 ```
 
