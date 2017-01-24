@@ -61,7 +61,7 @@ LOAD DATA LOCAL INPATH "test.json" OVERWRITE INTO TABLE test_json;
 
 ### 3、第三方类库需要在 beeline 生效
 
-```
+``` xml
 问题 :
  	On the Beeline client machine, in /etc/hive/conf/hive-site.xml, set the hive.aux.jars.path property to a comma-separated list of the fully-qualified paths to the JAR file and any dependent libraries.
 

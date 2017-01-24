@@ -4,10 +4,18 @@
 
 ## 方法一
 
-- 需要安装 pip 工具
-- 安装 sudo pip install pyhs2
+> 安装 pip 工具
+
+``` sh
+sudo apt-get install libsasl2-dev
+
+sudo pip install pyhs2
+```
+
+> 案例
 
 ``` python
+
 #coding=utf-8
 
 import pyhs2

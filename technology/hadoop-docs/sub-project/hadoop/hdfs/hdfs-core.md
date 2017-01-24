@@ -61,7 +61,7 @@
     如 : hdfs://NameNode:8020
 
   file.replication
-    复制因子 ，默认 1，不要修改
+    复制因子 ，默认 1
 
 
 2) hdfs-default.xml
