@@ -206,6 +206,17 @@ source ~/.bashrc
       <!-- 依赖的范围 : compile 编译,runtime 运行时,test system 测试系统, provided 并提供 -->
       <scope>test</scope>
     </dependency>
+
+
+    <!-- 定义一个外部依赖(不在 maven 仓库中) -->
+    <dependency>
+      <groupId>mydependency</groupId>
+      <artifactId>mydependency</artifactId>
+      <scope>system</scope>
+      <version>1.0</version>
+      <systemPath>${basedir}\war\WEB-INF\lib\mydependency.jar</systemPath>
+    </dependency>
+
   </dependencies>
 
 
@@ -226,14 +237,7 @@ source ~/.bashrc
     </plugins>
   </build>
 
-  <!-- 定义一个外部依赖(不在 maven 仓库中) -->
-  <dependency>
-    <groupId>mydependency</groupId>
-    <artifactId>mydependency</artifactId>
-    <scope>system</scope>
-    <version>1.0</version>
-    <systemPath>${basedir}\war\WEB-INF\lib\mydependency.jar</systemPath>
-  </dependency>
+
 
 </project>
 

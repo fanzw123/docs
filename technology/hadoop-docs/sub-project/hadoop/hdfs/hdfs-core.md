@@ -115,8 +115,18 @@
   (1) 对大文件，不要使用不支持切分整个文件的压缩格式，因为会失去数据的本地特性，进而造成了 MapReduce 应用效率降低
 
 2) MapReduce 中的 Map 阶段使用压缩可以提高效率
-  mapreduce.map.output.compress=true
-  mapreduce.map.output.compress.codec=org.apache.hadoop.io.compress.DefaultCodec
+
+  -- 开启 Map 合并阶段的压缩
+  mapreduce.map.output.compress=true;
+  -- 压缩格式, 均衡压缩: org.apache.hadoop.io.compress.SnappyCodec , 高压缩比: org.apache.hadoop.io.compress.BZip2Codec
+  mapreduce.map.output.compress.codec=org.apache.hadoop.io.compress.SnappyCodec;
+
+  -- 是否压缩最终作业输出（true 或 false）
+  mapreduce.output.fileoutputformat.compress=true;
+  -- 对于 SequenceFile 输出，应使用什么类型的压缩（NONE、RECORD 或 BLOCK）。建议使用 BLOCK
+  mapreduce.output.fileoutputformat.compress.type=BLOCK;
+  -- 如果要压缩最终作业输出，应使用哪个编码解码器
+  mapreduce.output.fileoutputformat.compress.codec=org.apache.hadoop.io.compress.SnappyCodec;
 
 ```
 

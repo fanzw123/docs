@@ -11,6 +11,7 @@
 2) 打开某个文件
   hdfs dfs –cat [file_path]
   hdfs dfs -cat /user/hive/warehouse/jason_test.db/student/student.txt
+  hdfs dfs -text adult/adult.txt.snappy | head  读取压缩文件
 
 3) 将本地文件存储至 hdfs
   hdfs dfs –put [本地地址] [hdfs目录]
@@ -82,7 +83,7 @@
 
 18) 归档 (减少小文件, 不能解决压缩格式问题)
   hadoop archive -archiveName [归档名.har] -p [需要归档的父目录] [归档的文件] [归档存放目录]
-  例如: 
+  例如:
   hadoop archive -archiveName foo.har -p /user/hive/dw_db_temp/jason_test_1 000000_* /user/hive/dw_db_temp/jason_test_1
 ```
 

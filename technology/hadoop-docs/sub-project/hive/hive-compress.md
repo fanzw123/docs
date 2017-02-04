@@ -31,19 +31,3 @@
 | --- | --- | --- |
 | access_log | 294.7 G 884.0 G  | 121.6 G  364.9 G  |
 | db_gather | 369.1 G  1.1 T  | 66.1 G  198.2 G |
-
-
-
-angejia__article 1
-angejia__article_image 1
-angejia__article_quiz 1
-angejia__call_log 1
-
-angejia__buyer_followup 1
-angejia__commission 1
-angejia__demand 1
-angejia__inventory_extend 1
-angejia__inventory_followup 1
-angejia__survey 1
-angejia__visit 1
-property__inventory 1
